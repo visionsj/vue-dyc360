@@ -1,9 +1,9 @@
-# first-vue
+# 使用技术
 
-> first vue project
+> vue2 + vuex + vue-router + webpack + ES6/7 + fetch + sass + flex + svg
 
-## Build Setup
-# 由于该项目没有用到eslint来检验代码格式，所以，初始化的时候不要用开启eslint，如果开启了会报错
+## 说明
+# 该应用公供学习参考
 
 ``` bash
 # install dependencies
@@ -15,14 +15,9 @@ npm run dev
 # build for production with minification
 npm run build
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
+
+## 作者
+# 何艳辉  mail: vision_sj@163.com
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
