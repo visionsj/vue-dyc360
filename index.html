@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>first-vue</title>
+    <style type="text/css">
+    	* { margin: 0; padding: 0; }
+    	html,body { background: #eee; }
+    	ul,li { list-style: none; }
+    	a { text-decoration: none; }
+    	img { vertical-align: middle; }
+    	/* 跳转页面动画 */
+    	.slide-enter,
+    	.slide_back-enter {
+    		position: absolute;
+    		width: 100%;
+    	}
+    	.slide-leave,
+    	.slide_back-leave {
+    		position: absolute;
+    		width: 100%;
+    	}
+    	.slide-enter-active,
+    	.slide_back-enter-active {
+    		transition: all 0.3s linear;
+    	}
+    	.slide-leave-active {
+    		position: absolute;
+    		transition: all 0.3s linear;
+    		transform: translate(-100%);
+    	}
+    	.slide-enter{
+    		transform: translateX(100%);
+    	}
+    	.slide_back-leave-active {
+    		position: absolute;
+    		transition: all 0.3s linear;
+    		transform: translate(100%);
+    	}
+    	.slide_back-enter {
+    		transform: translateX(-100%);
+    	}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    	<transition :name="transitionName">
+    		<router-view></router-view>
+    	</transition>
+    </div>
+
+    <script type="text/javascript">
+
+    	// 计算html的font-size
+    	(function(){
+    		function resizeBaseFontSize(){
+    			var rootHtml = document.documentElement,
+    				deviceWidth = rootHtml.clientWidth;
+
+    			if(deviceWidth > 640){
+    				deviceWidth = 640;
+    			}
+
+    			rootHtml.style.fontSize = deviceWidth / 7.5 + "px";
+    		}
+
+    		resizeBaseFontSize();
+
+    		window.addEventListener("resize", resizeBaseFontSize, false);
+    		window.addEventListener("orientationchange", resizeBaseFontSize, false);
+    	})();
+    </script>
+  </body>
+</html>
