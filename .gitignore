@@ -2,3 +2,7 @@
 node_modules/
 output/
 npm-debug.log
+.ssh
+.ssh.pub
+.ssh
+.gitignore
