@@ -1,5 +1,11 @@
 {
-  "presets": ["es2015", "stage-2"],
-  "plugins": ["transform-runtime"],
-  "comments": false
+    "compact": false,
+    "ast": false,
+    "sourceMaps": "inline",
+    "highlightCode": true,
+    "plugins": [
+        ["transform-es2015-modules-amd", {"strict": false}],
+        "transform-decorators-legacy"
+    ],
+    "presets": ["es2015", "stage-0", "stage-3"],
 }
