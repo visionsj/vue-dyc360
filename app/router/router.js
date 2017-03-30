@@ -1,9 +1,7 @@
 import App from '../App'
 
-const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
-const invest = r => require.ensure([], () => r(require('../page/invest/invest')), 'invest')
-
-
+const home = r => require.ensure([], () => r(require('../pages/home/home')), 'home')
+const invest = r => require.ensure([], () => r(require('../pages/invest/invest')), 'invest')
 
 export default [{
     path: '/',
@@ -21,8 +19,8 @@ export default [{
         },
         //投资列表页
         {
-            path: '/home',
-            component: home
+            path: '/invest',
+            component: invest
         },
     ]
 }]

@@ -1,9 +1,3 @@
 .DS_Store
 node_modules/
-output/
 npm-debug.log
-.gitignore
-.ssh
-.gitignore
-.ssh.pub
-*.log
