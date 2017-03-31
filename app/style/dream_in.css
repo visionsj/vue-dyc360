@@ -1,0 +1,149 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+img{
+	border:0;
+	margin: 0;
+	padding: 0;
+}
+.mainwrap{
+	position: relative;
+	color: #fff;
+}
+.mainwrap .guizhe a{
+	position: absolute;
+	height:5.65rem;
+	width: 8.82rem;
+	background: url(../images/icon.png) no-repeat; 
+	top:11.5rem;
+	right: 8rem;
+	background-size:100%;
+	-webkit-background-size: 100%;
+	-moz-background-size:100%;
+	-ms-background-size:100%;
+}
+.mainwrap .contan{
+	position: absolute;
+	z-index: 9991;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	top:-50px;
+	
+}
+.mainwrap p{
+	position: absolute;
+	z-index: 9991;
+	right:2.25rem;
+	top:3rem;
+	font-size: 0.75rem;
+	
+
+}
+.mainwrap .contanlist{
+	width: 13rem;
+	height: 49.35rem;
+	top:4.125rem;
+	left:50%;
+	margin-left: -6.5rem;
+	position: absolute;
+	z-index: 9991;
+	box-sizing: border-box;
+
+}
+.contanlist li{
+	width: 5rem;
+	height:11.45rem;
+	
+	margin-top:7%;
+	margin-right:2.8rem;
+	float: left;
+	position: relative;  
+}
+.contanlist li h4,.contanlist li h5{
+	font-size: 0.6rem;
+	text-align: center;
+	font-weight: normal;
+	color: #fff;
+}
+.contanlist li button,.contanlist li a{
+	width: 4rem;
+	height: 1.6rem;
+	background: #E5595A;
+	color: #fff;
+	border-radius: 20px;
+	line-height: 1.6rem;
+	text-align: center;
+	font-size: 0.75rem;
+	margin: 0.55rem auto 0;
+	border-bottom: 2px solid #B13C33;
+	position: absolute;
+	left:0.5rem;
+}
+.contanlist li .boy_icon{
+	background: #577CCA;
+	border-bottom: 2px solid #2F54A2;
+
+}
+#VoteListwrap h4{padding-top: 0.3rem}
+.gaobai{
+	position: relative;
+}
+.gaobai #gaobaolist_wrap{
+	position: absolute;
+	width: 15rem;
+	/*height: 6.3rem;*/
+	padding: 1rem 0.5rem;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	text-align: center;
+	color: #999;   
+	background: #fff;
+	border-radius: 5px;
+	z-index: 9991;
+	font-size: 0.525rem;
+	height:6rem;
+	top:3.375rem;
+
+
+}
+.gaobai ul li{
+	line-height: 1.5rem;
+}
+.msg{
+	position: absolute;
+	width: 13.375rem;
+	padding:0.95rem;
+	background: #FF8140;
+	color: #fff;
+	font-size: 0.45rem;
+	line-height: 0.825rem;
+	z-index: 9991;
+	left:50%;
+	top:14rem;
+	border-radius: 10px;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+
+}
+.msg h4{
+	text-align: center;
+	font-weight: normal;
+	line-height: 1.5rem;
+	font-size: 0.75rem;
+}
+.msg p:last-child{
+	line-height: 1.2rem;
+
+}
+

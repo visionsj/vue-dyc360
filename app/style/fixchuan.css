@@ -1,0 +1,132 @@
+/*以下为弹窗1红包弹窗*/
+.morey{
+	position: fixed;
+	top:50%;
+	left:50%;
+	width: 80%;
+	height: 280px;
+	margin: -140px 0 0 -40%;
+	max-height: 280px;
+	text-align: center;
+	border-radius: 10px;
+	background: #fff;
+	background-size: 100% 100%;
+	padding-top: 20px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	z-index: 99;
+
+}
+.close{
+	width: 18px;
+	height: 18px;
+	background: url(../images/h5clear.png) no-repeat;
+	position: absolute;
+	background-size: 100% 100%;
+	top:10px;
+	right: 10px;
+}
+.close:hover{
+	width: 18px;
+	height: 18px;
+	background: red url(../images/h5clear.png) no-repeat;
+	background-size: 100% 100%;
+}
+.morey img{
+	width: 59%;
+	height: 50%;
+	margin: 0.8rem auto;
+	padding-left: 1%;
+	background-size: 100% 100%;
+	display: block;
+}
+.morey button{
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+	background: #f40;
+	color: #fff;
+}
+.morey h5{
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	color: #f40;
+	font-family: '黑体';
+}
+.morey p{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+/*以下为隐藏各弹窗*/
+#dnone{
+	display: none;
+}
+
+#dnone_1{
+	display: none;
+}
+/*以上为隐藏各弹窗*/
+
+
+.morey_2{
+	padding: 45px 10px 20px;
+	height: 220px;
+	max-height: 240px;
+	color: #747474;
+}
+.morey_2 h5{
+	font-size: 1.1rem;
+	line-height: 2.9rem;
+	color: #fd515d;
+}
+.morey_2 p{
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+}
+.morey_2 button{
+	margin-top: 20px;
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+	background: #f40;
+	color: #fff;
+	font-size: 18px;
+}
+
+.morey_2 h4{
+	font-size: 0.8rem;
+	line-height: 1.8rem;
+	font-weight: normal;
+}
+.morey_2 h3{
+	font-size: 1.0rem;
+	line-height: 3.8rem;
+	color: #f40;
+
+}
+
+.dark {
+    background: #000 none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.red_num_show{
+	background: url('../images/redmoney.png') no-repeat center center  / 60% auto;
+	width: 236px;
+	font-size: 24px;
+    font-weight: bold;
+    height: 113px;
+    color: #000;
+    margin: 0 auto;
+    padding: 48px 0 0;
+}
+.red_mun_reddem{
+	background:url("../images/reddem_img.png") no-repeat scroll center center / 50% auto;
+}

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.act{width:100%; margin:0 auto; max-width:750px; min-width:320px;}
+.act img{ display:block;}
+.btnLink{display:block; width:200px; height:40px; background:#fd5e63; text-align:center; line-height:40px; font-size:1.4em; color:#fff; border-radius:4px; margin:15px auto;}
+.saveBtn{ position:relative;}
+.saveBtn .btnLink{position:absolute; left:50%; bottom:25px; margin:0 0 0 -100px;}

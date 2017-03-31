@@ -1,0 +1,141 @@
+.datecontent{
+	overflow: hidden;
+	padding:6px 3px 2px 15px;
+	width: 100%;
+	min-height: 68px;
+	border-bottom: 1px solid #ccc;
+	color: #A9A9A9;
+	background:#fff;
+	font-family: 'Microsoft YaHei';
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;  
+    -ms-box-sizing: border-box;  
+    -o-box-sizing: border-box;  
+
+}
+b{
+	font-weight: normal;
+}
+
+
+ul,li,button{margin:0;}
+
+.datecontent .nex{
+	float: left;
+	width: 110px;
+	height:auto;
+	text-align: left;
+	font-size: 16px;
+	line-height: 13px;
+	color: #686868;
+	margin-left: -2%;
+
+}
+.datecontent i{
+display: block;
+padding-top: 10px;
+font-style: normal;
+font-size: 16px;
+color: #A9A9A9; 
+}
+.datecontent i.timenow{
+font-size: 15px;
+}
+.datecontent .last{
+margin-left: 35%;
+text-align: left;
+height:auto;
+}
+.datecontent .last span{
+	color: #f40;
+}
+.datecontent .last span.loss{
+	color: #9dadd6;
+}
+
+.datecontent .last b.msg_tab{
+	display: inline-block;
+	right: 5%;
+	color: #686868;
+	position: absolute;
+}
+.datecontent .last p{
+margin: 0;
+padding-top:5px;
+font-size: 14px;
+}
+.datecontent .last i{
+	padding-top: 5px;
+}
+
+.date_month h2{
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	line-height: 50px;
+	padding-left: 12px;
+	color: #666666;
+}
+.date_month .toptab{
+	height: 49px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.fund_type h3,.time_type h3{
+	height: 45px;
+	padding-left: 3%;
+	margin:0;
+	line-height: 45px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	background: #fff;
+	font-size: 16px;
+	font-weight: normal;
+
+}
+.fundlist{
+	width: 94%;
+	padding: 10px 3%;
+	overflow: hidden;
+}
+.fund_type li{
+	width: 30%;
+	height: 40px;
+	margin: 10px 1.1%;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	border: 1px solid #DDDDDD;
+	background: #fff;
+
+}
+.get{
+	width: 30%;
+	height: 40px;
+	border: 1px solid #f16739 !important;
+	background: url(../images/v.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+button.pass{
+	width: 40%;
+	height: 40px !important;
+	line-height: 40px;
+	border-radius: 4px !important;
+	background:#f16739 !important;
+	color: #fff !important;
+	margin: 10px auto 30px;
+	font-weight: normal !important;
+	display: inherit;
+}
+#filter_wrap{
+	background-color: #fff;
+    left: 0;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}

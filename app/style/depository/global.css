@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*++++++++++++++++++++++++++++
++ CSS Document				 +
++ Date:2016-02-23			 +
+++++++++++++++++++++++++++++*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,select,th,td,div{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 "Microsoft YaHei",Arial, Helvetica, sans-serif;}
+button,input,select,textarea{font-size:100%;vertical-align:middle;}
+textarea {overflow: auto; vertical-align: top; }
+input,button{vertical-align:middle;*overflow: visible;line-height: normal;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-family:"Microsoft YaHei";font-weight:normal;}
+a{text-decoration:none;}
+a:active,a:hover {outline: 0 none;}
+ul,ol,li{list-style-type:none;}
+img{border:none 0;vertical-align:top;}
+address, cite, dfn, em, var{font-style:normal;}
+code, kbd, pre, samp, tt {font-family:"SimSun",Courier,monospace;}
+abbr, acronym {border:0 none; font-variant:normal;}
+body {background:url(/images/zt/depository/main_bg.png) repeat 0 0;}
+:focus {outline:none 0;}
+
+/*清除浮动*/
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content: "";}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+
+/*浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*HTML5*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
+audio,canvas,video {display: inline-block;*display:inline;*zoom:1;}
+
+/*其他*/
+#grayFixed{display:none; width:100%; height:100%; position:fixed; top:0; right:0; left:0; bottom:0; background:rgba(0,0,0,0.7);filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000'); z-index:999;}/*弹窗底层显示灰色半透明背景*/
+
+
+

@@ -1,0 +1,45 @@
+body{background:#fff0c2;}
+body img{display:block;}
+.banner{margin-bottom:1.4rem;}
+.title{position:relative;margin-top:3.3rem;text-align:center;font-size:1.8rem;color:#ed200f;}
+.title .tit_l,.title .tit_r{top:0.1rem;position:absolute;display:inline-block;width:24%;height:1rem;overflow:hidden;}
+.title .tit_l i,.title .tit_r i{position:absolute;display:inline-block;width:10rem;height:1rem;background-repeat:no-repeat;background-size:auto 1rem;}
+.title .tit_l{left:0px;}
+.title .tit_l i{right:0px;background-image:url(../images/zt/joy_song/tit_l.png);}
+.title .tit_r{right:0px;}
+.title .tit_r i{width:9.6rem;left:0px;background-image:url(../images/zt/joy_song/tit_r.png);}
+.floor1{margin-top:1.8rem;}
+.people{padding:0rem 5%;}
+.people li{font-size:1.4rem;color:#666;padding:1.3rem 0px 1.2rem;line-height:1.75;overflow:hidden;display:box;display:-webkit-box;display:-moz-box;}
+.people li.line{height:0.2rem;line-height: 1;background:url(../images/zt/joy_song/dot.png) repeat-x;background-size:auto 0.2rem;padding:0px;}
+.people li strong{font-size:1.4rem;font-weight:bold;color:#5c5c5c;margin-right:1rem;display:inline-block;-moz-box-flex:1;-webkit-box-flex:1;}
+.people li .rcon{display:block;-moz-box-flex:1;-webkit-box-flex:1;}
+.bline{position: relative;display:inline-block;}
+.bline i{display:inline-block;position:absolute;top:2rem;left:0px;height:0.5rem;background-size:auto 0.4rem;background-repeat:repeat-x;}
+.bline .bline1{width:4.2em;background-image:url(../images/zt/joy_song/line1.png);}
+.bline .bline1_2{left:-1rem;}
+.bline .bline2{width:4.2em;background-image:url(../images/zt/joy_song/line2.png);}
+.bline .bline2_2{width:6.5em;}
+.bline .bline3{width:4.3rem;background-image:url(../images/zt/joy_song/line3.png);left:-0.2em;}
+.bline .bline3_2{width:4.8rem;left:0px;}
+.bline .bline3_3{width:2.5em;left:0px;}
+.bline .bline4{width:4.8em;background-image:url(../images/zt/joy_song/line4.png);}
+.bline .bline4_2{width:7.2em;}
+.bline .bline5{width:3.8em;background-image:url(../images/zt/joy_song/line5.png);left:-0.2em;}
+.bline .bline5_2{width:4.2em;left:-0.2em;}
+.bline .bline5_3{width:5em;left:0em;}
+.floor2{margin-top:1.3rem;}
+.floor3{margin-top:1.5rem;}
+.floor4{margin-top:2rem;}
+.floor5{margin:1.3rem 0rem 2.6rem;}
+.concenter{margin:0 auto;}
+.floor6{padding:0rem 5% 6rem;margin-top:3.1rem;}
+.floor6 li{display:box;display:-webkit-box;display:-moz-box;margin-bottom:1.8rem;}
+.floor6 .project{width:7.5rem;height:7.5rem;background-size:7.5rem 7.5rem;background-repeat:no-repeat;}
+.floor6 .project.img1{background-image:url(../images/zt/joy_song/project1.png);}
+.floor6 .project.img2{background-image:url(../images/zt/joy_song/project2.png);}
+.floor6 .project.img3{background-image:url(../images/zt/joy_song/project3.png);}
+.floor6 .info{-moz-box-flex:1;-webkit-box-flex:1;padding-left:2rem;margin-top:1.9rem;color:#382525;}
+.floor6 .info .btit{font-size:1.5rem;font-weight:bold;}
+.floor6 .info .intro{font-size:1.1rem;margin-top:1.3rem;}
+.floor6 .finance_btn{width:32%;height:3.6rem;margin-top:2rem;display:block;background:#e82720;font-size:1.4rem;text-align: center;color:#fff;line-height:3.6rem;border-radius:0.4rem;}

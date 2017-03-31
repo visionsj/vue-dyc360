@@ -1,0 +1,144 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+.top{
+	width: 18.75rem;
+	height: 18.325rem;
+	background: url(../images/dream/zhen_2_1.jpg) center 0 no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	
+}
+.midworp{
+	width: 18.75rem;
+	height: 33.75rem;
+	background: url(../images/dream/zhen_2_2.jpg) center 0 no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	position: relative;
+}
+.footlast{
+	width: 18.75rem;
+	height: 30.85rem;
+	background: url(../images/dream/zhen_2_3.jpg) center 0 no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+}
+
+/*.banner{
+	width:13.55rem;
+	height: 16.05rem;
+	height: auto;
+	position: absolute;
+	z-index: 9990;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	top:4.275rem; 
+}
+.banner li{
+	width: 10.875rem;
+	height:16.05rem;
+	margin: 0 auto;
+
+}
+.banner .nex,.banner .last{
+	width: 0.475rem;
+	height: 0.85rem;
+	background: url(../images/dream/left.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	position: absolute;
+	z-index: 9994;
+	top:50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.banner .last{
+	width: 0.475rem;
+	height: 0.85rem;
+	right: 0px;
+	background: url(../images/dream/right.png) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}*/
+
+
+
+/* 本例子css -------------------------------------- */
+.focus {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 17rem;
+	height: 10.5rem;
+}
+.focus .hd {
+	width: 0;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+
+}
+.focus .hd ul {
+	overflow: hidden;
+	top: 1.8rem;
+	position: absolute;
+	right: 0;
+	
+
+
+}
+/*.focus .hd ul li {
+	height: 5px;
+	width: 10px;
+	border-radius: 4px;
+	display:inline-block;
+	border:1px solid #fff;
+	margin-right: 5px;
+	background-color: rgba(255,255,255,.5);
+	text-indent: -99999px;
+
+
+}
+.focus .hd ul .on {
+	background: #fff;
+}*/
+.focus .bd {
+	position: relative;
+	z-index: 0;
+}
+.focus .bd li img {
+	/*width: 100%;*/
+	width: 17rem;
+	height: 10.5rem;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	/*position: absolute;*/
+	z-index: 66;
+	
+
+}
+.focus .bd li a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin:0 auto;
+	
+	 /* 取消链接高亮 */
+}

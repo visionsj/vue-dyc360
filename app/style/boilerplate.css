@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* =============================================================================
+   HTML5 显示定义
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* =============================================================================
+   基础
+   ========================================================================== */
+
+/*
+ * 1. 纠正正文字体大小使用 em 单位设置时，IE6/7 中的文本异常调整大小的问题
+ * 2. 强制在非 IE 中使用垂直滚动条
+ * 3. 防止在设备方向更改时调整 iOS 文本大小，而不需要禁用用户缩放: h5bp.com/g
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * 删除选定高亮部分的文本阴影: h5bp.com/i
+ * 这些选定内容声明必须有所区别
+ * 此外: 暗粉色！（或自定义背景颜色以符合您的设计）
+ */
+
+/* Dreamweaver: 如果您想要自定义选定高亮部分，请取消这些注释
+ *::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+ *::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+ */
+
+/* =============================================================================
+   链接
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* 改善在所有浏览器中获取焦点和悬停时的可读性: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   排版规则
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* 重新声明固定宽度字体系列: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* 改善所有浏览器中预先格式化的文本的可读性 */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* 放置上标和下标内容，而不影响行高: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   列表
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   嵌入内容
+   ========================================================================== */
+
+/*
+ * 1. 改善在 IE7 中缩放时的图像质量: h5bp.com/d
+ * 2. 删除图像容器上的图像与边框之间的间隙: h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * 纠正 IE9 中未隐藏的溢出 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   图
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   表单
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 指示“label”会将焦点移至相关联的表单元素 */
+label { cursor: pointer; }
+
+/* 
+ * 1. 纠正 IE6/7/8/9 中非继承的颜色 
+ * 2. 纠正 IE6/7 中显示异常的对齐 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/*
+ * 1. 纠正所有浏览器中非继承的字体大小
+ * 2. 删除 FF3/4 S5 Chrome 中的边距
+ * 3. 定义在所有浏览器中一致地垂直对齐显示
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. 将行高定义为正常，以匹配 FF3/4（使用 UA 样式表中的 !important 设置）
+ * 2. 纠正 IE6/7 中显示异常的内边距
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 在“table”中重新加入内边距，以避免 IE6/7 中的交迭和空白问题
+ */
+
+table button, table input { *overflow: auto; }
+
+/*
+ * 1. 显示手形光标，表示可以点击的表单元素
+ * 2. 允许 iOS 中可点击的表单元素的样式
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * 一致的框大小和外观
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/* 
+ * 删除 FF3/4 中的内边距和边框: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* 
+ * 1. 删除 IE6/7/8/9 中的默认垂直滚动条 
+ * 2. 仅允许垂直调整大小
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* 用于表单验证的颜色 */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   表格
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== 主要样式 =====================================================
+   作者: 
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== 非语义的 helper 类 ========================================
+   请在进入此部分之前定义您的样式。
+   ========================================================================== */
+
+/* 用于图像替换 */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* 同时在屏幕读取器和浏览器中隐藏: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* 仅可视隐藏，但在屏幕读取器中可用: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* 扩展 .visuallyhidden 类以允许元素可在通过键盘浏览时成为焦点: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* 可视隐藏且在屏幕读取器中隐藏，但保留布局 */
+.invisible { visibility: hidden; }
+
+/* 包含浮动: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== 打印样式 =======================================================
+   打印样式。
+   已内嵌以避免必要的 HTTP 连接: h5bp.com/r
+   ========================================================================== */
+ 
+ @media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* 黑白打印速度更快: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* 不显示图像链接或 javascript/内部链接 */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

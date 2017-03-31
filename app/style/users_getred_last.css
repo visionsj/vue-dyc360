@@ -1,0 +1,107 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+
+.heard{
+	height: 2.2rem;
+	width: 100%;
+	background: #1C1B1F;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.backicon{
+      	width:1.5rem;
+      	height: 1.5rem;
+      	background: url(../images/back.png) no-repeat;
+      	position: absolute;
+      	background-size:cover;
+      	-webkit-background-size:cover;
+      	-moz-background-size:cover;
+      	-ms-background-size:cover;
+      	-o-background-size:cover;
+      	top:50%;
+      	margin-top: -0.75rem;
+      }
+.heard h2{
+		padding-left: 1.2rem;
+		font-size:0.775rem;
+		font-family: '微软雅黑';
+		line-height: 2.2rem;
+		font-weight: normal; 
+		}
+.banner_2{
+		width: 18.75rem;
+		height: 12.15rem;
+		background: url(../images/friend/getred_5.jpg) center center no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		margin: 0 auto;
+		position: relative;
+}
+
+.foot_2{
+		width: 18.75rem;
+		height: 17.875rem;
+		background: url(../images/friend/getred_6.jpg) center center no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		margin: 0 auto;
+		position: relative;
+
+}
+.foot_2 p{
+	text-align: center;
+	font-size: 0.75rem;
+	position: absolute;
+	line-height: 1.5rem;
+	top: 1.0rem;
+	color: #fff;
+	display: block;
+	width: 100%;
+}
+.foot_2 span{
+	font-size: 1.2rem;
+	vertical-align: top;
+	line-height: 1.5rem;
+	padding:0 3px;
+}
+.foot_2 button{
+	width: 6.35rem;
+	height: 2.275rem;
+	font-size:0.85rem;
+	border-radius: 5px;
+	font-family: '黑体';
+	background: #F45633;
+	color: #fff;
+	position: absolute;
+	right: 1.575rem;
+	top:5rem;
+	border-bottom: 3px solid #D93711;
+}
+.foot_2 button:last-child{
+	top:11rem;
+}
+.foot_2 button:hover{
+	background: #90101F;
+}
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	background: url(../images/friend/fixbottum.png) bottom center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}		

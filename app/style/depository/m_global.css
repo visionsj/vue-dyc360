@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*++++++++++++++++++++++++++++
++ CSS Document				 +
++ Date:2016-02-23			 +
+++++++++++++++++++++++++++++*/
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,textarea{font-size:16px;line-height:1.25em; -webkit-tap-highlight-color:rgba(255,255,255,0);}
+body{font-size:62.5%;font-family:"Microsoft YaHei",Arial, Helvetica, sans-serif;;color:#000;-webkit-text-size-adjust:none;}
+fieldset,img{border:0}
+input,button{vertical-align:middle; border-radius:0;}
+h1,h2,h3,h4,h5,h6{font-family:"Microsoft YaHei";font-weight:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none}
+address,em{font-style:normal}
+a{color:#000;text-decoration:none;}
+body{background:url(/images/zt/depository/main_bg.png) repeat 0 0;}
+.poRe{position:relative;}
+
+/*清除浮动*/
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content: "";}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+
+/*浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
+/* HTML5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
+audio,canvas,video {display: inline-block;*display:inline;*zoom:1;}
+
+#grayFixed{display:none; width:100%; height:100%; position:fixed; top:0; right:0; left:0; bottom:0; background:rgba(0,0,0,0.8);filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4F000000', endColorstr='#4F000000'); z-index:999;}/*弹窗底层显示灰色半透明背景*/
+#globalTip{z-index:99999;display:none;box-sizing:border-box;position:fixed;left:7%;top:20%;width:86%;padding: 5px 0;background-color:rgba(0,0,0,.7);text-align:center;color:#fff;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;line-height:30px;}
+#globalTip p{margin:0; padding: 0 10px; font-size:14px; word-wrap: break-word;}
+#codeTip{display:none;height:40px}
+#globalTip .waitIcon{display:block;width:2.95rem;height:2.95rem;margin:5px auto;background:url(/images/loading.gif);background-size:contain;vertical-align:middle}
+

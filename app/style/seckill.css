@@ -1,0 +1,61 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;outline:0}
+body,div,fieldset,form,h1,h2,h3,h4,h5,h6,html,p{-webkit-text-size-adjust:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;clear:both}
+html{font-size:62.5%}
+body{font-family:'Microsoft YaHei',arial,helvetica,sans-serif;-webkit-text-size-adjust:none;color:#666;background:#fbcc27;-webkit-text-size-adjust:none;font-size:1.4rem}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+form{display:inline}
+textarea{resize:none}
+table{border-collapse:collapse;border-spacing:0}
+ol,ul{list-style:none}
+button,input,select{font-family:'Microsoft YaHei',arial,helvetica,sans-serif;font-size:100%;vertical-align:middle;outline:0}
+button,input[type=button],input[type=reset],input[type=submit]{cursor:pointer;-webkit-appearance:button;-moz-appearance:button}
+input:focus:-moz-placeholder,input:focus::-webkit-input-placeholder{color:transparent}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+a{text-decoration:none;color:#111}
+a:hover{color:#111;text-decoration:none}
+img{vertical-align:middle;font-size:0;border:0;-ms-interpolation-mode:bicubic}
+.zjbz_title img{width:2.5rem;height:2.5rem;float:left}
+.zjbz_title b{margin-left:1rem;height:2.5rem;line-height:2.5rem;font-family:'Microsoft YaHei',arial,helvetica,sans-serif;font-size:1.8rem}
+.bzxx_lei_nav li{width:100%;height:4rem;float:left;line-height:4rem;background:#fff;border-bottom:1px #efeff4 solid}
+.bzxx_lei_nav li:first-child{margin-top:1.4rem}
+.bzxx_lei_nav li a{width:90%;height:4rem;margin:0 auto;display:block;font-size:1.4rem}
+.bzxx_lei_nav li a span{float:left}
+.bzxx_lei_nav li a b{width:.8rem;height:1.2rem;float:right;margin-top:1.5rem;background:url(../images/bzxxl.jpg) no-repeat;background-size:100% 100%}
+.zjb_title li{width:49%;height:4rem;line-height:4rem;float:left;cursor:pointer;text-align:center;font-size:1.5rem}
+.zjb_content li{width:100%;float:left}
+.gsxw_lie_list li{width:100%;height:4rem;float:left;line-height:4rem;border-bottom:1px #efeff4 solid;text-indent:1rem;color:#666;font-size:1.4rem}
+.gsxw_lie_list li a{float:left;width:100%;height:100%;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tzjl_content li{width:100%;height:4rem;float:left;line-height:4rem;font-size:1.4rem;background:#fff;border-bottom:1px #efeff4 solid}
+.jbgz_content h2{width:100%;height:1.6rem;float:left;line-height:1.6rem;font-size:1.4rem}
+.jbgz_content p{width:100%;float:left;line-height:1.6rem;font-size:1.4rem}
+.jbgz_content span{width:100%;float:left;line-height:1.6rem;font-size:1.6rem}
+.yqhy img{width:100%;height:auto}
+.zdms{width:100%;position:absolute;background:#fcd31f;padding-bottom: 20px; overflow: hidden}
+.zdms_banner{width:100%;margin:0 auto 20px}
+.zdms_banner img{width:100%;height:auto}
+.zdms_bo{width:94%;margin:0 3% 30px}
+.zdms_bg{position:relative;width:100%;float:left;z-index: 99}
+.zdms_bg_first{margin-top:-40px}
+.zdms_list{width: 100%; margin-top: -20px; background: #fff; display: inline-block; z-index: 9}
+.zdms_bg_top{width:67%;height:40px;padding-left: 13%;background:url('../images/zt/act/time-bar-bg.png') no-repeat;background-size: 100% 100%;font-size:16px;color:#fff;text-align:left;line-height:40px;margin:20px auto 0 0}
+.zdms_l{width:45%;float:left;margin-top:20px; padding: 10px;position: relative}
+.zdms_l img{width:100%;overflow:hidden}
+.zdms_r{width:47%;float:right;margin-top:20px}
+.zdms_r_djs{width:100%;height:40px; line-height:40px;float:left;text-align:center;color:#000; font-weight: bold;font-size:18px}
+.zdms_r_time{width:100%;height:30px;line-height:30px;float:left;text-align:center;font-size:18px; }
+.zdms_r_q{width:80%;height:35px;margin:80px auto 0 auto;display:block;border-radius:8px;background:#e3242b;line-height:35px;text-align:center;color:#fff;font-size:16px}
+.zdms_r_q:hover{color:#fff}
+.zdms_r_q_fal{background: #d1d1d1 !important;}
+.zdms_r_q_ws{background: #fd6c71 !important;}
+.zdms_gz{width:94%;padding:0 3%;margin:0 auto}
+.zdms_gz img{width:100%;height:auto}
+.zdms_hb_1 img{width:20.2rem;height:6.7rem}
+.icon_success{display:none;position:fixed;top:50%;left:50%;margin-top:-100px;margin-left:-145px;color:#fff;font-size:20px;padding-top:100px;text-align:center;line-height: 35px;background:url(../images/zt/act/zdms_icon_success.png) center no-repeat; background-size:100% 100%;width:290px;height:100px;z-index:999}
+.icon_success a{color:#fff;text-decoration: underline}
+.icon_success a:hover{color: #fff}
+.icon_joined{display:none;position:fixed;top:50%;left:50%;margin-top:-100px;margin-left:-145px;background:url(../images/zt/act/zdms_icon_joined.png) center no-repeat;background-size:100% 100%;width:290px;height:200px;z-index:999}
+.icon_fail{display:none;position:fixed;top:50%;left:50%;margin-top:-100px;margin-left:-145px;background:url(../images/zt/act/zdms_icon_fail.png) center no-repeat;background-size:100% 100%;width:290px;height:200px;z-index:999}
+.icon_faily{display:none;position:fixed;top:50%;left:50%;margin-top:-100px;margin-left:-145px;background:url(../images/zt/act/zdms_icon_faily.png) center no-repeat;background-size:100% 100%;width:290px;height:200px;z-index:999}
+.icon_x{background:url(../images/zt/act/zdms_icon_x.png);height:30px;width:30px;right:-10px;top:-15px;position:absolute;background-size: 100% 100%}
+.zdms_l label{display:inline-block;position:absolute;bottom:6px;right:10px;font-size:12px;color:#000}

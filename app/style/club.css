@@ -1,0 +1,283 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+	font-family: '微软雅黑';
+}
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	background: url(../images/friend/fixbottum.png) bottom center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}
+
+body{
+   background-color: #fff;
+}
+
+.close{
+		width: 0.675rem;
+		height: 0.675rem;
+		background: url(../images/h5luck/close.png) no-repeat;
+		right: 0.8rem;
+		top:0.8rem;
+		padding:0.1rem;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		position: absolute;
+	}
+.close:hover{
+		width: 0.675rem;
+		height: 0.675rem;
+		background: red url(../images/h5luck/close.png) no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		position: absolute;
+	}
+
+.dark{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: #000;
+	opacity: .6;
+	filter: "alpha(opacity=40)";
+	z-index: 9999;
+	display: none;
+}
+.usermsg{
+	position: relative;
+	font-size: 0.625rem;
+	color: #666666;
+}
+.usermsg input,.usermsg .zhucu{
+	width: 16.35rem;
+	height: 2.2rem;
+	font-size: 0.8rem;
+	padding-left: 0.4rem;
+	box-sizing: border-box;
+	top:1.1rem;
+	border-radius: 5px;
+	left:50%;
+	border: 1px solid #ddd;
+	border-top: 1px solid #ccc;
+	margin-left: -8.175rem;
+	position: absolute;
+}
+.usermsg button.get{
+	width: 6rem;
+	height: 2.2rem;
+	font-size: 0.85rem;
+	color: #F16937;
+	background:#F4C5A6;
+	border-radius: 5px;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover; 
+	display: inline-block;
+	position: absolute;
+	top:4rem;
+	left: 11.5rem;
+}
+.usermsg #code{
+	top:4rem;
+	width: 9.725rem;
+}
+#password{
+	top:6.9rem;
+}
+.usermsg .zhucu{
+	font-size: 0.9rem;
+	top:11.5rem;
+	color: #fff;
+	border-top: none;
+	background: #F35531;
+	cursor: pointer;
+}
+.usermsg .zhucu:hover{
+	background: red;
+}
+.usermsg a{
+	color: #6B80B6;
+}
+.usermsg .check{
+	width: 14.3rem;
+	text-align:left;
+	text-indent: -1em;
+	/*background: red;*/
+	display: block;
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	top:9.8rem;
+}
+.usermsg input.valid:checked{
+	height: 0.85rem;
+	width: 0.85rem;
+	padding-right: 0.1rem;
+	border: none;
+	top:0.05rem;
+	display: inline-block;
+	background: #F35531;
+	border-radius: 50%;
+	background: url(../images/h5luck/round.png) 0 center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover; 
+}
+.usermsg input.valid{
+	
+	height: 0.85rem;
+	width: 0.85rem;
+	padding-right: 0.1rem;
+	border: none;
+	top:0.05rem;
+	display: inline-block;
+	background: #F35531;
+	border-radius: 50%;
+	background: #ccc;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover; 
+}
+
+/*.reg_xieyi {  
+    position: relative;
+    margin-top: 9.8rem;
+    cursor: pointer;
+}
+.check_wrap input,.check_radio input{display:none}
+.check_radio {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.fl {
+    float: left;
+}
+.check_radio input:checked + label.radios:before {
+    content: '';
+    position: absolute;
+   height: 0.85rem;
+	width: 0.85rem;
+    background: url(../images/h5luck/round.png) no-repeat;
+    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover; 
+}
+*/
+.lastmsg{
+	margin-top: 14rem;
+}
+.lastmsg p{
+	font-size: 0.75rem;
+	color: #666;
+	line-height: 1.2rem;
+	padding-top:0.8rem;
+	font-family: '微软雅黑';
+	text-align: center;
+}
+.fixchuang{
+	position: fixed;
+	width: 17.15rem;
+	height: auto;
+	top:15%;
+	text-align: center;
+	z-index: 10000;
+	font-family: '微软雅黑';
+	left:50%;
+	margin-left: -8.575rem;
+	color: #BB132D;
+}
+.fixchuang input{
+	width: 15rem;
+	height: 2.2rem;
+	font-size: 0.8rem;
+	padding-left: 0.4rem;
+	top:4.825rem;
+	left:50%;
+	border-top: 1px solid #ccc;
+	margin-left: -7.7rem;
+	position: absolute;
+}
+
+.fixchuang input:nth-child(2){
+	top:7.625rem;
+}
+.fixchuang button.sure:hover{
+	background: red;
+}
+.fixchuang button.sure{
+	position: absolute;
+	font-size: 0.90rem;
+	width:  17.15rem;
+	height: 2.2rem;
+	font-family: '微软雅黑';
+	color: #fff; 
+	top:11.8rem;
+	left:50%;
+	margin-left: -8.575rem;
+	background:#F16739;
+	border-radius: 0 0 6px 6px;
+	cursor: pointer;
+}
+.fixchuang #redeemCode{
+	top:2.825rem;
+	line-height: 2.2rem;
+	border: 1px solid #ccc;
+
+}
+.fixchuang #btn_realcode_copy{
+	top:16.5rem;
+}
+.fixchuang button.btn_sure{
+	width: 8rem;
+	height: 2.2rem;
+	font-size: 0.95rem;
+	color: #f40;
+	background: none;
+	/*border-radius: 5px;
+	/*border: 2px solid #f40;*/
+	position: absolute;
+	top:5.9rem;
+	left:50%;
+	margin-left: -4rem;
+	cursor: pointer;
+}
+#error_tip{
+	position: fixed;
+	width: 7rem;
+	text-align: center;
+	border-radius: 5px;
+	padding:0.8rem;
+	height: auto;
+	background: #fff;
+	font-size: 0.75rem;
+	left:50%;
+	z-index: 10001;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+
+}

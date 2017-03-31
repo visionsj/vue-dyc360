@@ -1,0 +1,71 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+	font-family: '微软雅黑';
+}
+
+.heard{
+	height: 2.2rem;
+	width: 100%;
+	background: #1C1B1F;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.backicon{
+      	width:1.5rem;
+      	height: 1.5rem;
+      	background: url(../images/back.png) no-repeat;
+      	position: absolute;
+      	background-size:cover;
+      	-webkit-background-size:cover;
+      	-moz-background-size:cover;
+      	-ms-background-size:cover;
+      	-o-background-size:cover;
+      	top:50%;
+      	margin-top: -0.75rem;
+      }
+.heard h2{
+		padding-left: 1.2rem;
+		font-size:0.775rem;
+		font-family: '微软雅黑';
+		line-height: 2.2rem;
+		font-weight: normal; 
+		}
+/*以上为返回代码*/
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	background: url(../images/friend/fixbottum.png) bottom center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}
+
+.banner_05{
+	width: 18.75rem;
+	height: 11.475rem;
+	background: url(../images/friend/banner_05.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	position: relative;}
+.banner_06{
+	width: 18.75rem;
+	height: 18.7rem;
+	background: url(../images/friend/banner_06.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	position: relative;}

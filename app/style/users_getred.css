@@ -1,0 +1,187 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+.heard{
+	height: 2.2rem;
+	width: 100%;
+	background: #1C1B1F;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.backicon{
+      	width:1.5rem;
+      	height: 1.5rem;
+      	background: url(../images/back.png) no-repeat;
+      	position: absolute;
+      	background-size:cover;
+      	-webkit-background-size:cover;
+      	-moz-background-size:cover;
+      	-ms-background-size:cover;
+      	-o-background-size:cover;
+      	top:50%;
+      	margin-top: -0.75rem;
+      }
+.heard h2{
+		padding-left: 1.2rem;
+		font-size:0.775rem;
+		font-family: '微软雅黑';
+		line-height: 2.2rem;
+		font-weight: normal; 
+		}
+
+
+/*以上为头部样式结束*/
+.get_1{
+	width: 18.75rem;
+	height: 22.55rem;
+	background: url(../images/friend/getred_1.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+}
+.topheard{
+	position: relative;
+	font-family: '微软雅黑';
+	overflow: hidden;
+
+}
+.topheard p{
+	text-align: center;
+	font-size: 0.65rem;
+	position: absolute;
+	top: 12.6rem;
+	display: block;
+	width: 100%;
+}
+.topheard input{
+	width: 13.3rem;
+	height: 2.25rem;
+	border: 2px solid #f45632;
+	border-radius: 5px;
+	color: #999;
+	position: absolute;
+	top: 16.2rem;
+	left:50%;
+	font-family: '微软雅黑';
+	font-size: 0.8rem;
+	margin-left: -7rem;
+	padding-left: 0.7rem;
+
+}
+.topheard button{
+	width: 14rem;
+	height:2.25rem;
+	font-size: 0.8rem; 
+	color: #fff;
+	background:#f45632;
+	border-bottom: 2px solid #D53812;
+	position: absolute;
+	border-radius: 5px;
+	top: 19.1rem;
+	left:50%;
+	font-family: '微软雅黑';
+	margin-left: -7rem;  
+
+}
+.topheard button:hover{
+	background: #90101F;
+}
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	/*background: url(../images/friend/fixbottum.png) bottom center no-repeat;*/
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}
+.foot img,.topheard img{
+	border: none;
+	padding:0;
+	margin: 0;
+}
+
+/*以下为弹窗*/
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	background: url(../images/friend/fixbottum.png) bottom center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}		
+
+.fixchuang{
+	position: fixed;
+	padding:1.8rem 3.57rem 1rem;
+	width: 9.6rem;
+	height: auto;
+		top:30%;
+		border-radius: 10px;
+		color: #666;
+		background: #fff;
+		left:50%;
+		margin-left: -8.37rem;
+		font-size: 0.78rem;
+		font-weight: normal;
+		text-align: center;
+		z-index: 10000;
+		font-family: '微软雅黑';
+		/*display: none;*/
+}
+.fixchuang button{
+	width: 10rem;
+	height: 1.575rem;
+	background: #F16739;
+	color: #fff;
+	border-radius: 10px;
+
+}
+
+.close{
+		width: 0.575rem;
+		height: 0.575rem;
+		background: url(../images/app-download-close.png) no-repeat;
+		right: 10px;
+		top:10px;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		position: absolute;
+	}
+.close:hover{
+		width: 0.575rem;
+		height: 0.575rem;
+		background: red url(../images/app-download-close.png) no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+	}
+.dark{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: #000;
+	opacity: .6;
+	filter: "alpha(opacity=40)";
+	z-index: 9999;
+	display: none;
+}

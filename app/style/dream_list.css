@@ -1,0 +1,93 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+.banner{
+
+	top:9.575rem; 
+}
+
+.friend .conten{	
+	top:12.78rem;		
+}
+.icon_wrap .mine{
+	width: 9.375rem;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding-top: 0.875rem;
+
+}
+.icon_wrap button{
+	width: 4.5rem;
+	height: 2.05rem;
+	line-height: 2.05rem;
+	font-size: 0.6rem;
+	color: #fff;
+	background: #F71D51;
+	border-bottom: 2px solid #B40E34;
+	border-radius: 5px;
+	/*margin-top: 1.5rem;*/
+	margin: 1.5rem auto 0;
+	position: absolute;
+	margin-left:2.9rem;
+	display: inline-block;
+
+}
+.icon_wrap .btn_jia{
+	width: 4.5rem;
+	height: 1.91rem;
+	line-height: 1.91rem;
+	font-size: 0.6rem;
+	color: #fff;
+	background: #F71D51;
+	border-bottom: 2px solid #B40E34;
+	border-radius: 5px;
+	/*margin-top: 1.5rem;*/
+	margin: 1.5rem auto 0;
+	position: absolute;
+	margin-left:10rem;
+	text-align: center;
+	display: inline-block;
+	/*border: none;*/
+
+}
+.icon_wrap button:hover{
+	background: #B40E34;
+
+}
+.msg{
+	position: absolute;
+	width: 13.375rem;
+	padding:0.95rem;
+	background: #FF8140;
+	color: #fff;
+	font-size: 0.45rem;
+	line-height: 0.825rem;
+	z-index: 9991;
+	left:50%;
+	top:14rem;
+	border-radius: 10px;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	text-align: left;
+
+}
+.conten .msg p{
+	text-align: left;
+}
+.msg h4{
+	text-align: center;
+	line-height: 1.5rem;
+	font-weight: normal;
+	font-size: 0.75rem;
+}
+.msg p:last-child{
+	line-height: 1.2rem;
+
+}
+	

@@ -2,6 +2,19 @@ import {
 	baseUrl
 } from './env'
 
+const filter = (str) => {
+  str += '' 
+  str = str.replace(/%/g, '%25')
+  str = str.replace(/\+/g, '%2B')
+  str = str.replace(/ /g, '%20')
+  str = str.replace(/\//g, '%2F')
+  str = str.replace(/\?/g, '%3F')
+  str = str.replace(/&/g, '%26')
+  str = str.replace(/=/g, '%3D')
+  str = str.replace(/#/g, '%23')
+  return str
+}
+
 export default async(type = 'GET', url = '', data = {}, method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
@@ -18,7 +31,7 @@ export default async(type = 'GET', url = '', data = {}, method = 'fetch') => {
 		}
 	}
 
-	if (window.fetch && method == 'fetch') {
+	if (window.fetch && method != 'fetch') {
 		let requestConfig = {
 			credentials: 'include',
 			method: type,
@@ -32,7 +45,7 @@ export default async(type = 'GET', url = '', data = {}, method = 'fetch') => {
 
 		if (type == 'POST') {
 			Object.defineProperty(requestConfig, 'body', {
-				value: JSON.stringify(data)
+				value: query
 			})
 		}
 
@@ -45,6 +58,8 @@ export default async(type = 'GET', url = '', data = {}, method = 'fetch') => {
 		return responseJson
 	} else {
 		let requestObj;
+	    let query = [];
+	
 		if (window.XMLHttpRequest) {
 			requestObj = new XMLHttpRequest();
 		} else {
@@ -52,14 +67,17 @@ export default async(type = 'GET', url = '', data = {}, method = 'fetch') => {
 		}
 
 		let sendData = '';
-		if (type == 'POST') {
-			sendData = JSON.stringify(data);
-		}
 
+        Object.keys(data).forEach((k) => query.push(`${k}=${filter(data[k])}`));
 		requestObj.open(type, url, true);
 		requestObj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		requestObj.send(sendData);
-
+	
+		if (type == 'POST') {
+			sendData = JSON.stringify(data);
+			requestObj.send(query.join('&'));
+		}else{
+			requestObj.send(sendData);
+		}
 
 		requestObj.onreadystatechange = () => {
 			if (requestObj.readyState == 4) {

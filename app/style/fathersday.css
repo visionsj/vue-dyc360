@@ -1,0 +1,35 @@
+.fathersday{background:url(../images/zt/fathersday/conbg2.jpg) repeat-y;background-size:contain;color:#666;padding-bottom:4rem;}
+.fathersday .tit{margin-left:18.6%;}
+.fathersday ul{margin-top:0.5rem;margin-left:19.3%;font-size:1.2rem;line-height:2.4rem;}
+.fathersday ul label{width:15.6%;display:inline-block;}
+.fathersday .btn_invest{position:relative;width:56.1%;height:5.4rem;line-height:5.4rem;margin:2.1rem 0rem 1.5rem 18.6%;display:block;text-align:center;font-size:2.1rem;color:#fff;background:#185486;border-radius:2.7rem;}
+.fathersday .btn_buy{width:56.1%;height:5.4rem;margin-left:18.6%;display:block;text-align:center;font-size:1.6rem;color:#fff;background:#ff5c5f;border-radius:2.7rem;}
+.fathersday .btn_buy span{float:left;}
+.fathersday .btn_buy .buy_l{min-width:3.4rem;max-width:3.6rem;height:3.4rem;margin:0.8rem 0px 0px 13.2%;padding:0.3rem 6.8% 0px 0px;line-height:1;border-right:1px solid #fff;font-size:1.6rem;letter-spacing:0.1rem;}
+.fathersday .btn_buy .buy_r{font-size:2rem;margin:0.7rem 0px 0px 3.5%;line-height:1;}
+.fathersday .btn_buy .buy_r i{font-size:1.6rem;font-style:normal;}
+.fathersday .btn_buy .buy_r em{font-size:4rem;}
+.fathersday .btn_invest .notice{position:absolute;top:-4.5rem;right:-1.7rem;height:3.5rem;line-height:3.9rem;padding:0rem 0.9rem;background:#ff91ba;border-radius:1rem;font-size:1.2rem;}
+.fathersday .btn_invest .notice em{font-size:2.4rem;display:inline-block;vertical-align:top;margin: -0.2rem 0px 0px 0.1rem;}
+.fathersday .btn_invest .notice i{position:absolute;top:3.5rem;left:1.2rem;width:1rem;height:0.5rem;background:url(../images/zt/fathersday/notice.png) no-repeat;background-size:1rem 0.5rem;}
+.fathersday .line_l{width:94.1%;margin-left:5.9%;height:2px;background:#b0e7ee;position:relative;margin-top:3rem;}
+.fathersday .line_l .dot{position:absolute;background:#b0e7ee;width:0.6rem;height:0.6rem;border-radius:0.3rem;left:-0.6rem;top:-0.2rem;}
+.floor3 .btn_buy .buy_r,.floor4 .btn_buy .buy_r,.floor5 .btn_buy .buy_r{margin-left:0px;}
+.floor3 .btn_buy .buy_r em,.floor4 .btn_buy .buy_r em,.floor5 .btn_buy .buy_r em{margin-left:-0.6rem;}
+.floor1 .conimg{margin-left:5.4%;float:left;margin-top:-32px;position:relative;z-index: 2;clear:right;}
+.floor2 .conimg{margin-left:6.2%;}
+.floor3 .conimg{margin-left:7.4%;}
+.floor4 .conimg{margin-left:10.4%;}
+.floor5 .conimg{margin-left:6.4%;}
+.floor1 .tit{margin-top:0.7rem;clear:left;}
+.floor2 .tit{margin-top:2.6rem;}
+.floor3 .tit{margin-top:2.1rem;}
+.floor4 .tit{margin-top:3.1rem;}
+.floor5 .tit{margin-top:3rem;}
+.floor2{margin-top:3.3rem}
+.floor3{margin-top:1.8rem;}
+.floor4{margin-top:3.2rem;}
+.floor5{margin-top:3rem;}
+.floor6{width:83.2%;margin:4.6rem 0px 0px 6.8%;}
+.floor6 .tit2{font-size:1.8rem;font-weight:normal;margin-bottom:2.2rem;}
+.floor6 p{font-size:1.2rem;line-height:2.7rem;}

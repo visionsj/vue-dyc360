@@ -1,0 +1,208 @@
+html{
+	font-size: 40px;
+	min-width: 320px;/* 最小宽度 */
+	max-width: 750px;/* 最大宽度 */
+	margin:0 auto;
+}
+body{background-color: #ebe0c4;}
+.heard{
+	height: 2.2rem;
+	width: 100%;
+	background: #1C1B1F;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.backicon{
+      	width:1.5rem;
+      	height: 1.5rem;
+      	background: url(../images/back.png) no-repeat;
+      	position: absolute;
+      	background-size:cover;
+      	-webkit-background-size:cover;
+      	-moz-background-size:cover;
+      	-ms-background-size:cover;
+      	-o-background-size:cover;
+      	top:50%;
+      	margin-top: -0.75rem;
+      }
+.heard h2{
+		padding-left: 1.2rem;
+		font-size:0.775rem;
+		font-family: '微软雅黑';
+		line-height: 2.2rem;
+		font-weight: normal; 
+		}
+
+.banner_3{
+	width: 18.75rem;
+	height: 26.25rem;
+	background: url(../images/friend/getred_3.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 0 auto;
+	position: relative;
+}
+.banner_3 h4{
+
+	padding-top:10.3rem;
+	font-size: 0.85rem;
+	font-family: '微软雅黑';
+	font-weight: normal;
+	text-align: center;
+}
+.conwrap{
+	width: 17.325rem;
+	height:14.5rem;
+	border-radius: 8px;
+	background: #DACCAF;
+	position: absolute;
+	left:50%;
+	margin-left:-8.6625rem;
+	top:12.5rem;
+	padding-top: 0.2rem;
+
+}
+.conwrap input,.conwrap button{
+	height: 2.0rem;
+	font-size: 0.7rem;
+	margin: 0.58rem auto 0;
+	border-radius: 5px;
+	font-family: '微软雅黑';
+	display: block;
+}
+.conwrap input{
+	width: 13.3rem;
+	color: #999;	
+	padding-left: 0.7rem;
+	line-height: 1.7rem;
+	border-top: 2px solid #C0BABA;
+}
+.conwrap button{
+	width: 14rem;
+	color: #fff;
+	background:#f45632;
+	border-bottom: 3px solid #D53812;	
+}
+#code{
+	width: 6.775rem;
+	display: inline-block;
+	margin-left: 1.7rem;
+
+}
+.conwrap span{
+	width: 5.875rem;
+	height: 2.2rem;
+	font-size: 0.7rem;
+	display: inline-block;
+	border-radius: 5px;
+	line-height: 2.2rem;
+	text-align: center;
+	margin-left: 0.7rem;
+	background: #BE9B7B;
+}
+.conwrap span.disable_btn,.conwrap span.disable_btn:hover{background:#8a8a8a;}
+.conwrap span:hover{
+	background: #f40;
+}
+button:hover{
+	background: #90101F;
+}
+.foot_2{
+	width: 18.75rem;
+	height: 6.9rem;
+	background: url(../images/friend/getred_4.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	margin: 2.7rem auto 0;
+}
+/*.msglist{
+	position: absolute;
+	font-size: 0.55rem;
+	color: #fff;
+	line-height: 0.85rem;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	max-height:3.75rem; 
+}
+*/
+/*以下为弹窗*/
+.fixdown{
+	position: fixed;
+	width: 18.75rem;
+	height: 2.2rem;
+	background: url(../images/friend/fixbottum.png) bottom center no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	z-index: 999;
+	bottom: 0;
+}		
+
+.fixchuang{
+	position: fixed;
+	padding:1.8rem 3.57rem 1rem;
+	width: 9.6rem;
+	height: auto;
+		top:30%;
+		border-radius: 10px;
+		color: #666;
+		background: #fff;
+		left:50%;
+		margin-left: -8.37rem;
+		font-size: 0.78rem;
+		font-weight: normal;
+		text-align: center;
+		z-index: 10000;
+		font-family: '微软雅黑';
+		/*display: none;*/
+}
+.fixchuang button{
+	width: 10rem;
+	height: 1.575rem;
+	background: #F16739;
+	color: #fff;
+	border-radius: 10px;
+
+}
+
+.close{
+		width: 0.575rem;
+		height: 0.575rem;
+		background: url(../images/app-download-close.png) no-repeat;
+		right: 10px;
+		top:10px;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		position: absolute;
+	}
+.close:hover{
+		width: 0.575rem;
+		height: 0.575rem;
+		background: red url(../images/app-download-close.png) no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+	}
+.dark{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: #000;
+	opacity: .6;
+	filter: "alpha(opacity=40)";
+	z-index: 9999;
+	display: none;
+}

@@ -1,0 +1,4 @@
+body img{display:block;}
+.con{position:relative;text-align:center;}
+.con img{position:absolute;z-index:0;}
+.con video{position:relative;z-index:2;width:91.5%;height:auto;background:url(../images/spokesman/video.jpg) no-repeat;background-size:cover;}
