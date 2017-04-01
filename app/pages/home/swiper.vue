@@ -1,5 +1,5 @@
 <template>
-<div id="pageone">
+<div class="loginContainer">
 <app-down></app-down>
  <li v-for="todo in todos">
   {{ todo.text }}
@@ -47,9 +47,9 @@ export default {
 }
 
 </script>
-<style lang="scss" scoped>
-   @import '../../style/index';
-   @import '../../style/custom';
+<style  scoped>
+/*    @import '../../style/index';
+    @import '../../style/custom';*/
 
 
 </style>

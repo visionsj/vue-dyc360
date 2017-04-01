@@ -1,6 +1,36 @@
-<template>
-	<div>
+<template>	
+<div>
+
+<footer-common></footer-common>
 		
-代志锐
-	</div>
+
+</div>
 </template>
+<script>
+	import footerCommon from '../../components/footer/footerCommon'
+	export default {
+		data() {
+			return {
+
+			}
+		},
+		created() {
+
+		},
+		mounted() {
+
+		},
+		components: {
+			footerCommon
+		},
+		methods: {
+
+		},
+		
+		props: [
+		],
+
+		mixins: [
+		]
+	}
+</script>

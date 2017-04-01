@@ -1,15 +1,10 @@
 <template>
-	<div>
-	     <router-link :to="'/invest'" >1</router-link>
-    <router-link :to="'/home'" >2</router-link>
-		<transition name="router-fade" mode="out-in">
-    		<router-view></router-view>
-    	</transition>
-    </div>
+	<transition name="router-fade" mode="out-in">
+    	<router-view></router-view>
+    </transition>
 </template>
 
 <script>
-
   	export default {
 
   	}

@@ -1,25 +1,35 @@
 <template>
 <footer>
 	<div class="nav-bar">
-		<div class="nav-bar-wrap" data-href="index.html">
+		<router-link 
+		:class="$route.path.indexOf('home') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'" 
+		:to="'/home'">
 			<p class="nav-bar-content nb0">精品</p>
-		</div>
-		<div class="nav-bar-wrap" data-href="invest.html">
+		</router-link>
+
+		<router-link 
+		:class="$route.path.indexOf('invest') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
+		:to="'/invest'">
 			<p class="nav-bar-content nb1">产品</p>
-		</div>
-		<div class="nav-bar-wrap" data-href="users_main.html">
+		</router-link>
+		<router-link 
+		:class="$route.path.indexOf('usersMain') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
+		:to="'/usersMain'">
 			<p class="nav-bar-content nb2">我的</p>
-		</div>
-		<div class="nav-bar-wrap" data-href="more.html">
+		</router-link>
+		<router-link 
+		:class="$route.path.indexOf('more') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
+		:to="'/more'">
 			<p class="nav-bar-content nb3">更多</p>
-		</div>
+		</router-link>
 	</div>
 </footer>
 </template>
 <script>
     export default {
     	data(){
-            return{
+
+            return {
                 
             }
         },
@@ -27,10 +37,10 @@
            
         },
         mounted(){
-            
+    
         },
         computed: {
-           
+         
         },
         methods: {
         

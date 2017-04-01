@@ -1,12 +1,12 @@
 /*首页样式*/
-#index .list_title{    position: absolute;  top: 0;  left: 0;  width: 100%; height: 40px; background: url("../images/index/rem_icon.png") no-repeat 20px top;  background-size: 82px 34px;display: inline-block}
-#index .list_title_new{    position: absolute;  top: 0;  left: 0;  width: 100%; height: 40px; background: url("../images/index/new_icon.png") no-repeat 20px top;  background-size: 82px 34px;display: inline-block}
+#index .list_title{    position: absolute;  top: 0;  left: 0;  width: 100%; height: 40px; background: url("../../images/index/rem_icon.png") no-repeat 20px top;  background-size: 82px 34px;display: inline-block}
+#index .list_title_new{    position: absolute;  top: 0;  left: 0;  width: 100%; height: 40px; background: url("../../images/index/new_icon.png") no-repeat 20px top;  background-size: 82px 34px;display: inline-block}
 #index .list_title a{width:100%;min-height:20px; display: inline-block; color:#999; font-weight: normal; text-decoration: none;}
 #index .list_title a:hover{color:#db5423}
 #index .list_title a:active{color:#ff5c5f;}
-#index .list_title i{width:14px;height:14px;margin-top:4px;float:right;background:url("../images/icons-png/carat-r-grey.png")}
+#index .list_title i{width:14px;height:14px;margin-top:4px;float:right;background:url("../../images/icons-png/carat-r-grey.png")}
 
-#index .dhb_title{ position:absolute; top: 0;left: 0; width: 100%; height: 34px; background:url("../images/dhb/dhb_icon.png") no-repeat  20px  top; background-size:82px 34px;}
+#index .dhb_title{ position:absolute; top: 0;left: 0; width: 100%; height: 34px; background:url("../../images/dhb/dhb_icon.png") no-repeat  20px  top; background-size:82px 34px;}
 #index .dhb_title a{position: absolute; top: 23px; right: 25px;  display: inline-block; font-weight: normal; text-decoration: none;float:right;color: #7c91c7 !important;width: 90px; font-size: 18px}
 #index .rate{padding-top: 40px;}
 #index .jqm-round-wrap{display:block;position:relative;width:200px;height:200px;margin:0 auto 20px; overflow:hidden;  border-radius:240px;-webkit-border-radius:240px;}
@@ -137,21 +137,21 @@ footer{width: 100%; height: 50px;}
 footer .nav-bar{position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; background: #22354b; z-index: 99}
 footer .nav-bar .nav-bar-wrap{float:left; width: 25%; height: 47px; padding-top: 4px; }
 footer .nav-bar .nav-bar-wrap.active{background: #263c54;}
-footer .nav-bar .nav-bar-wrap .nb0{background: url('/images/index/rem_ico.png') 9px 0 no-repeat;}
-footer .nav-bar .nav-bar-wrap.active .nb0{background: url('/images/index/rem_ico_active.png') 9px 0 no-repeat;}
-footer .nav-bar .nav-bar-wrap .nb1{background: url('/images/index/pro_ico.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap .nb0{background: url('../../images/index/rem_ico.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap.active .nb0{background: url('../../images/index/rem_ico_active.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap .nb1{background: url('../../images/index/pro_ico.png') 9px 0 no-repeat;}
 footer .nav-bar .nav-bar-wrap.active .nb1{background: url('/images/index/pro_ico_active.png') 9px 0 no-repeat;}
-footer .nav-bar .nav-bar-wrap .nb2{background: url('/images/index/peo_ico.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap .nb2{background: url('../../images/index/peo_ico.png') 9px 0 no-repeat;}
 footer .nav-bar .nav-bar-wrap.active .nb2{background: url('/images/index/peo_ico_active.png') 9px 0 no-repeat;}
-footer .nav-bar .nav-bar-wrap .nb3{background: url('/images/index/more_ico.png') 9px 0 no-repeat;}
-footer .nav-bar .nav-bar-wrap.active .nb3{background: url('/images/index/more_ico_active.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap .nb3{background: url('../../images/index/more_ico.png') 9px 0 no-repeat;}
+footer .nav-bar .nav-bar-wrap.active .nb3{background: url('../../images/index/more_ico_active.png') 9px 0 no-repeat;}
 footer .nav-bar .nav-bar-wrap .nav-bar-content{width: 40px; height: 15px; padding-top: 27px; margin: 0 auto; color: #6e90aa; font-size: 12px; text-align: center; background-size: 22px auto;}
 footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; background-size: 22px auto !important;}
 
 #globalTip{z-index:99999;display:none;box-sizing:border-box;position:fixed;left:7%;top:20%;width:86%;padding: 5px 0;background-color:rgba(0,0,0,.7);text-align:center;color:#fff;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;line-height:30px;}
 #globalTip p{margin:0; padding: 0 10px; font-size:14px; word-wrap: break-word;}
 #codeTip{display:none;height:40px}
-#globalTip .waitIcon{display:block;width:2.95rem;height:2.95rem;margin:5px auto;background:url(/images/loading.gif);background-size:contain;vertical-align:middle}
+#globalTip .waitIcon{display:block;width:2.95rem;height:2.95rem;margin:5px auto;background:url(../../images/loading.gif);background-size:contain;vertical-align:middle}
 
 
 /*会员登陆页面*/
@@ -193,7 +193,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .redbox{
 	padding-top: 28%;
 	width: 70%;
-	background: url(../images/zhuce.png)  center center no-repeat;
+	background: url(../../images/zhuce.png)  center center no-repeat;
 	background-size:100% 100%;
 	margin: 25px auto;
 }
@@ -223,7 +223,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #regBtn .reg_btn { }
 #regBtn .reg_btn:hover, .login_btn:focus {background: #ff5400;}
 #regBtn .reg_btn:active {}
-.logo{background:#c1000d url(/images/hb.jpg) no-repeat top center;background-size:100% 100%;}
+.logo{background-size:100% 100%;}
 .realname_form{margin:0; padding:3% 0;}
 .realname_form li{text-align: right; padding-right: 3%; list-style:none;}
 .realNameEorror{box-shadow: none;height:30px; padding-left:2%; line-height: 30px; border:1px dashed #ffa71c; background: #fffbf4;font-size:15px;text-align: left;color:#f1a300; text-shadow:none; display:none;}
@@ -243,7 +243,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #invest .list_title:active,#invest_con .list_title a:active{color:#ff5c5f;}
 #invest .list_title div.invest_title_name{border-bottom: 1px solid #c8c8ca}
 #users_main .list_title label{display: inline; float: right;}
-#invest .list_title i,#invest_con .list_title i,#users_main .list_title i,.user_info i{width:14px;height:14px;margin-top:8px;float:right;background:url("../images/icons-png/carat-r-grey.png")}
+#invest .list_title i,#invest_con .list_title i,#users_main .list_title i,.user_info i{width:14px;height:14px;margin-top:8px;float:right;background:url("../../images/icons-png/carat-r-grey.png")}
 #invest .invest_list li{width:31%;list-style: none; display: inline-block; }
 #invest .invest_list_title{padding-bottom:10px;border-bottom: 1px solid #e4e8e9;}
 #invest .invest_list_detail_title{color:#8a8a8a; font-size: 13px;margin:0;}
@@ -292,7 +292,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #invest_con .invest_process .active p.processText{background: #ff5c5f}
 #invest_con .invest_process li.active:after{color: #ff5c5f}
 
-.red_ico{width: 63px; height:33px; margin:3.5px auto !important; line-height: 30px;padding: 5px 0 0 0; text-align: center; color:#ffc400; background: url(../images/hb.png) no-repeat; background-size: 100% auto;}
+.red_ico{width: 63px; height:33px; margin:3.5px auto !important; line-height: 30px;padding: 5px 0 0 0; text-align: center; color:#ffc400; background: url(../../images/hb.png) no-repeat; background-size: 100% auto;}
 .invest_tender{position:fixed; bottom:0; left:0; width:94%; padding: 8px 3%; height:36px; line-height: 36px; background: #ff5c5f; color:#fff !important; text-shadow:none; text-align: center; z-index: 99999; text-decoration: none}
 .invest_tender:hover{background: #e92c2f}
 .borrow_invest_detail li p{line-height: 24px;}
@@ -315,8 +315,8 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #borrowNavBar li a{font-size: 1em; line-height: 1.2em; font-weight: normal;}
 #investNavBar li a{font-size: 1em; line-height: 1em; font-weight: normal; padding: .7em 0;}
 #investNavBar li a:active, #investNavBar li a:visited,#investNavBar li a:hover{background-color:#ededed; text-shadow: 0 1px 0 #ededed; border-color:#ededed; color: #1694cf;}
-.pro_z{position:absolute; top:0; left:0; width:100%; height:100%; background:#000;filter:alpha(opacity:40);opacity:0.4; }
-.protocol{position:fixed; bottom:0; width:90%;  padding:0 5%; height:120px; filter:alpha(opacity:90);opacity:0.90; background:#000; z-index:999;}
+.pro_z{position:absolute; top:0; left:0; width:100%; height:100%; background:#000; pacity:0.4; }
+.protocol{position:fixed; bottom:0; width:90%;  padding:0 5%; height:120px; opacity:0.90; background:#000; z-index:999;}
 .protocol a{display:block; width:100%; text-align:center;  height:36px; line-height:36px; border-radius:1em; border:1px solid #333; margin:12px 0;background-color: #cecece;text-shadow: 0 1px 0 #fff;color: #0d0d0d; cursor:pointer}
 .login_state{color: #fff;text-shadow:0 1px 0 #005b83;font-size:0.9em;text-align:center;  padding:0.4em 0}
 .check_name{display: inline-block;vertical-align:middle;line-height:16px;}
@@ -325,12 +325,12 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .check_wrap,.check_radio{height:16px;width:16px;display:inline-block;position:relative;vertical-align:middle;}
 .check_radio{width:18px;height:18px;margin-top:-2px;}
 .check_wrap input + label.checkbox{display:block;width:16px;height:16px;border-radius:3px;box-shadow:0 1px 0 white,0 1px 1px #ccc inset;background:#e5e2df}
-.check_wrap input:checked + label.checkbox:before{content:'';position:absolute;width:14px;height:14px;color:#2579a0;background:url(../images/icon.png) no-repeat;background-size:15px 15px;}
-.check_radio input + label.radios{display:block;width:16px;height:16px;margin-top: 9px;background:url(../images/radio.png) no-repeat 0 bottom;text-shadow: none;}
+.check_wrap input:checked + label.checkbox:before{content:'';position:absolute;width:14px;height:14px;color:#2579a0;background-size:15px 15px;}
+.check_radio input + label.radios{display:block;width:16px;height:16px;margin-top: 9px;background:url(../../images/radio.png) no-repeat 0 bottom;text-shadow: none;}
 .radios{text-shadow: none;font-size: 13px !important;}
 .radios a{text-shadow: none;}
 .check_radio label:hover,.check_radio label:focus{background-position:0 -18px}
-.check_radio input:checked + label.radios:before{content:'';position:absolute;width:16px;height:16px;background:url(../images/radio.png) no-repeat; background-size: 100% auto;}
+.check_radio input:checked + label.radios:before{content:'';position:absolute;width:16px;height:16px;background:url(../../images/radio.png) no-repeat; background-size: 100% auto;}
 .register_head{position:relative}
 .mr_dr{width:143px;height:166px;position:absolute;right:0;bottom:-25px;}
 .back_login{text-align:right;font-weight:bold;color:#7a7f79;padding-right:8px;border-radius:5px 5px 0 0;line-height:55px;}
@@ -362,7 +362,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #users_main .recoverCount{position: relative; width:94%;height: 140px;padding: 0 3% 0 3%;margin:0;color: #fff; text-align: center; text-shadow: none;}
 #users_main .recoverCount .recoverCountNum{float:left; font-family:arial, helvetica, sans-serif;width:100%;font-weight:normal !important;font-size: 1.1em; line-height: 2.4em; padding: 8px 0 0 0;}
 #users_main .recoverCount span{float:left;width:100%;font-size: .9em;}
-#users_main .userdata{width:100%; margin-bottom:20px;display:inline-block;background: url('/images/account/top-bg.jpg')}
+#users_main .userdata{width:100%; margin-bottom:20px;display:inline-block;background: url('../../images/account/top-bg.jpg')}
 #users_main .totalCount{width:100%;height: 100px;margin:0; padding: 10px 0; text-align: center;color:#fff; line-height: 40px; text-shadow: none;}
 #users_main .acountnNum{font-size: 1.2em; line-height: 40px; color: #2ba6e1;}
 .users_main_list{height:30px; overflow: hidden; margin-right: 10px;}
@@ -424,8 +424,8 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .content{padding-right:10px;}
 .nav li{padding:10px 10px 10px 22px;border-bottom:#c3c3c4 1px solid;font-size:1.5em;font-weight:bold;letter-spacing:5px;}
 .nav span{font-size:0.5em;display:block;padding-top:5px;color:#9ea0a5;letter-spacing:1px;}
-.nav li i{display:block;width:45px;float:left;margin-right:15px;border:#fff 3px solid;box-shadow:2px 3px 2px rgba(0,0,0,.2);height:45px;background:#fff url(../images/heart.png) no-repeat;background-size:contain}
-.directing{display:block;width:25px;height:25px;margin-top:13px; no-repeat;background-size:contain;float:right;}
+.nav li i{display:block;width:45px;float:left;margin-right:15px;border:#fff 3px solid;box-shadow:2px 3px 2px rgba(0,0,0,.2);height:45px;background-size:contain}
+.directing{display:block;width:25px;height:25px;margin-top:13px; background-size:contain;float:right;}
 .nav .blue{color:#2771cc}
 .nav .sky_blue{color:#64a9de}
 .nav .indigo{color:#7a6ddf}
@@ -449,11 +449,11 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .icon_transferred.white{background-position:-176px 0}
 .icon_xin.white{background-position:-206px 0}
 .icon_xian.white{background-position:-244px 0}
-#type_0 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
-#type_1 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
-#type_2 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
-#type_3 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
-#type_4 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
+#type_0 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
+#type_1 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
+#type_2 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
+#type_3 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
+#type_4 a:after{position:absolute;right:12px;top:17px;height:11px;width:17px;line-height:1;color:transparent;content:"";background:url(../../images/checkmark.png) no-repeat;background-size:auto 11px;margin-right:12px}
 .borrow_j{background:#f9fafa}
 .borrow_j li{border-bottom:1px solid #f5f5f5;background:#fff;list-style:none;color:#8e8e8e;display:block;line-height:1.8em;padding:10px}
 #rate_endtime{background:#fff;color:#b5b5b5;height:30px;line-height:25px;background:#fff;font-size:16px}
@@ -464,20 +464,20 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .project_navbar .pro{ width: 150px; margin: 0 auto; padding-top: 8px;}
 .project_navbar .pro a{width: 75px; height: 28px; display: table-cell; border: 1px solid #7c91c8; line-height: 28px; border-radius: 6px;text-decoration:none; color: #7c91c8;}
 .project_navbar .pro a.active{background: #7c91c8 !important; color: #fff !important;}
-.project_navbar .project_filter_icon{ position: absolute; top: 0px; right: 0px; width: 50px; height: 45px; background: #fff url(../images/dhb/project_filter.png) no-repeat center center; background-size: 16px 16px; z-index: 999;}
+.project_navbar .project_filter_icon{ position: absolute; top: 0px; right: 0px; width: 50px; height: 45px; background: #fff url(../../images/dhb/project_filter.png) no-repeat center center; background-size: 16px 16px; z-index: 999;}
 
 .mask{ display: none; width: 100%; height: 100%;background: #333;opacity: 0.6;filter: alpha(opacity=60);z-index: 99; position: fixed;top: 0;left: 0;}
 .project_filter{ display: none; position: absolute; width: 100%; top: 92px; left: 0px; background: #fff; z-index: 100;}
 .project_filter .title{ height: 43px; line-height: 43px; padding-left: 15px; color: #333 !important;}
 .project_filter ul{ background: #efeff4; overflow:hidden; padding: 13px 16px; min-height: 42px;}
 .project_filter ul li{float: left; width: 31%; height: 32px; text-align: center; background: #fff; border: 1px solid #dddddd; line-height: 32px; margin-right: 4px; margin-bottom: 8px;}
-.project_filter ul li.active{background:url(../images/dhb/project_filter_sel.png) no-repeat; background-size: 100% 100%;}
+.project_filter ul li.active{background:url(../../images/dhb/project_filter_sel.png) no-repeat; background-size: 100% 100%;}
 
 .project_filter ul li .pro_input{ width: 97px; height: 40px; display: none; z-index: 9999;-webkit-appearance:checkbox}
 .project_filter_button{height: 45px; width: 50%; text-align: center; margin: 18px auto 40px;}
 
 .dhb_invest{position: relative;width: 100%;font-weight: normal !important;}
-.dhb_invest .dhb_ad{ display: none; position: relative; height: 44px; width: 100%; background: #4e5e88 url(/images/dhb/goto.png) no-repeat 350px 16px; background-size: 10px 14px;}
+.dhb_invest .dhb_ad{ display: none; position: relative; height: 44px; width: 100%; background: #4e5e88 url(../../images/dhb/goto.png) no-repeat 350px 16px; background-size: 10px 14px;}
 .dhb_invest .dhb_ad a{height: 44px; width: 100%; text-align: center;display: inline-block;line-height: 44px;color: #fff !important;}
 .dhb_invest .dhb_info{ position: relative;  width: 100%; background: #6b80b6; padding: 14px 0 20px 0; color: #fff; text-align: center; }
 .dhb_invest .dhb_info h1{font-size: 40px; margin:  0 !important;font-weight: normal !important;}
@@ -499,7 +499,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .dhb_invest .list_title a{width:100%;min-height:30px;  display: inline-block; color:#8a8a8a !important; line-height: 30px;}
 .dhb_invest .list_title a:hover{color:#db5423}
 .dhb_invest .list_title a:active{color:#ff5c5f;}
-.dhb_invest .list_title i{width:14px;height:14px;margin-top:8px;float:right;background:url("../images/icons-png/carat-r-grey.png")}
+.dhb_invest .list_title i{width:14px;height:14px;margin-top:8px;float:right;background:url("../../images/icons-png/carat-r-grey.png")}
 
 .rollout_navbar{ position: relative; background: #efeff4; height: 74px; width: 100%; text-align: center;}
 .rollout_navbar .pro{ width: 240px; margin: 0 auto; padding-top: 20px;}
@@ -515,7 +515,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #btn .tips.tips_time{margin-top: 10px;}
 
 #dhb_content img{width: 100%;height: auto;}
-.list_title .red_notice{float:right;display:inline-block;height:19px;margin:6px 10px 0px 0px;background:#f2683a url('../images/account/menu_note.jpg') no-repeat center right;background-size:contain;padding:0px 11px 0px 6px;color:#fff;font-size:12px;line-height:19px;}
+.list_title .red_notice{float:right;display:inline-block;height:19px;margin:6px 10px 0px 0px;background:#f2683a url('../../images/account/menu_note.jpg') no-repeat center right;background-size:contain;padding:0px 11px 0px 6px;color:#fff;font-size:12px;line-height:19px;}
 
 
 
