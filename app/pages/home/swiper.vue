@@ -1,56 +1,75 @@
 <template>
-<div class="loginContainer">
-<app-down></app-down>
- <li v-for="todo in todos">
-  {{ todo.text }}
-</li>
-      <button name="button" @click.prevent="targe('')"> sdafasf
-      </button>
-<footer-common></footer-common>
-</div>
+    <div class="main_nav">
+      <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide food_types_container" v-for="(item,index) in bannerList" :key="index">
+                  <a :href=item.webUrl  class="link_to_food">
+                      <img :src=item.imageUrl>
+                  </a>  
+                </div>
+             </div>
+       </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
 </template>
 
 
 <script>
-import {getBannerList} from '../../service/getData'
-import footerCommon from '../../components/footer/footerCommon'
-import appDown from '../../components/common/appDown'
 
+import {getBannerList} from '../../service/getData'
+import '../../plugins/swiper.min.js'
+import '../../style/swiper.min.css'
+import $ from '../../plugins/zepto.min.js'
 export default {
     data(){
         return {
-            todos: [
-              { text: '1ssssss' },
-              { text: '2test' },
-              { text: '3' }
-            ]
+          bannerList: []
         }
     },
     created(){
-        this.id = this.$route.query.id;
-        this.sig = this.$route.query.sig;
+         
+      
+
     },
     mounted(){
-        this.initData();
+      getBannerList(2).then(res => {
+        this.bannerList = res.data.data;
+      }).then(res => {
+        $('.swiper-container, .swiper-container img')
+            .css('height', $(document).width()/720*276);
+
+        new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            loop: true
+        });
+      })
+
     },
     components: {
-        appDown,
-        footerCommon,
     },
     methods: {
-         async initData(){
-            await getBannerList(2);
-         }
+
     },
     props:[],
     mixins: [],
 }
 
 </script>
-<style  scoped>
-/*    @import '../../style/index';
-    @import '../../style/custom';*/
+<style lang="scss" scoped>
 
+.main_nav {
+  position: relative
+}
+
+.swiper-pagination{
+  position:absolute;
+  left:0;
+  text-align:center;
+  bottom:5px;
+  width:100%;
+  z-index:99
+}
 
 </style>
 
