@@ -20,7 +20,7 @@
     <div style="position: relative; margin-bottom: 30px;">
 
         <div :class="productDetail.borrowType==1 ? 'list_title_new' : 'list_title'" id="list_title" >
-            <span class="activity"></span>
+            <span class="activity" @click="showActiveImg=true"></span>
         </div>
 
         <div class="rate">
@@ -88,6 +88,19 @@
                 <li><img src="../../images/index/info4_ico.png"> 优质资产，稳健收益</li>
             </ul>
     </div>
+
+    <div class="active-list" id="active_list" v-show="showActiveImg">
+        <div class="swiper-container-active">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide" v-for="value in activeActivity" :href=value.url :data-code=value.code>
+                    <p><img :src=value.imageUrl /></p>
+                </a> 
+            </div>
+        </div>
+        <div class="page" style="display:none"></div>
+        <div id="active_close" @click="showActiveImg=false"></div>
+    </div>
+
 </div>
 
 <footer-common></footer-common>
@@ -98,7 +111,7 @@
 <script>
 import $ from '../../plugins/zepto.min.js'
 import Vue from 'vue'
-import {getRecommendedBorrowList, getSimpleArticleList} from '../../service/getData'
+import {getRecommendedBorrowList, getSimpleArticleList,getActiveActivity} from '../../service/getData'
 import footerCommon from '../../components/footer/footerCommon'
 import appDown from '../../components/common/appDown'
 import swiperBanner from './swiper'
@@ -114,6 +127,7 @@ export default {
     data(){
         return {
             showActicle: true,
+            showActiveImg: false,
             productDetail: {}
         }
     },
@@ -134,6 +148,17 @@ export default {
             },500)
         })
         
+        getActiveActivity().then(res => {
+            this.activeActivity = res.data.data
+        }).then(res => {
+            setTimeout(() =>{
+                new Swiper('.swiper-container-active',{
+                    pagination: '.page',
+                    loop: false
+                })
+            }, 1000)
+        })
+
         $('#platformInfoText').textSlider({
             scrollHeight: 24
         });
@@ -159,10 +184,8 @@ export default {
                 percent++;
             },15);
         },
-        push: function(){
-            this.$nextTick(function(){
-                alert('v-for渲染已经完成')
-            })
+        showActiveImg: function(){
+
         }
          
     },

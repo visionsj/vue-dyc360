@@ -13,3 +13,6 @@ export const getRecommendedBorrowList =  () => Vue.http.post('/web/noauth/post?m
 
 export const getSimpleArticleList =  () => Vue.http.post('/web/noauth/post?method=/article/getSimpleArticleList', {
 })
+
+export const getActiveActivity =  () => Vue.http.post('/web/noauth/post?method=/common/getActiveActivity', {
+})
