@@ -10,3 +10,6 @@ export const getBannerList =  (bannerType) => Vue.http.post('/web/noauth/post?me
 
 export const getRecommendedBorrowList =  () => Vue.http.post('/web/noauth/post?method=/product/getRecommendedBorrowList', {
 })
+
+export const getSimpleArticleList =  () => Vue.http.post('/web/noauth/post?method=/article/getSimpleArticleList', {
+})

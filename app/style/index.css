@@ -1,7 +1,7 @@
-#index .article{width: 100%; padding: 10px 0; text-align: center; font-size: 12px; height: 20px; line-height: 20px; color: #999; background: #efeff4}
+#index .article{width: 100%; padding: 10px 0; text-align: center; font-size: 12px;  line-height: 20px; color: #999; background: #efeff4}
 .app-download{width: 100%; height: 60px; background: #fff;z-index: 999999;}
 .app-download-detail {float: left; width: 140px; padding:10px 0 0 10px;color: #555;line-height: 20px; text-align: left;  font-size: 14px; overflow:hidden; word-break:break-all; white-space:nowrap;text-overflow:ellipsis;}
-.app-download-close {display: inline-block; padding:0 10px 10px; width: 12px; height: 12px; position: absolute; top: 23px; left: 0; cursor: pointer;background:url(/images/app-download-close.png) no-repeat; background-size:12px 12px; background-position: 10px 0;}
+.app-download-close {display: inline-block; padding:0 10px 10px; width: 12px; height: 12px; position: absolute; top: 23px; left: 0; cursor: pointer;background:url(../images/app-download-close.png) no-repeat; background-size:12px 12px; background-position: 10px 0;}
 .app-download-content{display:block; height: 60px; cursor: pointer;}
 .app-download-content a{font-weight: normal;}
 .app-download-btn{float: right;margin:10px 10px 0 0; padding:8px;display:inline-block;background: #fb793a; font-weight: normal; border:none; color:#fff; text-align: center; border-radius: 4px; font-size: 15px;}
@@ -10,9 +10,9 @@
 
 #dhb_circle{position: relative}
 .article{position: relative}
-.activity{position: absolute; right: 15px; top: 15px; width: 36px; height: 30px; background: url("/images/index/gift.png") no-repeat; background-size:  auto 100%}
-#articleSlider{position: absolute; top: 10px; left: 0; width: 100%; height: 20px; text-align: left; line-height: 20px; overflow: hidden;background: #efeff4 url('/images/index/news.png') 10px 0 no-repeat; background-size: 20px auto}
-.article .close{position: absolute; top: 13px; right: 12px; width: 10px; height: 12px; background: url("/images/app-download-close.png"); background-size: 100% 100%; z-index: 999}
+.activity{position: absolute; right: 15px; top: 15px; width: 36px; height: 30px; background: url("../images/index/gift.png") no-repeat; background-size:  auto 100%}
+#articleSlider{position: absolute; top: 10px; left: 0; width: 100%; height: 20px; text-align: left; line-height: 20px; overflow: hidden;background: #efeff4 url('../images/index/news.png') 10px 0 no-repeat; background-size: 20px auto}
+.article .close{position: absolute; top: 13px; right: 12px; width: 10px; height: 12px; background: url("../images/app-download-close.png"); background-size: 100% 100%; z-index: 999}
 #articleSlider ul, #articleSlider ul li{margin: 0;}
 #articleSlider ul li{padding:0 0 0 40px; width: 80%; display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 #articleSlider ul li a{color: #666}
@@ -37,7 +37,7 @@
 .active-list .swiper-slide-active p{ opacity: 1  !important;}
 .active-list .swiper-slide p{display: inline-block;  width: 270px;  height: 350px;  border-radius: 20px;  overflow: hidden; background: #fff; opacity: .5;}
 .active-list .pagination{display: none !important;}
-#active_close{position: absolute; width: 30px; height: 30px; top: 430px; left: 50%; margin-left: -15px; background: url('/images/index/close.png'); background-size: 100% 100%;z-index: 991}
+#active_close{position: absolute; width: 30px; height: 30px; top: 430px; left: 50%; margin-left: -15px; background: url('../images/index/close.png'); background-size: 100% 100%;z-index: 991}
 
 .circle,.percent,.wrap_circle{position:absolute;width:200px;height:200px;border-radius:50%;z-index:999999}
 .wrap_circle{top:0;left:0;background-color:#f1f1f1;z-index:9}
