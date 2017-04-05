@@ -20,7 +20,7 @@
     <div style="position: relative; margin-bottom: 30px;">
 
         <div :class="productDetail.borrowType==1 ? 'list_title_new' : 'list_title'" id="list_title" >
-            <span class="activity" @click="showActiveImg=true"></span>
+            <span class="activity" @click.prevent="showActive()"></span>
         </div>
 
         <div class="rate">
@@ -68,7 +68,7 @@
 
         <div id="recommend_btn" class="in_invest">
             <router-link 
-            :to="{path: 'borrow_content.html', query: { borrowNo: productDetail.borrowNo}}"
+            :to="{path: 'borrow_content', query: { borrowNo: productDetail.borrowNo}}"
             :class="productDetail.borrowStatus != 3 ? 'common_btn_og disable_btn' : 'common_btn_og'" >
                 <span v-if="productDetail.borrowStatus == '2'">预告标</span>
                 <span v-if="productDetail.borrowStatus == '3'">立即投资</span>
@@ -100,10 +100,13 @@
         <div class="page" style="display:none"></div>
         <div id="active_close" @click="showActiveImg=false"></div>
     </div>
-
 </div>
-
 <footer-common></footer-common>
+
+<transition name="loading">
+    <loading v-if="showLoading"></loading>
+</transition>
+
 </div>
 </template>
 
@@ -114,6 +117,7 @@ import Vue from 'vue'
 import {getRecommendedBorrowList, getSimpleArticleList,getActiveActivity} from '../../service/getData'
 import footerCommon from '../../components/footer/footerCommon'
 import appDown from '../../components/common/appDown'
+import loading from '../../components/common/loading'
 import swiperBanner from './swiper'
 import {textSlider} from '../../plugins/textSlider'
 import '../../style/index.css'
@@ -128,6 +132,7 @@ export default {
         return {
             showActicle: true,
             showActiveImg: false,
+            showLoading: false, //显示加载动画
             productDetail: {}
         }
     },
@@ -138,6 +143,7 @@ export default {
         getRecommendedBorrowList().then(res => {
             this.productDetail = res.data.data[0]
             this.pieCircle(this.productDetail.process);
+            this.showLoading = false;
         })
 
         getSimpleArticleList().then(res => {
@@ -149,14 +155,8 @@ export default {
         })
         
         getActiveActivity().then(res => {
-            this.activeActivity = res.data.data
-        }).then(res => {
-            setTimeout(() =>{
-                new Swiper('.swiper-container-active',{
-                    pagination: '.page',
-                    loop: false
-                })
-            }, 1000)
+            this.activeActivity = res.data.data;
+           
         })
 
         $('#platformInfoText').textSlider({
@@ -168,24 +168,31 @@ export default {
         appDown,
         swiperBanner,
         footerCommon,
+        loading,
     },
     methods: {
-        pieCircle: function(process) {
+        async pieCircle(process) {
             var percent= 0, curPercent = process;
             var percnetInter = setInterval(function(){
                 if(percent >= curPercent){
                     clearInterval(percnetInter);
                 }else if(percent>50){
-                    $('.circle').addClass('clip-auto');
-                    $('.right').removeClass('wth0');
+                    $('#index .circle').addClass('clip-auto');
+                    $('#index .right').removeClass('wth0');
                 }
-                $('.left').css("-webkit-transform","rotate("+(18/5)*percent+"deg)");
-                $('.num>span').text(percent);
+                $('#index .left').css("-webkit-transform","rotate("+(18/5)*percent+"deg)");
+                $('#index .num>span').text(percent);
                 percent++;
-            },15);
+            },3);
         },
-        showActiveImg: function(){
-
+        async showActive(){
+            this.showActiveImg = true,
+            setTimeout(() => {
+                new Swiper('.swiper-container-active',{
+                    pagination: '.page',
+                    loop: false
+                })
+            },500)
         }
          
     },

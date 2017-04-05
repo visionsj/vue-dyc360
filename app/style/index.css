@@ -39,7 +39,7 @@
 .active-list .pagination{display: none !important;}
 #active_close{position: absolute; width: 30px; height: 30px; top: 430px; left: 50%; margin-left: -15px; background: url('../images/index/close.png'); background-size: 100% 100%;z-index: 991}
 
-.circle,.percent,.wrap_circle{position:absolute;width:200px;height:200px;border-radius:50%;z-index:999999}
+.circle,.percent,.wrap_circle{position:absolute;width:200px;height:200px;border-radius:50%;z-index:99}
 .wrap_circle{top:0;left:0;background-color:#f1f1f1;z-index:9}
 .circle{box-sizing:border-box;border:20px solid #f1f1f1;clip:rect(0,200px,200px,100px)}
 .clip-auto{clip:rect(auto,auto,auto,auto)}
@@ -56,4 +56,4 @@
 
 .platformInfoText{margin-bottom: 20px}
 .swiper-container-active{width: 300px !important}
-.active-list{padding-top: 50px; padding-left: 80px}
+.active-list{padding-top: 50px; padding-left: 50px}

@@ -16,3 +16,9 @@ export const getSimpleArticleList =  () => Vue.http.post('/web/noauth/post?metho
 
 export const getActiveActivity =  () => Vue.http.post('/web/noauth/post?method=/common/getActiveActivity', {
 })
+
+//获取产品列表数据
+export const getBorrowList =  () => Vue.http.post('/web/noauth/post?method=/product/getBorrowList', {
+	pageSize: 50,
+	terminalType: 3
+})
