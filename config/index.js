@@ -26,9 +26,20 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         context: [ //代理路径
-            '/web'
+            '/common',
+            '/product',
+            '/account',
+            '/trade',
+            '/user',
+            '/appRechargeOrder',
+            '/openAccount',
+            '/current',
+            '/gift',
+            '/redeem',
+            '/article',
+            '/activity_dync',
         ],
-        proxypath: 'https://m.duc360.com/',
+        proxypath: 'https://api.duc360.com',
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

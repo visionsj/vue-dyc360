@@ -16,6 +16,16 @@ if ('addEventListener' in document) {
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
+Vue.http.interceptors.push((request, next) => {
+　next((response) => {
+	if(response.data.retCode == "-104"){
+		window.location.href = "/#/login"
+	}else{
+		return response;
+	}
+  });
+});
+
 const router = new VueRouter({
 	routes,
 	mode: routerMode,

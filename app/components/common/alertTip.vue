@@ -1,7 +1,7 @@
  <template>
     <div class="alet_container">
 	    <section class="tip_text_container">
-            <div class="tip_icon">
+            <div v-if="showAlertIcon"  class="tip_icon">
                 <span></span>
                 <span></span>
             </div>
@@ -20,9 +20,16 @@
             }
         },
         mounted(){
-      
+            
         },
-        props: ['alertText'],
+        props: {
+            alertText: {  
+               required: true
+            },
+            showAlertIcon: {   // 可选字段，有默认值
+               default: true
+            }
+        },
         methods: {
             closeTip(){
                 this.$emit('closeTip')
@@ -46,6 +53,7 @@
         right: 0;
         bottom: 0;
         z-index: 200;
+        background: rgba(0,0,0,0.3);
     }
     .tip_text_container{
         position: absolute;
@@ -65,15 +73,16 @@
         border: 1px;
         border-radius: 0.25rem;
         .tip_icon{
-            @include wh(3rem, 3rem);
+            @include wh(2rem, 2rem);
             border: 0.15rem solid #f8cb86;
             border-radius: 50%;
             display: flex;
             justify-content: center;
+            margin:.4rem 0;
             align-items: center;
             flex-direction: column;
             span:nth-of-type(1){
-                @include wh(.12rem, 1.5rem);
+                @include wh(.12rem, 1rem);
                 background-color: #f8cb86;
             }
             span:nth-of-type(2){
@@ -85,17 +94,17 @@
             }
         }
         .tip_text{
-            @include sc(.7rem, #333);
+            @include sc(.75rem, #333);
             line-height: .9rem;
             text-align: center;
-            margin-top: .8rem;
+            margin: .6rem 0;
             padding: 0 .4rem;
         }
         .confrim{
             @include sc(.8rem, #fff);
             font-weight: bold;
-            margin-top: .8rem;
-            background-color: #4cd964;
+            margin-top: .4rem;
+            background-color: #7c91c8;
             width: 100%;
             text-align: center;
             line-height: 1.8rem;

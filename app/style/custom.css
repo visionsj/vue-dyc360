@@ -157,17 +157,17 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 
 /*会员登陆页面*/
 .login_form_wrap{margin-top: 15px;}
-.login_form{display:block;width:94%;padding:0 3%;background:#fff;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
+.login_form{display:block;padding:0 3%;background:#fff;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
 .login_form li{ position:relative;display:block; margin:0.6em 0; padding: 5px 0; background:#fff;}
 .login_form li.user_name{border-bottom:#e6e6e6 1px solid;}
 #login .login_text_2{border-right: 1px solid #ddd; font-size: 14px; line-height: 20px; padding-right: 10px; display: inline-block}
 #login .login_text{border:none;width:70%;font-size: 14px; color:#666;padding-left:5px; margin: 0; height:30px;}
 #login .loginEorror{position: absolute; right: 0; top: 15px;width: 14px; height: 14px; display:none;}
-#loginForm .login-tip{width: 94%; padding: 20px 3%; font-size: 14px}
+#loginForm .login-tip{padding: 20px 3%; font-size: 14px}
 #loginForm .login-tip a{color:#7c91c8; font-weight: normal; text-decoration: none; text-shadow: none}
 #loginForm .login-tip a:hover{color:#e92c2f; text-decoration: underline}
 #login .focus{color:#333}
-#btn{width:94% ;padding:0 3%;}
+#btn{padding:0 3%;}
 #btn .login_btn,#btn .common_btn{display:block;background-color:#ff5c5f;border:none;width:100%;color: #fff;font-size:18px;line-height:200%; font-weight:normal;border-radius:4px;cursor: pointer;  padding:0.3em 0;text-align: center;text-decoration: none;text-shadow: none; -webkit-appearance: none;}
 #btn .common_btn.btn_dis{background-color:#999;}
 

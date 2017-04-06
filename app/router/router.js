@@ -2,6 +2,9 @@ import App from '../App'
 
 const home = r => require.ensure([], () => r(require('../pages/home/home')), 'home')
 const invest = r => require.ensure([], () => r(require('../pages/invest/invest')), 'invest')
+const login = r => require.ensure([], () => r(require('../pages/member/login')), 'login')
+const register = r => require.ensure([], () => r(require('../pages/member/register')), 'register')
+const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
 
 export default [{
     path: '/',
@@ -22,5 +25,21 @@ export default [{
             path: '/invest',
             component: invest
         },
+        //会员登录
+        {
+            path: '/login',
+            component: login
+        },
+        //注册
+        {
+            path: '/register',
+            component: register
+        },
+        //找回密码
+        {
+            path: '/forgetPassword',
+            component: forgetPassword
+        },
+
     ]
 }]
