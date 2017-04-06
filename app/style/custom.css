@@ -104,7 +104,7 @@ a{text-decoration: none; font-weight: normal !important;}
 .wd80{width: 80px !important;}
 .w100{width: 100% !important;}
 .focus{color:#323232 !important;}
-.layout{width: 94% !important;; padding: 10px 3%; }
+.layout{width: 100% !important;; padding: 10px 3%; }
 
 .common_bg{background: #fff;}
 .common_btn_og{display:block;background-color:#ff5c5f;border:none;width:100%;color: #fff !important;font-size:18px;line-height:200%; font-weight:normal !important;border-radius:25px;cursor: pointer;  padding:0.3em 0;text-align: center;text-decoration: none;text-shadow: none; -webkit-appearance: none;}

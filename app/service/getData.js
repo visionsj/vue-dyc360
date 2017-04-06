@@ -100,11 +100,19 @@ export const checkVerifyCode =  () => Vue.http.post('/user/checkVerifyCode', {
 })
 
 //忘记登录密码
-export const forgetLoginPassword =  () => Vue.http.post('/user/forgetLoginPassword', {
+export const forgetLoginPassword =  (mobilePhone, verifyCode, newPassword, repeatPassword) => Vue.http.post('/user/forgetLoginPassword', {
+	mobilePhone: mobilePhone,
+	verifyCode: verifyCode,
+	newPassword: newPassword,
+	repeatPassword: repeatPassword,
 })
 
 //用户签到
 export const signIn =  () => Vue.http.post('/user/signIn', {
+})
+
+//获取配置URL
+export const getConfigureUrl =  () => Vue.http.post('/common/getConfigureUrl', {
 })
 
 //检测用户签到状态
@@ -352,7 +360,8 @@ export const getServerTime =  () => Vue.http.post('/common/getServerTime', {
 })
 
 //上传头像
-export const headPicUpload =  () => Vue.http.post('/common/headPicUpload', {
+export const headPicUpload =  (frontImage) => Vue.http.post('/common/headPicUpload', {
+	 fileStr: frontImage
 })
 
 //查询充值和提现是否可用

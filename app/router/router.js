@@ -5,6 +5,7 @@ const invest = r => require.ensure([], () => r(require('../pages/invest/invest')
 const login = r => require.ensure([], () => r(require('../pages/member/login')), 'login')
 const register = r => require.ensure([], () => r(require('../pages/member/register')), 'register')
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
+const more = r => require.ensure([], () => r(require('../pages/more/more')), 'more')
 
 export default [{
     path: '/',
@@ -39,6 +40,12 @@ export default [{
         {
             path: '/forgetPassword',
             component: forgetPassword
+        },
+
+        //更多
+        {
+            path: '/more',
+            component: more
         },
 
     ]

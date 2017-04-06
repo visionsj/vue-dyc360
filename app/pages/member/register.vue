@@ -105,7 +105,6 @@ export default {
 		async register(){
             if (!this.mobilePhone) {
                 this.showAlert = true;
-                this.showAlertIcon = false;
                 this.alertText = '请输入手机号';
                  return
             }else if(!this.vcode){
@@ -143,18 +142,19 @@ export default {
                 this.alertText = '图片验证码不正确';
                 return
             }else{
-                this.computedTime = 60;
-                //60秒倒计时，60秒后可以重新获取验证码
-                this.timer = setInterval(() => {
-                    this.computedTime --;
-                    if (this.computedTime == 0) {
-                        clearInterval(this.timer)
-                    }
-                }, 1000)
 
                 //返回的数据带message，说明登陆失败
                 let res = await getVerifyCode(this.mobilePhone, this.vcode, 1);
                 if (res.data.retCode == "1") {
+                    this.computedTime = 60;
+                    //60秒倒计时，60秒后可以重新获取验证码
+                    this.timer = setInterval(() => {
+                        this.computedTime --;
+                        if (this.computedTime == 0) {
+                            clearInterval(this.timer)
+                        }
+                    }, 1000)
+                    
                     this.showAlert = true;
                     this.alertText = "发送短信成功";
                     return

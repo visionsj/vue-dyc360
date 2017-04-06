@@ -1,157 +1,84 @@
 <template>	
 <div id="pageone">
-<div style="padding: 0;">
-    <div id="invest">
-        <div id="wrapper" style="top: 0px">
-            <div v-load-more="loaderMore">
-                <div id="users_tender_list" class="ui-body-d ui-content pd0">
-               
-                <div id="productVote">
-                 
-                    <router-link class="list_title" style="padding: 5px 10px;" v-for="value in productVote" 
-                    :to="{path:'/borrow_content', query: {borrowNo : value.borrowNo}}">
-                        <div class="mg0 pd0 invest_title_name">
-							{{value.name}}
-					       
-					        <span v-if="!!value.tagsArr" v-for="k in value.tagsArr">
-					            <span class="ft12 product_title_item">{{k}}</span>
-					        </span>
-                        </div>
-                        <div class="invest_list">
-                            <li class="fl">
-                                <p class="invest_list_detail ft34">
-                                    {{value.yield-value.floatYield}}<font class="ft16">%</font>
-                                    <span class="yield" v-if="value.floatYield > 0">+{{value.floatYield}}%</span>
+    <div style="margin-bottom: 15px;" id="users_main">
+            <div id="userdata" class="userdata">
+                <div class="fl layout">
+                    <p class="head_pic">
+                        <img :src="!!userInfo.isLogin && userInfo.headPicUrl != '' ? userInfo.headPicUrl : 'https://m.duc360.com/images/account/headPic.jpg'" />
+                        <input id="browse" name="file" type="file" accept="image/*" v-show="!!userInfo.isLogin" />
+                    </p>
 
-                                </p>
-                                <p class="invest_list_detail_title">预期年化收益</p>
-                            </li>
-
-                            <li class="fl">
-                                <p class="invest_list_detail invest_limit ftgray ft20">
-                                    
-                                    <font v-if="value.durationType == 1 || value.durationType == 2">{{value.duration}}</font>
-                                    <font v-if="value.durationType == 3">{{value.duration * 3}}</font>
-                                    <font v-if="value.durationType == 4">{{value.duration * 6}</font>
-
-                                    <font class="ft12" v-if="value.durationType == 1">天</font>
-                                    <font class="ft12" v-else>个月</font>
-                                </p>
-                                <p class="invest_list_detail_title">项目期限</p>
-                            </li>
-
-                            <li class="fl">
-                                <div class="wrap">
-                                    <div :class="value.process > 50 ? 'invest_circle clip-auto' : 'invest_circle'">
-                                        <div class="percent left" 
-                                        :style="{'-webkit-transform': 'rotate('+ value.process*3.6+ 'deg)'}"></div>
-                                        <div :class="value.process < 50 ? 'percent right wth0' : 'percent right'" ></div>
-                                    </div>
-                                    <div class="num">
-                                        <span v-if="value.borrowStatus == '2'">预</span>
-                                        <span v-if="value.borrowStatus == '3'">抢</span>
-                                        <span v-if="value.borrowStatus == '4'">满</span>
-                                        <span v-if="value.borrowStatus == '5'">还</span>
-                                        <span v-if="value.borrowStatus == '6'">完</span>
-                                        <span v-if="value.borrowStatus == '7'">过</span>
-                                        <span v-if="value.borrowStatus == '9'">流</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="invest_list_bottom ftgray9">
-                          <span class="fl">
-                              <font class="ftblue2 ft15">{{value.orderNum}}</font>
-                              <font class="ft12">人已投</font>
-                              <font class="ft12">｜ 剩余 </font><font class="ftblue2 ft15">{{value.remainBalance}}</font>
-                              <font class="ft12">元</font>
-                          </span>
-                            <span class="fr ft12 assign">
-                               <font v-if="value.assignType == '3'">(按{{value.durationTypeText}}) </font>
-
-                               {{value.assignTypeText}}
-                            </span>
-                        </div>
-                    </router-link>
-                </div>
-
-
-
-                <div id="boundary" v-show="showLine">
-                    <img src="../../images/product-title.png" width="100%" />
-                </div>
-
-                <div id="product">
-                  
-                    <router-link class="list_title" style="padding: 5px 10px;" v-for="value in product" 
-                    :to="{path:'/borrow_content',query: {borrowNo : value.borrowNo}}">
-                        <div class="mg0 pd0 ftgray9 invest_title_name">{{value.name}}</div>
-                        <div class="invest_list">
-                            <li class="fl">
-                                <p class="invest_list_detail ft34 ftgray9">
-                                  {{value.yield-value.floatYield}}<font class="ft16">%</font>
-                                   <span class="yield brgray" v-if="value.floatYield > 0">+{{value.floatYield}}%</span>
-                                </p>
-                                <p class="invest_list_detail_title">预期年化收益</p>
-                            </li>
-                            <li class="fl">
-                                <p class="invest_list_detail invest_limit ftgray9 ft20">
-                                    <font v-if="value.durationType == 1 || value.durationType == 2">{{value.duration}}</font>
-                                    <font v-if="value.durationType == 3">{{value.duration * 3}}</font>
-                                    <font v-if="value.durationType == 4">{{value.duration * 6}</font>
-
-                                    <font class="ft12" v-if="value.durationType == 1">天</font>
-                                    <font class="ft12" v-else>个月</font>
-                                </p>
-                                <p class="invest_list_detail_title">项目期限</p>
-                            </li>
-                            <li class="fl">
-                                <div class="wrap">
-                                    <div class="invest_circle">
-                                        <div class="percent left" style="border-color:#e7e7e7"></div>
-                                        <div class="percent right wth0" style="border-color:#e7e7e7"></div>
-                                    </div>
-                                    <div class="num ftgray9" style="background: #e7e7e7">
-                                        <span v-if="value.borrowStatus == '2'">预</span>
-                                        <span v-if="value.borrowStatus == '3'">抢</span>
-                                        <span v-if="value.borrowStatus == '4'">满</span>
-                                        <span v-if="value.borrowStatus == '5'">还</span>
-                                        <span v-if="value.borrowStatus == '6'">完</span>
-                                        <span v-if="value.borrowStatus == '7'">过</span>
-                                        <span v-if="value.borrowStatus == '9'">流</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="invest_list_bottom ftgray9">
-                          <span class="fl">
-                              <font class="ftgray9 ft15">{{value.orderNum}}</font>
-                              <font class="ft12">人已投</font>
-                          </span>
-                            <span class="fr ft12 assign">
-                               <font v-if="value.assignType == '3'">(按{{value.durationTypeText}}) </font>
-
-                               {{value.assignTypeText}}
-                            </span>
-                        </div>
-                    </router-link>
+                    <p class="ft18 mg0" v-if="!!userInfo.isLogin">{{userInfo.personName}}</p>
+                    <p class="ft14 user-name" v-if="!!userInfo.isLogin"><img src="../../images/account/vip.png" height="23" /> {{userInfo.levelText}}</p>
           
+                    <p class="ft18 "v-if="!userInfo.isLogin" style="margin: 10px 0">点击登录</p>
+
                 </div>
-               
-                </div>
-                <div id="pullUp" class="fl">
-                    <span class="pullUpLabel"></span>
+                <div class="user_set">
+                    <img src="../../images/um1.png?20161116" height="25" />
                 </div>
             </div>
-        </div>
-    </div> 
-</div>
 
-<footer-common></footer-common>
 
-<transition name="loading">
-    <loading v-if="showLoading"></loading>
-</transition>
+            <div class="list_title list_title_clu mg0 bor0" >
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appFriends', query: {loginRef: '/appFriends'}}">
+                    <span class="fl users_main_list">
+                        <img src="../../images/um8.png?v20161116" height="30" />
+                    </span>
+                    邀请好友<i></i> <span class="fr ft16 ftog">30<font class="ft13 ftgray9">元红包+提成</font></span>
+                </router-link>
+            </div>
+
+            <div class="list_title list_title_clu mg0">
+                <router-link :to="{path: '/appHelpList'}">
+                    <span class="fl users_main_list">
+                        <img src="../../images/um9.png?v20161116" height="30" />
+                    </span>
+                    帮助中心<i></i>
+                </router-link>    
+            </div>
+
+            <div class="list_title list_title_clu mgb0 bor0" >
+                <router-link :to="{path: '/appNewsList'}">
+                    <span class="fl users_main_list">
+                    <img src="../../images/um10.png?v20161116" height="30" />
+                    </span>
+                    公司新闻<i></i>
+                </router-link>
+            </div>
+
+            <div class="list_title list_title_clu mg0 bor0">
+                <router-link :to="{path: '/appHelpList'}">
+                    <span class="fl users_main_list">
+                        <img src="../../images/um11.png?v20161116" height="30" />
+                    </span>
+                    平台公告<i></i>
+                </router-link>
+            </div>
+
+            <div class="list_title list_title_clu mg0">
+                <router-link :to="{path: '/appAbout'}">
+                    <span class="fl users_main_list">
+                    <img src="../../images/um12.png?v20161116" height="30" />
+                    </span>
+                    关于我们<i></i>
+                </router-link>
+            </div>
+
+            <div class="list_title list_title_clu" >
+                <span class="fl users_main_list">
+                <img src="../../images/um13.png?v20161116" height="30" />
+                </span>
+                    联系我们<i></i>
+                    <a href="tel:4000077707" class="fr ft14 ftog" style="width: 130px; text-align: right">400-0077-707</a>
+            </div>
+
+
+    </div>
+
+    <footer-common></footer-common>
+
+    <alert-tip v-if="showAlert" @closeTip="showAlert=false" :alertText="alertText" :showAlertIcon="showAlertIcon"></alert-tip>
 
 </div>
 </template>
@@ -159,87 +86,92 @@
 <script>
 import Vue from 'vue'
 import $ from '../../plugins/zepto.min.js'
-import {getBorrowList} from '../../service/getData'
+import {getUserAccountInfo, getConfigureUrl, headPicUpload} from '../../service/getData'
+import alertTip from '../../components/common/alertTip'
 import footerCommon from '../../components/footer/footerCommon'
-import loading from '../../components/common/loading'
-import {loadMore} from '../../plugins/mixin'
 import '../../style/custom.css' 
 
 export default {
 	data() {
 		return {
-			productVote: [],
-			product: [],
-			pageNo: 1,
-			showLine: false,
-			showLoading: true, //显示加载动画
+            showAlert: false, //是否显示提示框
+            alertText: null, //提示框的文字
+            userInfo: {},
+            userInfoUrl: {},
+            isLogin: false,
 		}
 	},
 	created() {
 
 	},
 	mounted() {
-		getBorrowList(this.pageNo, 10, 3).then(res => {
-        	var productVote = [], product = [];
-        	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVote.push(value)
-        	    }else {
-        	        product.push(value)
-        	    }
+        var _self = this;
+		getUserAccountInfo().then(res => {
+            let userInfo = res.data.data;
+            userInfo.isLogin = true;
+            this.userInfo = userInfo;
+        })
 
-        	});
+        getConfigureUrl().then(res => {
+            this.userInfoUrl = res.data.data;
 
-        	this.productVote = productVote;
-        	this.product = product;
+        })
 
-        	if(productVote.length != 0 && product.length > 0){
-        		this.showLine = true
-        	}
-        	this.showLoading = false;
+        window.compressImg = function (inputId, callback) {
+            var inputFile = document.getElementById(inputId);
+            if (typeof(FileReader) === 'undefined') {
+                _self.showAlert= true; //是否显示提示框
+                _self.alertText= "抱歉，你的浏览器不支持图片上传，请使用现代浏览器操作！"; //提示框的文字
+                inputFile.setAttribute('disabled', 'disabled');
+
+            }else{
+                inputFile.addEventListener("change", function () {
+                    var file = this.files[0];
+                    if(!/image\/\w+/.test(file.type)){
+                        loadingTip.show({
+                            content: "请确保文件为图像类型"
+                        });
+                        return false;
+                    }
+
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function(e){
+                        var srcString = this.result,src;
+                        if(srcString.substring(5,10)!="image"){
+                            src = srcString.replace(/(.{5})/,"$1image/jpeg;");
+                        }else{
+                            src = srcString;
+                        }
+                        if(callback!=undefined) {
+                            callback(src);
+                        }
+                     }
+                 })
+             }        
+        }
+   
+
+        compressImg('browse',function(src){
+            var frontImage = src.substr(src.indexOf(",")+1);
+            _self.picUpload(frontImage);
         })
 
 	},
 	components: {
-		loading,
 		footerCommon,
+        alertTip,
 	},
 	methods: {
-		async loaderMore(){
-			let productVoteNew = [], productNew = [];
-		    if (this.preventRepeat) {
-		        return
-		    }
-		    this.preventRepeat = true;
-		    this.showLoading = true;
-		    this.pageNo += 1;
-		    let res = await getBorrowList(this.pageNo, 10, 3);
-		            	
-        	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVoteNew.push(value)
-        	    }else {
-        	        productNew.push(value)
-        	    }
+		async picUpload(frontImage){
+            let headPic = await headPicUpload(frontImage)
+            if(headPic.data.retCode == "1") {
+                this.userInfo.headPicUrl = headPic.data.data.url
+            }else{
+                 this.showAlert= true; //是否显示提示框
+                this.alertText= headPic.data.data.retMsg; //提示框的文字
+            }
 
-        	});
-
-		    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
-		    this.product = this.product.concat(this.product, productNew);
-
-		    this.preventRepeat = false;
-		    this.hideLoading();
-		},
-		hideLoading(){
-		    if (process.env.NODE_ENV !== 'development') {
-		        clearTimeout(this.timer);
-		        this.timer = setTimeout(() => {
-		            clearTimeout(this.timer);
-		            this.showLoading = false;
-		        }, 1000)
-		    }else{
-		        this.showLoading = false;
-		    }
 		},
 	},
 	
@@ -247,7 +179,49 @@ export default {
 	],
 
 	mixins: [
-		loadMore
+		
 	]
 }
 </script>
+<style lang="scss" scoped="">
+  .userdata {
+    position: relative;
+    text-align: center;
+    color: #fff
+  }
+
+  .head_pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .userdata .user-name {
+    margin: 5px 0 10px;
+    line-height: 30px;
+  }
+
+  .userdata .user-name img {
+    vertical-align: middle
+  }
+
+  .user_set {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  #browse {
+    display: block!important;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: -50px;
+    opacity: 0;
+  }
+
+</style>
