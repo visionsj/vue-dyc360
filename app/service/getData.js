@@ -18,7 +18,8 @@ export const getActiveActivity =  () => Vue.http.post('/web/noauth/post?method=/
 })
 
 //获取产品列表数据
-export const getBorrowList =  () => Vue.http.post('/web/noauth/post?method=/product/getBorrowList', {
-	pageSize: 50,
-	terminalType: 3
+export const getBorrowList =  (pageNo, pageSize, terminalType) => Vue.http.post('/web/noauth/post?method=/product/getBorrowList', {
+	pageNo: pageNo,
+	pageSize: pageSize,
+	terminalType: terminalType
 })

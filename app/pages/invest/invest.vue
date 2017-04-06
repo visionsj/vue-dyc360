@@ -3,7 +3,7 @@
 <div style="padding: 0;">
     <div id="invest">
         <div id="wrapper" style="top: 0px">
-            <div id="scroller">
+            <div v-load-more="loaderMore">
                 <div id="users_tender_list" class="ui-body-d ui-content pd0">
                
                 <div id="productVote">
@@ -149,6 +149,10 @@
 
 <footer-common></footer-common>
 
+<transition name="loading">
+    <loading v-if="showLoading"></loading>
+</transition>
+
 </div>
 </template>
 
@@ -157,6 +161,8 @@ import Vue from 'vue'
 import $ from '../../plugins/zepto.min.js'
 import {getBorrowList} from '../../service/getData'
 import footerCommon from '../../components/footer/footerCommon'
+import loading from '../../components/common/loading'
+import {loadMore} from '../../plugins/mixin'
 import '../../style/custom.css' 
 
 export default {
@@ -164,14 +170,16 @@ export default {
 		return {
 			productVote: [],
 			product: [],
-			showLine: false
+			pageNo: 1,
+			showLine: false,
+			showLoading: true, //显示加载动画
 		}
 	},
 	created() {
 
 	},
 	mounted() {
-		getBorrowList().then(res => {
+		getBorrowList(this.pageNo, 10, 3).then(res => {
         	var productVote = [], product = [];
         	$.each(res.data.data, function(name, value){
         	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
@@ -188,20 +196,58 @@ export default {
         	if(productVote.length != 0 && product.length > 0){
         		this.showLine = true
         	}
+        	this.showLoading = false;
         })
 
 	},
 	components: {
-		footerCommon
+		loading,
+		footerCommon,
 	},
 	methods: {
+		async loaderMore(){
+			let productVoteNew = [], productNew = [];
+		    if (this.preventRepeat) {
+		        return
+		    }
+		    this.preventRepeat = true;
+		    this.showLoading = true;
+		    this.pageNo += 1;
+		    let res = await getBorrowList(this.pageNo, 10, 3);
+		            	
+        	$.each(res.data.data, function(name, value){
+        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
+        	        productVoteNew.push(value)
+        	    }else {
+        	        productNew.push(value)
+        	    }
 
+        	});
+
+		    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
+		    this.product = this.product.concat(this.product, productNew);
+
+		    this.preventRepeat = false;
+		    this.hideLoading();
+		},
+		hideLoading(){
+		    if (process.env.NODE_ENV !== 'development') {
+		        clearTimeout(this.timer);
+		        this.timer = setTimeout(() => {
+		            clearTimeout(this.timer);
+		            this.showLoading = false;
+		        }, 1000)
+		    }else{
+		        this.showLoading = false;
+		    }
+		},
 	},
 	
 	props: [
 	],
 
 	mixins: [
+		loadMore
 	]
 }
 </script>
