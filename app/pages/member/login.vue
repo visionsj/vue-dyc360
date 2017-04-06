@@ -21,7 +21,7 @@
             </div>
 
             <div class="login-tip">
-                <router-link to="/reg" class="fl" >注册</router-link>
+                <router-link to="/register" class="fl" >注册</router-link>
                 <router-link to="/forgetPassword" class="fr">忘记密码?</router-link>
             </div>
         </form>

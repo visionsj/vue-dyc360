@@ -209,7 +209,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 
 /*以上为我添加的注册页面内容*/
 .register_form{padding:0; margin-top: 20px;}
-.register_form li{padding:6px 0;clear:both;line-height:35px;height:35px; position:relative;background:#fff;border-bottom:#e6e6e6 1px solid;}
+.register_form li{padding:6px 0;clear:both;line-height:35px;height:47px; position:relative;background:#fff;border-bottom:#e6e6e6 1px solid;}
 .register_form .reg_text{height:30px;color:#666; font-size: 14px; border:none; width:60%;line-height:30px;}
 .register_form .reg_text_2{min-width: 60px; font-size: 14px; display: inline-block}
 .register_form .common_bg{padding: 0 3%; border-bottom: 1px solid #c7c8cc;border-top: 1px solid #c7c8cc}
@@ -231,7 +231,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .regDetail{float:left; width:100%;}
 .regDetail img{float:left;width: 100%;margin: 0;padding: 0;}
 .reg_phone_code{width: 100%;padding-bottom:8px ;border-bottom: #e6e6e6 1px solid;display: inline-block}
-.reg_phone_code_send{float:right;width:28%;text-align: center; height: 35px; line-height: 35px; font-size:13px; font-weight:normal;color:#fff; background: #00aff0; border-radius: 4px;cursor: pointer}
+.reg_phone_code_send{float:right;width:28%;text-align: center;  line-height: 35px; font-size:13px; font-weight:normal;color:#fff; background: #00aff0; border-radius: 4px;cursor: pointer}
 .reg_phone_code_send:hover{background: #008ccf}
 .reg_phone_code_btn{height:28px; padding: 6px 0; border-radius:.2em; text-decoration:none; text-shadow: none; color:#fff !important; right:10px; font:normal .95em/28px 'Microsoft Yahei'; display: inline-block;}
 .reg_03 li{box-shadow: none;}
@@ -336,7 +336,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .mr_dr{width:143px;height:166px;position:absolute;right:0;bottom:-25px;}
 .back_login{text-align:right;font-weight:bold;color:#7a7f79;padding-right:8px;border-radius:5px 5px 0 0;line-height:55px;}
 .back_login a{color:#fff;border-radius:5px; padding:5px 8px; background:#4fc1e9; border:1px solid #3aafe1; text-shadow:0;}
-.reg_xieyi{padding: 15px 3% 0;clear: both;line-height: 35px;height: 35px;position: relative; cursor:pointer;}
+.reg_xieyi{padding: 15px 3% 0;clear: both;line-height: 35px;height: 50px;position: relative; cursor:pointer;}
 .reg_xieyi a{color:#ff5c5f !important;}
 .reg_xieyi a:hover{color:#e92c2f;}
 .invest_list{width:100%; min-height:60px; margin:0em 0% 0 0%; background:#fff; position: relative;-webkit-border-radius: 4px;-ms-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; color:#333;}

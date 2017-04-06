@@ -37,7 +37,7 @@ module.exports = {
             '/gift',
             '/redeem',
             '/article',
-            '/activity_dync',
+            '/activity_dync'
         ],
         proxypath: 'https://api.duc360.com',
         // CSS Sourcemaps off by default because relative paths are "buggy"

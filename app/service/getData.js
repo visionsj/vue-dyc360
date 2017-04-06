@@ -66,7 +66,7 @@ export const loginUser =  (activeId, loginRef, username, password) => Vue.http.p
 	sourceType: "login",
 	username: username,
 	password: password,
-	terminalType : 2
+	terminalType : 3
 })
 
 //用户登出
@@ -74,11 +74,21 @@ export const logoutUser =  () => Vue.http.post('/user/logoutUser', {
 })
 
 //注册用户
-export const registerUser =  () => Vue.http.post('/user/registerUser', {
+export const registerUser =  (username, sourceType, mobilePhone, vcode, verifyCode, password, inviteMobilePhone) => Vue.http.post('/user/registerUser', {
+	username: username,
+	sourceType: sourceType,
+	mobilePhone: mobilePhone,
+	vcode: vcode,
+	verifyCode: verifyCode,
+	password: password,
+	inviteMobilePhone: inviteMobilePhone,
 })
 
 //获取验证码
-export const getVerifyCode =  () => Vue.http.post('/user/getVerifyCode', {
+export const getVerifyCode =  (mobilePhone, vcode, verifyCodeType) => Vue.http.post('/user/getVerifyCode', {
+	mobilePhone: mobilePhone,
+	vcode: vcode,
+	verifyCodeType: verifyCodeType
 })
 
 //找回支付密码获取验证码

@@ -1,253 +1,197 @@
 <template>	
-<div id="pageone">
 <div style="padding: 0;">
-    <div id="invest">
-        <div id="wrapper" style="top: 0px">
-            <div v-load-more="loaderMore">
-                <div id="users_tender_list" class="ui-body-d ui-content pd0">
-               
-                <div id="productVote">
-                 
-                    <router-link class="list_title" style="padding: 5px 10px;" v-for="value in productVote" 
-                    :to="{path:'/borrow_content', query: {borrowNo : value.borrowNo}}">
-                        <div class="mg0 pd0 invest_title_name">
-							{{value.name}}
-					       
-					        <span v-if="!!value.tagsArr" v-for="k in value.tagsArr">
-					            <span class="ft12 product_title_item">{{k}}</span>
-					        </span>
-                        </div>
-                        <div class="invest_list">
-                            <li class="fl">
-                                <p class="invest_list_detail ft34">
-                                    {{value.yield-value.floatYield}}<font class="ft16">%</font>
-                                    <span class="yield" v-if="value.floatYield > 0">+{{value.floatYield}}%</span>
-
-                                </p>
-                                <p class="invest_list_detail_title">预期年化收益</p>
-                            </li>
-
-                            <li class="fl">
-                                <p class="invest_list_detail invest_limit ftgray ft20">
-                                    
-                                    <font v-if="value.durationType == 1 || value.durationType == 2">{{value.duration}}</font>
-                                    <font v-if="value.durationType == 3">{{value.duration * 3}}</font>
-                                    <font v-if="value.durationType == 4">{{value.duration * 6}</font>
-
-                                    <font class="ft12" v-if="value.durationType == 1">天</font>
-                                    <font class="ft12" v-else>个月</font>
-                                </p>
-                                <p class="invest_list_detail_title">项目期限</p>
-                            </li>
-
-                            <li class="fl">
-                                <div class="wrap">
-                                    <div :class="value.process > 50 ? 'invest_circle clip-auto' : 'invest_circle'">
-                                        <div class="percent left" 
-                                        :style="{'-webkit-transform': 'rotate('+ value.process*3.6+ 'deg)'}"></div>
-                                        <div :class="value.process < 50 ? 'percent right wth0' : 'percent right'" ></div>
+    <div class="bg_icon" id="page">
+            <input type="hidden" name="ref" v-model="ref" value="" >
+            <input type="hidden" name="sourceType" v-model="sourceType" value="reg" >
+            <div id="register">
+                <ul class="register_form" id="login">
+                    <div class="reg_01">
+                        <div class="list_title common_bg">
+                            <ul>
+                                <li style="box-shadow: none;">
+                                    <label class="reg_text_2">手机号码</label>
+                                    <input type="text" name="mobilePhone"  v-model="mobilePhone" maxlength="11"  class="reg_text" placeholder="请输入手机号码" @input="checkPhone"/>
+                                </li>
+                                <li>
+                                    <div style="position: relative;float:left;width:59%;">
+                                        <label class="reg_text_2">图片验证</label>
+                                        <input type="text" name="vcode" v-model="vcode" class="reg_text" placeholder="图片验证码" 
+                                        @input="checkImgCode"/>
                                     </div>
-                                    <div class="num">
-                                        <span v-if="value.borrowStatus == '2'">预</span>
-                                        <span v-if="value.borrowStatus == '3'">抢</span>
-                                        <span v-if="value.borrowStatus == '4'">满</span>
-                                        <span v-if="value.borrowStatus == '5'">还</span>
-                                        <span v-if="value.borrowStatus == '6'">完</span>
-                                        <span v-if="value.borrowStatus == '7'">过</span>
-                                        <span v-if="value.borrowStatus == '9'">流</span>
+                                    <div id="code_send" style="float: right; width: 30%;text-align: center;border-radius: 6px;">
+                                        <img class="code_img" :src="captchaCodeImg" @click="getCaptchaCode"/>
                                     </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="invest_list_bottom ftgray9">
-                          <span class="fl">
-                              <font class="ftblue2 ft15">{{value.orderNum}}</font>
-                              <font class="ft12">人已投</font>
-                              <font class="ft12">｜ 剩余 </font><font class="ftblue2 ft15">{{value.remainBalance}}</font>
-                              <font class="ft12">元</font>
-                          </span>
-                            <span class="fr ft12 assign">
-                               <font v-if="value.assignType == '3'">(按{{value.durationTypeText}}) </font>
-
-                               {{value.assignTypeText}}
-                            </span>
-                        </div>
-                    </router-link>
-                </div>
-
-
-
-                <div id="boundary" v-show="showLine">
-                    <img src="../../images/product-title.png" width="100%" />
-                </div>
-
-                <div id="product">
-                  
-                    <router-link class="list_title" style="padding: 5px 10px;" v-for="value in product" 
-                    :to="{path:'/borrow_content',query: {borrowNo : value.borrowNo}}">
-                        <div class="mg0 pd0 ftgray9 invest_title_name">{{value.name}}</div>
-                        <div class="invest_list">
-                            <li class="fl">
-                                <p class="invest_list_detail ft34 ftgray9">
-                                  {{value.yield-value.floatYield}}<font class="ft16">%</font>
-                                   <span class="yield brgray" v-if="value.floatYield > 0">+{{value.floatYield}}%</span>
-                                </p>
-                                <p class="invest_list_detail_title">预期年化收益</p>
-                            </li>
-                            <li class="fl">
-                                <p class="invest_list_detail invest_limit ftgray9 ft20">
-                                    <font v-if="value.durationType == 1 || value.durationType == 2">{{value.duration}}</font>
-                                    <font v-if="value.durationType == 3">{{value.duration * 3}}</font>
-                                    <font v-if="value.durationType == 4">{{value.duration * 6}</font>
-
-                                    <font class="ft12" v-if="value.durationType == 1">天</font>
-                                    <font class="ft12" v-else>个月</font>
-                                </p>
-                                <p class="invest_list_detail_title">项目期限</p>
-                            </li>
-                            <li class="fl">
-                                <div class="wrap">
-                                    <div class="invest_circle">
-                                        <div class="percent left" style="border-color:#e7e7e7"></div>
-                                        <div class="percent right wth0" style="border-color:#e7e7e7"></div>
+                                </li>
+                                <li>
+                                    <div style="position: relative;float:left;width:60%;">
+                                        <label class="reg_text_2">短信验证</label>
+                                        <input type="text" name="verifyCode" v-model="verifyCode" class="reg_text" placeholder="请输入短信验证码"/>
                                     </div>
-                                    <div class="num ftgray9" style="background: #e7e7e7">
-                                        <span v-if="value.borrowStatus == '2'">预</span>
-                                        <span v-if="value.borrowStatus == '3'">抢</span>
-                                        <span v-if="value.borrowStatus == '4'">满</span>
-                                        <span v-if="value.borrowStatus == '5'">还</span>
-                                        <span v-if="value.borrowStatus == '6'">完</span>
-                                        <span v-if="value.borrowStatus == '7'">过</span>
-                                        <span v-if="value.borrowStatus == '9'">流</span>
+                                    <div id="phone_send" :class="!showCodeBtn ? 'reg_phone_code_send' : 'reg_phone_code_send disable_btn'" :disabled="showCodeBtn" @click="getVerifyCode" v-show="!computedTime">
+                                        获取验证码
                                     </div>
-                                </div>
-                            </li>
+                                    <div class="reg_phone_code_send disable_btn" @click.prevent v-show="computedTime">
+                                        已发送( {{computedTime}}s )
+                                    </div>
+                                </li>
+                                <li >
+                                    <label class="reg_text_2">密码</label>
+                                    <input type="password" name="password" v-model="password" maxlength="20" class="reg_text" placeholder="输入密码6-20个字符" >
+                                </li>
+                                <li style="border-bottom: none" id="recommended_list">
+                                    <label class="reg_text_2">推荐人</label>
+                                    <input type="tel" name="inviteMobilePhone" v-model="inviteMobilePhone" maxlength="16"  class="reg_text" placeholder="请输入推荐人手机号码（选填）" >
+                                </li>
+                            </ul>
                         </div>
-                        <div class="invest_list_bottom ftgray9">
-                          <span class="fl">
-                              <font class="ftgray9 ft15">{{value.orderNum}}</font>
-                              <font class="ft12">人已投</font>
-                          </span>
-                            <span class="fr ft12 assign">
-                               <font v-if="value.assignType == '3'">(按{{value.durationTypeText}}) </font>
 
-                               {{value.assignTypeText}}
-                            </span>
+
+                        <div class="reg_xieyi">
+                            <div class="check_radio fl">
+                                <input name="xieyi" id="xieyi" type="checkbox" value="" checked >
+                                <label class="radios" for="xieyi"></label>
+                            </div>
+                            <label class="radios fl">我已阅读并同意《<a href="agreement_reg.html" class="protocol_l" >鼎有财会员合作协议</a>》</label>
                         </div>
-                    </router-link>
-          
-                </div>
-               
-                </div>
-                <div id="pullUp" class="fl">
-                    <span class="pullUpLabel"></span>
-                </div>
+                    </div>
+
+                    <div id="btn"  class="mgt20">
+                        <input type="button" id="subbt" class="common_btn" value='确　认' @click="register" >
+                    </div>
+
+                </ul>
             </div>
-        </div>
-    </div> 
+
+    </div>
+
+    <div class="copyright" style="position: relative">平凡人的卓越理财<br /><a href="tel:4000077707">400-0077-707</a></div>
+    <alert-tip v-if="showAlert" @closeTip="showAlert=false" :alertText="alertText" :showAlertIcon="showAlertIcon"></alert-tip>
 </div>
 
-<footer-common></footer-common>
-
-<transition name="loading">
-    <loading v-if="showLoading"></loading>
-</transition>
-
-</div>
 </template>
 
 <script>
 import Vue from 'vue'
 import $ from '../../plugins/zepto.min.js'
-import {getBorrowList} from '../../service/getData'
-import footerCommon from '../../components/footer/footerCommon'
-import loading from '../../components/common/loading'
-import {loadMore} from '../../plugins/mixin'
+import {MD5} from '../../plugins/md5'
+import alertTip from '../../components/common/alertTip'
+import {getVerifyCode, registerUser} from '../../service/getData'
+
 import '../../style/custom.css' 
 
 export default {
 	data() {
 		return {
-			productVote: [],
-			product: [],
-			pageNo: 1,
-			showLine: false,
-			showLoading: true, //显示加载动画
+            showAlert: false, //是否显示提示框
+            alertText: null, //提示框的文字
+            captchaCodeImg: null,
+            showCodeBtn: true,
+            rightPhoneNumber: false,
+            computedTime: 0,
+            username: null,
+            sourceType: "reg"
 		}
 	},
 	created() {
 
 	},
 	mounted() {
-		getBorrowList(this.pageNo, 10, 3).then(res => {
-        	var productVote = [], product = [];
-        	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVote.push(value)
-        	    }else {
-        	        product.push(value)
-        	    }
-
-        	});
-
-        	this.productVote = productVote;
-        	this.product = product;
-
-        	if(productVote.length != 0 && product.length > 0){
-        		this.showLine = true
-        	}
-        	this.showLoading = false;
-        })
-
+		this.getCaptchaCode()
 	},
 	components: {
-		loading,
-		footerCommon,
+		alertTip
 	},
 	methods: {
-		async loaderMore(){
-			let productVoteNew = [], productNew = [];
-		    if (this.preventRepeat) {
-		        return
-		    }
-		    this.preventRepeat = true;
-		    this.showLoading = true;
-		    this.pageNo += 1;
-		    let res = await getBorrowList(this.pageNo, 10, 3);
-		            	
-        	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVoteNew.push(value)
-        	    }else {
-        	        productNew.push(value)
-        	    }
+		async register(){
+            if (!this.mobilePhone) {
+                this.showAlert = true;
+                this.showAlertIcon = false;
+                this.alertText = '请输入手机号';
+                 return
+            }else if(!this.vcode){
+                this.showAlert = true;
+                this.alertText = '请输入图片验证码';
+                return
+            }else if(!this.verifyCode){
+                this.showAlert = true;
+                this.alertText = '请输入短信验证码';
+                return
+            }else if(!this.password){
+                this.showAlert = true;
+                this.alertText = '请输入密码';
+                return
+            }
 
-        	});
+            let registerInfo = await registerUser(this.mobilePhone, this.sourceType, this.mobilePhone, this.vcode, this.verifyCode, MD5(this.password), this.inviteMobilePhone);
 
-		    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
-		    this.product = this.product.concat(this.product, productNew);
+            //如果返回的信息没有user_id说明登陆失败，弹出提示
+            if (registerInfo.data.retCode != "1") {
+                this.showAlert = true;
+                this.alertText = registerInfo.data.retMsg;
+            }else{
+                window.location.href = "/#/login"
+            }
+        },
+        //获取手机验证码
+        async getVerifyCode(){
+            if(!this.rightPhoneNumber){
+                this.showAlert = true;
+                this.alertText = '手机号不正确';
+                return
+            }else if(!!this.showCodeBtn){
+                this.showAlert = true;
+                this.alertText = '图片验证码不正确';
+                return
+            }else{
+                this.computedTime = 60;
+                //60秒倒计时，60秒后可以重新获取验证码
+                this.timer = setInterval(() => {
+                    this.computedTime --;
+                    if (this.computedTime == 0) {
+                        clearInterval(this.timer)
+                    }
+                }, 1000)
 
-		    this.preventRepeat = false;
-		    this.hideLoading();
-		},
-		hideLoading(){
-		    if (process.env.NODE_ENV !== 'development') {
-		        clearTimeout(this.timer);
-		        this.timer = setTimeout(() => {
-		            clearTimeout(this.timer);
-		            this.showLoading = false;
-		        }, 1000)
-		    }else{
-		        this.showLoading = false;
-		    }
-		},
+                //返回的数据带message，说明登陆失败
+                let res = await getVerifyCode(this.mobilePhone, this.vcode, 1);
+                if (res.data.retCode == "1") {
+                    this.showAlert = true;
+                    this.alertText = "发送短信成功";
+                    return
+                }else{
+                    this.showAlert = true;
+                    this.alertText = res.data.retMsg;
+                    return
+                }
+            }
+        },
+
+        //获取验证码图片
+        async getCaptchaCode(){
+            this.captchaCodeImg = 'https://m.duc360.com/vcode/gen-vcode.do?'  + Math.random();
+        },
+        checkImgCode(){
+            if(this.vcode.length >= 4){
+                this.showCodeBtn= false
+            }else{
+                this.showCodeBtn= true
+            }
+        },
+        checkPhone(){
+            if(/^1\d{10}$/gi.test(this.mobilePhone)){
+                this.rightPhoneNumber = true;
+            }else{
+                this.rightPhoneNumber = false;
+            }
+        },
+
 	},
 	
 	props: [
 	],
 
 	mixins: [
-		loadMore
+		
 	]
 }
 </script>
