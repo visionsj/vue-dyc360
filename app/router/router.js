@@ -6,6 +6,11 @@ const login = r => require.ensure([], () => r(require('../pages/member/login')),
 const register = r => require.ensure([], () => r(require('../pages/member/register')), 'register')
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
 const more = r => require.ensure([], () => r(require('../pages/more/more')), 'more')
+const usersSet = r => require.ensure([], () => r(require('../pages/more/children/usersSet')), 'usersSet')
+
+const usersMain = r => require.ensure([], () => r(require('../pages/users/usersMain')), 'usersMain')
+
+
 
 export default [{
     path: '/',
@@ -45,7 +50,19 @@ export default [{
         //更多
         {
             path: '/more',
-            component: more
+            component: more,
+            children: [
+                {
+                    path: 'usersSet',
+                    component: usersSet
+                },
+            ]
+        },
+
+        //我的
+        {
+            path: '/usersMain',
+            component: usersMain,
         },
 
     ]

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
 import routes from './router/router'
+import store from './store/'
+import VueResource from 'vue-resource'
 import {routerMode} from './config/env'
 import './config/rem'
 import FastClick from './plugins/fastClick'
@@ -29,12 +30,12 @@ Vue.http.interceptors.push((request, next) => {
 const router = new VueRouter({
 	routes,
 	mode: routerMode,
-	strict: process.env.NODE_ENV !== 'production'
 })
 
 
 const app = new Vue({
 	router,
+	store,
 }).$mount('#app')
 
 

@@ -38,7 +38,7 @@
 .sum_tender{position:fixed; bottom:0; left:0; width:94%; padding: 10px 3%; height:24px; line-height: 24px; background: #555;filter:Alpha(Opacity=95);opacity:.95; color:#e7e7e7; text-shadow:none; text-align: center; z-index: 99999;}
 
 /*公共样式*/
-body, html{margin: 0; font-size: 14px; color: #666; background: #fff}
+body, html{margin: 0; font-size: 14px; color: #666; background: #efeff4}
 input{border:1px solid #b7bbc2; border-radius: 4px;}
 select{height:34px; min-width:100px;border-radius: 0;padding: 5px !important; color:#8a8a8a;border:1px solid #b7bbc2; border-radius: 0 !important;}
 li,ul{margin:0; padding: 0;list-style: none}
@@ -268,7 +268,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #invest_con .list_title{padding:10px; margin:10px 0;background:#fff;border-top:1px solid #ddd; border-bottom: 1px solid #ddd;}
 #invest_con .list_title a{width:100%;min-height:30px;  display: inline-block; color:#666; line-height: 30px; font-weight: normal; text-decoration: none;}
 #invest_con .list_title a:active{color:#ff5c5f;}
-#invest_con .list_child{line-height:30px;height:30px;}
+#invest_con .list_child{line-height:30px;}
 #invest_con #invest_info{width: 100%; padding: 10px 0 0; background: #7c91c8; color: #fff;display: inline-block; border:none !important;}
 #invest_con .invest_list_content{width: 100%; margin: 15px 0 20px; text-align: center}
 #invest_con .invest_list_content .progressBar{width: 260px; line-height: 34px; margin:0 auto}
@@ -356,11 +356,11 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 
 
 /*用户中心页*/
-#users_main .userName{width:94%; color:#888; padding:12px 3%;min-height: 68px; line-height: 30px; font-size: .85em;}
+#users_main .userName{width:100%; color:#888; padding:12px 3%;min-height: 68px; line-height: 30px; font-size: .85em;}
 #users_main .userName p{float:left;padding:0; margin:0;width:100%;}
 #users_main .userName p strong{font-size: 1.1em; font-weight: normal}
 #users_main .userName .userNameList{padding: 0; margin:0;}
-#users_main .recoverCount{position: relative; width:94%;height: 140px;padding: 0 3% 0 3%;margin:0;color: #fff; text-align: center; text-shadow: none;}
+#users_main .recoverCount{position: relative; width:100%;height: 140px;padding: 0 3% 0 3%;margin:0;color: #fff; text-align: center; text-shadow: none;}
 #users_main .recoverCount .recoverCountNum{float:left; font-family:arial, helvetica, sans-serif;width:100%;font-weight:normal !important;font-size: 1.1em; line-height: 2.4em; padding: 8px 0 0 0;}
 #users_main .recoverCount span{float:left;width:100%;font-size: .9em;}
 #users_main .userdata{width:100%; margin-bottom:20px;display:inline-block;background: url('../images/account/top-bg.jpg')}

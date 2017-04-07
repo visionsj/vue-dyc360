@@ -32,6 +32,7 @@
 
 <script>
 import Vue from 'vue'
+import {mapState, mapMutations} from 'vuex'
 import $ from '../../plugins/zepto.min.js'
 import {loginUser} from '../../service/getData'
 import {MD5} from '../../plugins/md5'
@@ -59,6 +60,9 @@ export default {
         alertTip
 	},
 	methods: {
+        ...mapMutations([
+            'RECORD_USERINFO', 'OUT_LOGIN'
+        ]),
 		async login(){
             if (!this.username) {
                 this.showAlert = true;
@@ -79,7 +83,8 @@ export default {
                 this.alertText = loginInfo.data.retMsg;
             }else{
                 //登陆成功保存用户信息，返回上一路游
-                this.$router.go(-1);  
+                this.RECORD_USERINFO(loginInfo.data.data);
+                window.location.href = "/#/more"
             }
 
         },

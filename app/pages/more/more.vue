@@ -2,20 +2,24 @@
 <div id="pageone">
     <div style="margin-bottom: 15px;" id="users_main">
             <div id="userdata" class="userdata">
-                <div class="fl layout">
+                <div class="fl layout" style="padding: 20px 3% 10px">
                     <p class="head_pic">
                         <img :src="!!userInfo.isLogin && userInfo.headPicUrl != '' ? userInfo.headPicUrl : 'https://m.duc360.com/images/account/headPic.jpg'" />
-                        <input id="browse" name="file" type="file" accept="image/*" v-show="!!userInfo.isLogin" />
+                        <input id="browse" name="file" type="file" accept="image/*" v-if="!!userInfo.isLogin" />
                     </p>
 
                     <p class="ft18 mg0" v-if="!!userInfo.isLogin">{{userInfo.personName}}</p>
                     <p class="ft14 user-name" v-if="!!userInfo.isLogin"><img src="../../images/account/vip.png" height="23" /> {{userInfo.levelText}}</p>
           
-                    <p class="ft18 "v-if="!userInfo.isLogin" style="margin: 10px 0">点击登录</p>
+                    <p class="ft18 "v-if="!userInfo.isLogin" style="margin: 10px 0">
+                        <router-link :to="{path: '/login'}" style="color: #fff">点击登录</router-link>
+                    </p>
 
                 </div>
                 <div class="user_set">
-                    <img src="../../images/um1.png?20161116" height="25" />
+                    <router-link :to="{path: '/more/usersSet'}" tag="div">
+                        <img src="../../images/um1.png?20161116" height="25" />
+                    </router-link>
                 </div>
             </div>
 
@@ -30,7 +34,7 @@
             </div>
 
             <div class="list_title list_title_clu mg0">
-                <router-link :to="{path: '/appHelpList'}">
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appHelpList'}">
                     <span class="fl users_main_list">
                         <img src="../../images/um9.png?v20161116" height="30" />
                     </span>
@@ -39,7 +43,7 @@
             </div>
 
             <div class="list_title list_title_clu mgb0 bor0" >
-                <router-link :to="{path: '/appNewsList'}">
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appNewsList'}">
                     <span class="fl users_main_list">
                     <img src="../../images/um10.png?v20161116" height="30" />
                     </span>
@@ -48,7 +52,7 @@
             </div>
 
             <div class="list_title list_title_clu mg0 bor0">
-                <router-link :to="{path: '/appHelpList'}">
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appHelpList'}">
                     <span class="fl users_main_list">
                         <img src="../../images/um11.png?v20161116" height="30" />
                     </span>
@@ -57,7 +61,7 @@
             </div>
 
             <div class="list_title list_title_clu mg0">
-                <router-link :to="{path: '/appAbout'}">
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appAbout'}">
                     <span class="fl users_main_list">
                     <img src="../../images/um12.png?v20161116" height="30" />
                     </span>
@@ -76,7 +80,12 @@
 
     </div>
 
+
     <footer-common></footer-common>
+
+    <transition name="router-slid">
+         <router-view></router-view>
+     </transition>
 
     <alert-tip v-if="showAlert" @closeTip="showAlert=false" :alertText="alertText" :showAlertIcon="showAlertIcon"></alert-tip>
 
@@ -85,6 +94,7 @@
 
 <script>
 import Vue from 'vue'
+import {mapState, mapMutations} from 'vuex'
 import $ from '../../plugins/zepto.min.js'
 import {getUserAccountInfo, getConfigureUrl, headPicUpload} from '../../service/getData'
 import alertTip from '../../components/common/alertTip'
@@ -106,62 +116,71 @@ export default {
 	},
 	mounted() {
         var _self = this;
-		getUserAccountInfo().then(res => {
-            let userInfo = res.data.data;
-            userInfo.isLogin = true;
-            this.userInfo = userInfo;
-        })
+        if(!!this.login){
+    		getUserAccountInfo().then(res => {
+                let userInfo = res.data.data;
+                userInfo.isLogin = true;
+                this.userInfo = userInfo;
+            }).then(res => {
+
+                window.compressImg = function (inputId, callback) {
+                    var inputFile = document.getElementById(inputId);
+                    if (typeof(FileReader) === 'undefined') {
+                        _self.showAlert= true; //是否显示提示框
+                        _self.alertText= "抱歉，你的浏览器不支持图片上传，请使用现代浏览器操作！"; //提示框的文字
+                        inputFile.setAttribute('disabled', 'disabled');
+
+                    }else{
+                        inputFile.addEventListener("change", function () {
+                            var file = this.files[0];
+                            if(!/image\/\w+/.test(file.type)){
+                                loadingTip.show({
+                                    content: "请确保文件为图像类型"
+                                });
+                                return false;
+                            }
+
+                            var reader = new FileReader();
+                            reader.readAsDataURL(file);
+                            reader.onload = function(e){
+                                var srcString = this.result,src;
+                                if(srcString.substring(5,10)!="image"){
+                                    src = srcString.replace(/(.{5})/,"$1image/jpeg;");
+                                }else{
+                                    src = srcString;
+                                }
+                                if(callback!=undefined) {
+                                    callback(src);
+                                }
+                             }
+                         })
+                     }        
+                }
+                
+
+                compressImg('browse',function(src){
+                    var frontImage = src.substr(src.indexOf(",")+1);
+                    _self.picUpload(frontImage);
+                })
+            })
+        }
 
         getConfigureUrl().then(res => {
             this.userInfoUrl = res.data.data;
 
         })
 
-        window.compressImg = function (inputId, callback) {
-            var inputFile = document.getElementById(inputId);
-            if (typeof(FileReader) === 'undefined') {
-                _self.showAlert= true; //是否显示提示框
-                _self.alertText= "抱歉，你的浏览器不支持图片上传，请使用现代浏览器操作！"; //提示框的文字
-                inputFile.setAttribute('disabled', 'disabled');
-
-            }else{
-                inputFile.addEventListener("change", function () {
-                    var file = this.files[0];
-                    if(!/image\/\w+/.test(file.type)){
-                        loadingTip.show({
-                            content: "请确保文件为图像类型"
-                        });
-                        return false;
-                    }
-
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function(e){
-                        var srcString = this.result,src;
-                        if(srcString.substring(5,10)!="image"){
-                            src = srcString.replace(/(.{5})/,"$1image/jpeg;");
-                        }else{
-                            src = srcString;
-                        }
-                        if(callback!=undefined) {
-                            callback(src);
-                        }
-                     }
-                 })
-             }        
-        }
-   
-
-        compressImg('browse',function(src){
-            var frontImage = src.substr(src.indexOf(",")+1);
-            _self.picUpload(frontImage);
-        })
 
 	},
 	components: {
 		footerCommon,
         alertTip,
 	},
+    computed:{
+        ...mapState([
+            'userInfoNew', 'login'
+        ])
+    },
 	methods: {
 		async picUpload(frontImage){
             let headPic = await headPicUpload(frontImage)
@@ -184,6 +203,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped="">
+   @import '../../style/mixin';
   .userdata {
     position: relative;
     text-align: center;
@@ -222,6 +242,12 @@ export default {
     top: 20px;
     margin-left: -50px;
     opacity: 0;
+  }
+  .router-slid-enter-active, .router-slid-leave-active {
+      transition: all .4s;
+  }
+  .router-slid-enter, .router-slid-leave-active {
+      transform: translateX(100%);
   }
 
 </style>
