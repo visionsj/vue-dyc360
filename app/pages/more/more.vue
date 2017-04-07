@@ -99,6 +99,7 @@ import $ from '../../plugins/zepto.min.js'
 import {getUserAccountInfo, getConfigureUrl, headPicUpload} from '../../service/getData'
 import alertTip from '../../components/common/alertTip'
 import footerCommon from '../../components/footer/footerCommon'
+import {getStore, setStore} from '../../config/mUtils'
 import '../../style/custom.css' 
 
 export default {
@@ -116,7 +117,9 @@ export default {
 	},
 	mounted() {
         var _self = this;
-        if(!!this.login){
+
+        if(getStore('login') == "true"){
+            console.log(88)
     		getUserAccountInfo().then(res => {
                 let userInfo = res.data.data;
                 userInfo.isLogin = true;
@@ -178,7 +181,7 @@ export default {
 	},
     computed:{
         ...mapState([
-            'userInfoNew', 'login'
+            'login'
         ])
     },
 	methods: {

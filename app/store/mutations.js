@@ -17,6 +17,7 @@ export default {
 		let validity = 30;
 		let now = new Date();
 		now.setTime(now.getTime() + validity * 24 * 60 * 60 * 1000);
+		setStore('login', true);
 		// document.cookie = "USERID=" + info.user_id + ";expires=" + now.toGMTString();
 		// document.cookie = "SID=huRyTRd9QLij7NkbpHJoj3PQrx1eRiO6bAiw" + ";expires=" + now.toGMTString();
 	},
@@ -35,5 +36,6 @@ export default {
 	[OUT_LOGIN](state) {
 		state.userInfoNew = null;
 		state.login = false;
+		setStore('login', false);
 	},
 }
