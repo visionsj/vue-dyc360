@@ -7,7 +7,7 @@
 <div id="index" style="padding: 0">
     <div class="article">
             <div id="slider" v-if="showActicle">
-               <div class="close" @click="showActicle=faulse"></div>
+               <div class="close" @click="showActicle=false"></div>
                 <div id="articleSlider" > 
                     <ul style="margin-top: -40px;"> 
                         <li v-for="value in articleList"><a :href="value.source">{{value.name}}</a></li>
