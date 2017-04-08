@@ -169,12 +169,13 @@ export default {
                              }
                          })
                      }        
-                    
+                } 
+                setTimeout(() => {
                     compressImg('browse',function(src){
                         var frontImage = src.substr(src.indexOf(",")+1);
                         _self.picUpload(frontImage);
                     })
-                }
+                },200)
             }
 
 
