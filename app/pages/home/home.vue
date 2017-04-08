@@ -37,7 +37,7 @@
                 <div id="jqm-round-circle" class="jqm-round-circle">
                     <div style="margin-top:5px;">
                         <h1>
-                            {{(productDetail.yield | isNAN) - (productDetail.floatYield | isNAN)}}<font class="ft20">%</font>
+                            {{productDetail.yield | isNAN}}<font class="ft20">%</font>
                             
                             <span class="yield" v-if="productDetail.floatYield > 0"> +{{productDetail.floatYield}}%</span>
                             
@@ -131,39 +131,19 @@ Vue.filter('isNAN', function (value) {
 export default {
     data(){
         return {
+            articleList: null,
+            productDetail: {},
+            activeActivity: null,
             showActicle: true,
             showActiveImg: false,
-            showLoading: false, //显示加载动画
-            productDetail: {}
+            showLoading: false, 
         }
     },
     created(){
 
     },
     mounted(){
-        getRecommendedBorrowList().then(res => {
-            this.productDetail = res.data.data[0]
-            this.pieCircle(this.productDetail.process);
-            this.showLoading = false;
-        })
-
-        getSimpleArticleList().then(res => {
-            this.articleList = res.data.data
-
-            setTimeout(() => {
-                $('#articleSlider').textSlider();
-            },500)
-        })
-        
-        getActiveActivity().then(res => {
-            this.activeActivity = res.data.data;
-           
-        })
-
-        $('#platformInfoText').textSlider({
-            scrollHeight: 24
-        });
-        
+        this.initData();      
     },
     components: {
         appDown,
@@ -172,6 +152,30 @@ export default {
         loading,
     },
     methods: {
+        async initData(){
+
+            let resBorrowList = await getRecommendedBorrowList();
+            this.productDetail = {...resBorrowList.data.data[0]};
+            this.pieCircle(this.productDetail.process);
+            this.showLoading = false;
+
+            let resArticle = await getSimpleArticleList();
+            this.articleList = [...resArticle.data.data];
+
+            setTimeout(() => {
+                $('#articleSlider').textSlider();
+            },500)
+
+            
+            let resActivity = await getActiveActivity();
+            this.activeActivity =  [...resActivity.data.data];
+               
+
+            $('#platformInfoText').textSlider({
+                scrollHeight: 24
+            });
+        },
+
         async pieCircle(process) {
             var percent= 0, curPercent = process;
             var percnetInter = setInterval(function(){
@@ -186,6 +190,7 @@ export default {
                 percent++;
             },3);
         },
+
         async showActive(){
             this.showActiveImg = true,
             setTimeout(() => {

@@ -1,4 +1,4 @@
-<template>	
+<template>  
 <div id="invest_con" class="more_detail_page">
 
   <div class="ft14 user_account" style="margin:15px 0;line-height: 30px;">
@@ -56,65 +56,67 @@
 <script>
 import Vue from 'vue'
 import {mapState, mapMutations} from 'vuex'
-import $ from '../../../plugins/zepto.min.js'
 import {getUserBindBankList, getUserAccountInfo, logoutUser} from '../../../service/getData'
 import alertTip from '../../../components/common/alertTip'
 import footerCommon from '../../../components/footer/footerCommon'
 import '../../../style/custom.css' 
 
 export default {
-	data() {
-		return {
-            showAlert: false, //是否显示提示框
-            alertText: null, //提示框的文字
+  data() {
+    return {
             userSetDetail: {},
             bankListDetail: {},
-		}
-	},
-	created() {
+            showAlert: false, 
+            alertText: null, 
+    }
+  },
+  created() {
 
-	},
-	mounted() {
-        getUserAccountInfo().then(res => {
-          this.userSetDetail = res.data.data;
-        });
-
-        getUserBindBankList().then(res => {
-          this.bankListDetail = res.data.data[0]
-        })
-	},
-	components: {
-		footerCommon,
+  },
+  mounted() {
+    this.initData()
+  },
+  components: {
+    footerCommon,
     alertTip,
-	},
+  },
   computed:{
 
   },
-	methods: {
+  methods: {
     ...mapMutations([
         'OUT_LOGIN'
     ]),
-    async hideNum(){
+    async initData(){
+      let resAccount = await getUserAccountInfo();
+      this.userSetDetail = {...resAccount.data.data}
+
+
+      let resBankList = await getUserBindBankList();
+      this.bankListDetail = {...resBankList.data.data[0]}
+
+    },
+    hideNum(){
         if(this.hideNumText){
             this.hideNumText = false
         }else{
             this.hideNumText = true
         }
     },
-    async loginOut(){
+    loginOut(){
         this.OUT_LOGIN()
         logoutUser().then(res => {
           window.location.href = "/#/login"
         })
     }
-	},
-	
-	props: [
-	],
+  },
+  
+  props: [
+  ],
 
-	mixins: [
-		
-	]
+  mixins: [
+    
+  ]
 }
 </script>
 <style lang="scss" scoped="">

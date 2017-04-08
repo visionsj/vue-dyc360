@@ -1,4 +1,4 @@
-<template>	
+<template>  
 <div id="pageone">
     <div style="margin-bottom: 15px;" id="users_main">
         <div id="userdata" class="userdata">
@@ -114,46 +114,45 @@
 
 <script>
 import Vue from 'vue'
-import $ from '../../plugins/zepto.min.js'
 import {getUserAssetInfo, forceOpenAccount, getUserAccountInfo} from '../../service/getData'
 import alertTip from '../../components/common/alertTip'
 import footerCommon from '../../components/footer/footerCommon'
 import '../../style/custom.css' 
 
 export default {
-	data() {
-		return {
+    data() {
+        return {
             openAccountDetail: {},
             aseetDetail: {},
             accountDetail: {},
             hideNumText: false,
             showAlert: false, //是否显示提示框
             alertText: null, //提示框的文字
-		}
-	},
-	created() {
+        }
+    },
+    created() {
 
-	},
-	mounted() {
-        this.init();
-	},
-	components: {
-		footerCommon,
+    },
+    mounted() {
+        this.initData();
+    },
+    components: {
+        footerCommon,
         alertTip,
-	},
+    },
     computed:{
 
     },
-	methods: {
-		async init(){
+    methods: {
+        async initData(){
             let openAccountDetail = await forceOpenAccount();
-            this.openAccountDetail = openAccountDetail.data.data;
+            this.openAccountDetail = {...openAccountDetail.data.data};
 
             let aseetDetail = await getUserAssetInfo();
-            this.aseetDetail = aseetDetail.data.data;
+            this.aseetDetail = {...aseetDetail.data.data};
 
             let accountDetail = await getUserAccountInfo();
-            this.accountDetail = accountDetail.data.data;
+            this.accountDetail = {...accountDetail.data.data};
         },
         async hideNum(){
             if(this.hideNumText){
@@ -162,14 +161,14 @@ export default {
                 this.hideNumText = true
             }
         }
-	},
-	
-	props: [
-	],
+    },
+    
+    props: [
+    ],
 
-	mixins: [
-		
-	]
+    mixins: [
+        
+    ]
 }
 </script>
 <style lang="scss" scoped="">

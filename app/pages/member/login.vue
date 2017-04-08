@@ -1,4 +1,4 @@
-<template>	
+<template>  
 <div style="padding: 0">
     <div class="bg_icon">
         <form class='login_form_wrap' autocomplete="off" method='post' id='loginForm' action="/flow/dispatch_post.do?action=submitLogin">
@@ -33,37 +33,38 @@
 <script>
 import Vue from 'vue'
 import {mapState, mapMutations} from 'vuex'
-import $ from '../../plugins/zepto.min.js'
 import {loginUser} from '../../service/getData'
 import {MD5} from '../../plugins/md5'
 import alertTip from '../../components/common/alertTip'
 import '../../style/custom.css' 
 
 export default {
-	data() {
-		return {
-            showAlert: false, //是否显示提示框
-            alertText: null, //提示框的文字
+    data() {
+        return {
+            username: null,
+            password: null,
             activeId: '',
             loginRef: '',
-		}
-	},
-	created() {
+            showAlert: false, 
+            alertText: null, 
+        }
+    },
+    created() {
        this.activeId = this.$route.query.activeId || "";
        this.loginRef = this.$route.query.loginRef || "";
-	},
-	mounted() {
+    },
+    mounted() {
         
 
-	},
-	components: {
+    },
+    components: {
         alertTip
-	},
-	methods: {
+    },
+    methods: {
         ...mapMutations([
             'RECORD_USERINFO', 'OUT_LOGIN'
         ]),
-		async login(){
+        async login(){
             if (!this.username) {
                 this.showAlert = true;
                 this.showAlertIcon = false;
@@ -88,13 +89,13 @@ export default {
             }
 
         },
-	},
-	
-	props: [
-	],
+    },
+    
+    props: [
+    ],
 
-	mixins: [
-		
-	]
+    mixins: [
+        
+    ]
 }
 </script>

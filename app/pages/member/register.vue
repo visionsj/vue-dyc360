@@ -1,7 +1,6 @@
-<template>	
+<template>  
 <div style="padding: 0;">
     <div class="bg_icon" id="page">
-            <input type="hidden" name="ref" v-model="ref" value="" >
             <input type="hidden" name="sourceType" v-model="sourceType" value="reg" >
             <div id="register">
                 <ul class="register_form" id="login">
@@ -72,7 +71,6 @@
 
 <script>
 import Vue from 'vue'
-import $ from '../../plugins/zepto.min.js'
 import {MD5} from '../../plugins/md5'
 import alertTip from '../../components/common/alertTip'
 import {getVerifyCode, registerUser} from '../../service/getData'
@@ -80,29 +78,34 @@ import {getVerifyCode, registerUser} from '../../service/getData'
 import '../../style/custom.css' 
 
 export default {
-	data() {
-		return {
-            showAlert: false, //是否显示提示框
-            alertText: null, //提示框的文字
+    data() {
+        return {
+            mobilePhone: null,
+            vcode: null,
+            verifyCode: null,
+            password: null,
+            inviteMobilePhone: null,
             captchaCodeImg: null,
             showCodeBtn: true,
             rightPhoneNumber: false,
             computedTime: 0,
             username: null,
-            sourceType: "reg"
-		}
-	},
-	created() {
+            sourceType: "reg",
+            showAlert: false, 
+            alertText: null, 
+        }
+    },
+    created() {
 
-	},
-	mounted() {
-		this.getCaptchaCode()
-	},
-	components: {
-		alertTip
-	},
-	methods: {
-		async register(){
+    },
+    mounted() {
+        this.getCaptchaCode()
+    },
+    components: {
+        alertTip
+    },
+    methods: {
+        async register(){
             if (!this.mobilePhone) {
                 this.showAlert = true;
                 this.alertText = '请输入手机号';
@@ -185,13 +188,13 @@ export default {
             }
         },
 
-	},
-	
-	props: [
-	],
+    },
+    
+    props: [
+    ],
 
-	mixins: [
-		
-	]
+    mixins: [
+        
+    ]
 }
 </script>

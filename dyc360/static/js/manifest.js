@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"more","2":"usersMain","3":"usersSet","4":"invest","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"15d32267c41582ffce1b","1":"cc3303691a39e36d022e","2":"a4522dbe9856bf8bc157","3":"3505dd3018a9182fad0d","4":"176c7e3280f061c02ca7","5":"1e5a7b22dfb4551c77d6","6":"33a862c254ec41bafdf7","7":"afbc9f5a14e7228d238e","9":"ef801d8b243a3b599ec2","10":"a63c4e7678cfdf9e9c47"}[chunkId] + ".min.js";
+/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"usersMain","2":"more","3":"invest","4":"usersSet","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"7367bb9702d9a216d1ae","1":"169c525feb6c20082f86","2":"7a4fc53b275ffc83cdc0","3":"5cea0139542ff57afb7f","4":"a27c92f6648701bf42ce","5":"66efb953b4978c05f2bc","6":"2e33e8b0ee3520b30d3c","7":"c07f0748e1daeaa8b067","9":"1e3109b45a77e8a07c97","10":"34ee983c51971a56dbc8"}[chunkId] + ".min.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};

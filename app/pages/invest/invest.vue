@@ -11,11 +11,11 @@
                     <router-link class="list_title" style="padding: 5px 10px;" v-for="value in productVote" 
                     :to="{path:'/borrow_content', query: {borrowNo : value.borrowNo}}">
                         <div class="mg0 pd0 invest_title_name">
-							{{value.name}}
-					       
-					        <span v-if="!!value.tagsArr" v-for="k in value.tagsArr">
-					            <span class="ft12 product_title_item">{{k}}</span>
-					        </span>
+                	       {{value.name}}
+
+                	        <span v-if="!!value.tagsArr" v-for="k in value.tagsArr">
+                	            <span class="ft12 product_title_item">{{k}}</span>
+                	        </span>
                         </div>
                         <div class="invest_list">
                             <li class="fl">
@@ -179,68 +179,71 @@ export default {
 
 	},
 	mounted() {
-	   getBorrowList(this.pageNo, 10, 3).then(res => {
-                	var productVote = [], product = [];
-                	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVote.push(value)
-        	    }else {
-        	        product.push(value)
-        	    }
-
-        	});
-
-        	this.productVote = productVote;
-        	this.product = product;
-
-        	if(productVote.length != 0 && product.length > 0){
-        		this.showLine = true
-        	}
-        	this.showLoading = false;
-        })
-
+                this.initData();
 	},
 	components: {
 		loading,
 		footerCommon,
 	},
 	methods: {
-		async loaderMore(){
-			let productVoteNew = [], productNew = [];
-		    if (this.preventRepeat) {
-		        return
-		    }
-		    this.preventRepeat = true;
-		    this.showLoading = true;
-		    this.pageNo += 1;
-		    let res = await getBorrowList(this.pageNo, 10, 3);
-		            	
-        	$.each(res.data.data, function(name, value){
-        	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-        	        productVoteNew.push(value)
-        	    }else {
-        	        productNew.push(value)
-        	    }
+                async initData(){
+                    let res = await getBorrowList(this.pageNo, 10, 3);
+                    let productVote = [], product = [];
+                    $.each(res.data.data, function(name, value){
+                        if(value.borrowStatus == 3 || value.borrowStatus == 4) {
+                            productVote.push(value)
+                        }else {
+                            product.push(value)
+                        }
+                    });
 
-        	});
+                    this.productVote = [...productVote];
+                    this.product = [...product];
 
-		    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
-		    this.product = this.product.concat(this.product, productNew);
+                    if(productVote.length != 0 && product.length > 0){
+                        this.showLine = true
+                    }
+                    this.showLoading = false;
 
-		    this.preventRepeat = false;
-		    this.hideLoading();
-		},
-		hideLoading(){
-		    if (process.env.NODE_ENV !== 'development') {
-		        clearTimeout(this.timer);
-		        this.timer = setTimeout(() => {
-		            clearTimeout(this.timer);
-		            this.showLoading = false;
-		        }, 1000)
-		    }else{
-		        this.showLoading = false;
-		    }
-		},
+
+                },
+                async loaderMore(){
+                    let productVoteNew = [], productNew = [];
+                    if (this.preventRepeat) {
+                        return
+                    }
+                    this.preventRepeat = true;
+                    this.showLoading = true;
+                    this.pageNo += 1;
+                    let res = await getBorrowList(this.pageNo, 10, 3);  
+                                    
+                        $.each(res.data.data, function(name, value){
+                            if(value.borrowStatus == 3 || value.borrowStatus == 4) {
+                                productVoteNew.push(value)
+                            }else {
+                                productNew.push(value)
+                            }
+
+                        });
+
+                        this.productVote = this.productVote.concat(this.productVote, productVoteNew);
+                        this.product = this.product.concat(this.product, productNew);
+
+                        this.preventRepeat = false;
+                        this.hideLoading();
+                    },
+                    
+                    hideLoading(){
+                        if (process.env.NODE_ENV !== 'development') {
+                            clearTimeout(this.timer);
+                            this.timer = setTimeout(() => {
+                                clearTimeout(this.timer);
+                                this.showLoading = false;
+                            }, 1000)
+                        }else{
+                            this.showLoading = false;
+                        }
+                    },
 	},
 	
 	props: [

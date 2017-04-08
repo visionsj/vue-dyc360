@@ -1,4 +1,4 @@
-<template>	
+<template>  
 <div id="pageone">
     <div style="margin-bottom: 15px;" id="users_main">
             <div id="userdata" class="userdata">
@@ -95,7 +95,6 @@
 <script>
 import Vue from 'vue'
 import {mapState, mapMutations} from 'vuex'
-import $ from '../../plugins/zepto.min.js'
 import {getUserAccountInfo, getConfigureUrl, headPicUpload} from '../../service/getData'
 import alertTip from '../../components/common/alertTip'
 import footerCommon from '../../components/footer/footerCommon'
@@ -103,29 +102,41 @@ import {getStore, setStore} from '../../config/mUtils'
 import '../../style/custom.css' 
 
 export default {
-	data() {
-		return {
+    data() {
+        return {
             showAlert: false, //是否显示提示框
             alertText: null, //提示框的文字
             userInfo: {},
             userInfoUrl: {},
             isLogin: false,
-		}
-	},
-	created() {
+        }
+    },
+    created() {
 
-	},
-	mounted() {
-        var _self = this;
+    },
+    mounted() {
+        this.initData();
+    },
+    components: {
+        footerCommon,
+        alertTip,
+    },
+    computed:{
+        ...mapState([
+            'login'
+        ])
+    },
+    methods: {
+        async initData(){
+            var _self = this;
 
-        if(getStore('login') == "true"){
-            console.log(88)
-    		getUserAccountInfo().then(res => {
-                let userInfo = res.data.data;
-                userInfo.isLogin = true;
-                this.userInfo = userInfo;
-            }).then(res => {
+            if(getStore('login') == "true"){
 
+                let resAccount = await getUserAccountInfo();
+
+                this.userInfo = {...resAccount.data.data};
+                this.userInfo.isLogin = true;
+        
                 window.compressImg = function (inputId, callback) {
                     var inputFile = document.getElementById(inputId);
                     if (typeof(FileReader) === 'undefined') {
@@ -158,34 +169,19 @@ export default {
                              }
                          })
                      }        
+                    
+                    compressImg('browse',function(src){
+                        var frontImage = src.substr(src.indexOf(",")+1);
+                        _self.picUpload(frontImage);
+                    })
                 }
-                
-
-                compressImg('browse',function(src){
-                    var frontImage = src.substr(src.indexOf(",")+1);
-                    _self.picUpload(frontImage);
-                })
-            })
-        }
-
-        getConfigureUrl().then(res => {
-            this.userInfoUrl = res.data.data;
-
-        })
+            }
 
 
-	},
-	components: {
-		footerCommon,
-        alertTip,
-	},
-    computed:{
-        ...mapState([
-            'login'
-        ])
-    },
-	methods: {
-		async picUpload(frontImage){
+            let resUrl = await getConfigureUrl();
+            this.userInfoUrl = {...resUrl.data.data};
+        },
+        async picUpload(frontImage){
             let headPic = await headPicUpload(frontImage)
             if(headPic.data.retCode == "1") {
                 this.userInfo.headPicUrl = headPic.data.data.url
@@ -194,15 +190,15 @@ export default {
                 this.alertText= headPic.data.data.retMsg; //提示框的文字
             }
 
-		},
-	},
-	
-	props: [
-	],
+        },
+    },
+    
+    props: [
+    ],
 
-	mixins: [
-		
-	]
+    mixins: [
+        
+    ]
 }
 </script>
 <style lang="scss" scoped="">

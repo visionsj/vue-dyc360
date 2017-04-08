@@ -5,31 +5,31 @@ webpackJsonp([10,8],{
 
 	'use strict';
 
-	var _vue = __webpack_require__(23);
+	var _vue = __webpack_require__(24);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vueRouter = __webpack_require__(246);
+	var _vueRouter = __webpack_require__(247);
 
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-	var _router = __webpack_require__(167);
+	var _router = __webpack_require__(168);
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(170);
+	var _store = __webpack_require__(171);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _vueResource = __webpack_require__(245);
+	var _vueResource = __webpack_require__(246);
 
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 
-	var _env = __webpack_require__(129);
+	var _env = __webpack_require__(125);
 
-	__webpack_require__(162);
+	__webpack_require__(163);
 
-	var _fastClick = __webpack_require__(163);
+	var _fastClick = __webpack_require__(164);
 
 	var _fastClick2 = _interopRequireDefault(_fastClick);
 
@@ -47,7 +47,7 @@ webpackJsonp([10,8],{
 	_vue2.default.http.interceptors.push(function (request, next) {
 		next(function (response) {
 			if (response.data.retCode == "-104") {
-				window.location.href = "/dyc360/#/login";
+				window.location.href = "/#/login";
 			} else {
 				return response;
 			}
@@ -66,7 +66,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 114:
+/***/ 110:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -76,11 +76,11 @@ webpackJsonp([10,8],{
 	});
 	exports.animate = exports.showBack = exports.loadMore = exports.getStyle = exports.removeStore = exports.getStore = exports.setStore = undefined;
 
-	var _keys = __webpack_require__(134);
+	var _keys = __webpack_require__(131);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _stringify = __webpack_require__(132);
+	var _stringify = __webpack_require__(129);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -335,7 +335,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 129:
+/***/ 125:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -362,7 +362,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 162:
+/***/ 163:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -382,12 +382,12 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 163:
+/***/ 164:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	var _typeof2 = __webpack_require__(75);
+	var _typeof2 = __webpack_require__(94);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -921,7 +921,7 @@ webpackJsonp([10,8],{
 			return new FastClick(layer, options);
 		};
 
-		if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(131)) === 'object' && __webpack_require__(131)) {
+		if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(127)) === 'object' && __webpack_require__(127)) {
 			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return FastClick;
 			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -935,7 +935,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 167:
+/***/ 168:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -944,7 +944,7 @@ webpackJsonp([10,8],{
 	    value: true
 	});
 
-	var _App = __webpack_require__(223);
+	var _App = __webpack_require__(224);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -952,43 +952,43 @@ webpackJsonp([10,8],{
 
 	var home = function home(r) {
 	    return __webpack_require__.e/* nsure */(0, function () {
-	        return r(__webpack_require__(225));
+	        return r(__webpack_require__(226));
 	    });
 	};
 	var invest = function invest(r) {
-	    return __webpack_require__.e/* nsure */(4, function () {
-	        return r(__webpack_require__(227));
+	    return __webpack_require__.e/* nsure */(3, function () {
+	        return r(__webpack_require__(228));
 	    });
 	};
 	var login = function login(r) {
 	    return __webpack_require__.e/* nsure */(5, function () {
-	        return r(__webpack_require__(229));
+	        return r(__webpack_require__(230));
 	    });
 	};
 	var register = function register(r) {
 	    return __webpack_require__.e/* nsure */(6, function () {
-	        return r(__webpack_require__(230));
+	        return r(__webpack_require__(231));
 	    });
 	};
 	var forgetPassword = function forgetPassword(r) {
 	    return __webpack_require__.e/* nsure */(7, function () {
-	        return r(__webpack_require__(228));
+	        return r(__webpack_require__(229));
 	    });
 	};
 	var more = function more(r) {
-	    return __webpack_require__.e/* nsure */(1, function () {
-	        return r(__webpack_require__(232));
+	    return __webpack_require__.e/* nsure */(2, function () {
+	        return r(__webpack_require__(233));
 	    });
 	};
 	var usersSet = function usersSet(r) {
-	    return __webpack_require__.e/* nsure */(3, function () {
-	        return r(__webpack_require__(231));
+	    return __webpack_require__.e/* nsure */(4, function () {
+	        return r(__webpack_require__(232));
 	    });
 	};
 
 	var usersMain = function usersMain(r) {
-	    return __webpack_require__.e/* nsure */(2, function () {
-	        return r(__webpack_require__(233));
+	    return __webpack_require__.e/* nsure */(1, function () {
+	        return r(__webpack_require__(234));
 	    });
 	};
 
@@ -1028,14 +1028,14 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 168:
+/***/ 169:
 /***/ function(module, exports) {
 
 	"use strict";
 
 /***/ },
 
-/***/ 169:
+/***/ 170:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1047,7 +1047,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 170:
+/***/ 171:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1056,23 +1056,23 @@ webpackJsonp([10,8],{
 		value: true
 	});
 
-	var _vue = __webpack_require__(23);
+	var _vue = __webpack_require__(24);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(105);
+	var _vuex = __webpack_require__(96);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
-	var _mutations = __webpack_require__(172);
+	var _mutations = __webpack_require__(173);
 
 	var _mutations2 = _interopRequireDefault(_mutations);
 
-	var _action = __webpack_require__(168);
+	var _action = __webpack_require__(169);
 
 	var _action2 = _interopRequireDefault(_action);
 
-	var _getters = __webpack_require__(169);
+	var _getters = __webpack_require__(170);
 
 	var _getters2 = _interopRequireDefault(_getters);
 
@@ -1093,7 +1093,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 171:
+/***/ 172:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1107,7 +1107,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 172:
+/***/ 173:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1116,15 +1116,15 @@ webpackJsonp([10,8],{
 		value: true
 	});
 
-	var _defineProperty2 = __webpack_require__(137);
+	var _defineProperty2 = __webpack_require__(134);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 	var _RECORD_USERINFO$GET_;
 
-	var _mutationTypes = __webpack_require__(171);
+	var _mutationTypes = __webpack_require__(172);
 
-	var _mUtils = __webpack_require__(114);
+	var _mUtils = __webpack_require__(110);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1153,7 +1153,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 173:
+/***/ 174:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1165,25 +1165,25 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 199:
+/***/ 200:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 223:
+/***/ 224:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(199)
+	__webpack_require__(200)
 
 	var Component = __webpack_require__(11)(
 	  /* script */
-	  __webpack_require__(173),
+	  __webpack_require__(174),
 	  /* template */
-	  __webpack_require__(242),
+	  __webpack_require__(243),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1195,7 +1195,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 242:
+/***/ 243:
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1209,7 +1209,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 247:
+/***/ 248:
 /***/ function(module, exports) {
 
 	/* (ignored) */
