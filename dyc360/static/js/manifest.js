@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"usersMain","2":"more","3":"invest","4":"usersSet","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"7367bb9702d9a216d1ae","1":"169c525feb6c20082f86","2":"7a4fc53b275ffc83cdc0","3":"5cea0139542ff57afb7f","4":"a27c92f6648701bf42ce","5":"66efb953b4978c05f2bc","6":"2e33e8b0ee3520b30d3c","7":"c07f0748e1daeaa8b067","9":"1e3109b45a77e8a07c97","10":"34ee983c51971a56dbc8"}[chunkId] + ".min.js";
+/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"usersMain","2":"more","3":"usersSet","4":"invest","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"38cbed563cfdc5df0efc","1":"acf3d91b5cabb2dbb06f","2":"1ebcf002d363161827d0","3":"067ae83f28cbe68bfd51","4":"8a118aa89872be024da2","5":"8ee9f5aa2d579f86f72d","6":"443478f627b7c40a6af3","7":"3dd24a6286e682fcc1de","9":"2be5b1912f79ebdfff1e","10":"b7fa1bef3896c1d9ee3e"}[chunkId] + ".min.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};

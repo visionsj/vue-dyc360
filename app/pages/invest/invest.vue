@@ -158,7 +158,6 @@
 
 <script>
 import Vue from 'vue'
-import $ from '../../plugins/zepto.min.js'
 import {getBorrowList} from '../../service/getData'
 import footerCommon from '../../components/footer/footerCommon'
 import loading from '../../components/common/loading'
@@ -189,13 +188,14 @@ export default {
                 async initData(){
                     let res = await getBorrowList(this.pageNo, 10, 3);
                     let productVote = [], product = [];
-                    $.each(res.data.data, function(name, value){
+                    for(var i=0; i<res.data.data.length; i++){
+                        let value = res.data.data[i];
                         if(value.borrowStatus == 3 || value.borrowStatus == 4) {
                             productVote.push(value)
                         }else {
                             product.push(value)
                         }
-                    });
+                    };
 
                     this.productVote = [...productVote];
                     this.product = [...product];
@@ -217,20 +217,22 @@ export default {
                     this.pageNo += 1;
                     let res = await getBorrowList(this.pageNo, 10, 3);  
                                     
-                        $.each(res.data.data, function(name, value){
-                            if(value.borrowStatus == 3 || value.borrowStatus == 4) {
-                                productVoteNew.push(value)
-                            }else {
-                                productNew.push(value)
-                            }
+                    
+                    for(var i=0; i<res.data.data.length; i++){
+                         let value = res.data.data[i];
+                        if(value.borrowStatus == 3 || value.borrowStatus == 4) {
+                            productVoteNew.push(value)
+                        }else {
+                            productNew.push(value)
+                        }
+                    };
 
-                        });
+                    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
+                    this.product = this.product.concat(this.product, productNew);
 
-                        this.productVote = this.productVote.concat(this.productVote, productVoteNew);
-                        this.product = this.product.concat(this.product, productNew);
+                    this.preventRepeat = false;
+                    this.hideLoading();
 
-                        this.preventRepeat = false;
-                        this.hideLoading();
                     },
                     
                     hideLoading(){
