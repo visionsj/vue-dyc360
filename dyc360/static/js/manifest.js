@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"more","2":"usersMain","3":"usersSet","4":"invest","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"276409645d15320dff48","1":"e22d123208a242e2cd8b","2":"3b2afcfbba0ffa64a6e1","3":"d32a7ed95105823653f3","4":"07203eb794534dfa3f24","5":"4cbced310b5b88942347","6":"e03422dbebdbba9e019c","7":"8ba2be6561b308f2b932","9":"ef801d8b243a3b599ec2","10":"28c7264a2dff4d84cd1e"}[chunkId] + ".min.js";
+/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"more","2":"usersMain","3":"usersSet","4":"invest","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"15d32267c41582ffce1b","1":"cc3303691a39e36d022e","2":"a4522dbe9856bf8bc157","3":"3505dd3018a9182fad0d","4":"176c7e3280f061c02ca7","5":"1e5a7b22dfb4551c77d6","6":"33a862c254ec41bafdf7","7":"afbc9f5a14e7228d238e","9":"ef801d8b243a3b599ec2","10":"a63c4e7678cfdf9e9c47"}[chunkId] + ".min.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -88,7 +88,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/dyc360/";
 /******/ })
 /************************************************************************/
 /******/ ([]);

@@ -3,23 +3,23 @@
 	<div class="nav-bar">
 		<router-link 
 		:class="$route.path.indexOf('home') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'" 
-		:to="'/home'">
+		:to="'home'">
 			<p class="nav-bar-content nb0">精品</p>
 		</router-link>
 
 		<router-link 
 		:class="$route.path.indexOf('invest') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
-		:to="'/invest'">
+		:to="'invest'">
 			<p class="nav-bar-content nb1">产品</p>
 		</router-link>
 		<router-link 
 		:class="$route.path.indexOf('usersMain') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
-		:to="'/usersMain'">
+		:to="'usersMain'">
 			<p class="nav-bar-content nb2">我的</p>
 		</router-link>
 		<router-link 
 		:class="$route.path.indexOf('more') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
-		:to="'/more'">
+		:to="'more'">
 			<p class="nav-bar-content nb3">更多</p>
 		</router-link>
 	</div>

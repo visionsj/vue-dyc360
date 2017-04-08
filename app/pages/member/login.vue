@@ -84,7 +84,7 @@ export default {
             }else{
                 //登陆成功保存用户信息，返回上一路游
                 this.RECORD_USERINFO(loginInfo.data.data);
-                window.location.href = "/#/more"
+                window.location.href = "#/usersMain"
             }
 
         },

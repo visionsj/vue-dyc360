@@ -179,9 +179,9 @@ export default {
 
 	},
 	mounted() {
-		getBorrowList(this.pageNo, 10, 3).then(res => {
-        	var productVote = [], product = [];
-        	$.each(res.data.data, function(name, value){
+	   getBorrowList(this.pageNo, 10, 3).then(res => {
+                	var productVote = [], product = [];
+                	$.each(res.data.data, function(name, value){
         	    if(value.borrowStatus == 3 || value.borrowStatus == 4) {
         	        productVote.push(value)
         	    }else {

@@ -47,7 +47,7 @@ webpackJsonp([10,8],{
 	_vue2.default.http.interceptors.push(function (request, next) {
 		next(function (response) {
 			if (response.data.retCode == "-104") {
-				window.location.href = "/#/login";
+				window.location.href = "/dyc360/#/login";
 			} else {
 				return response;
 			}
@@ -1189,22 +1189,6 @@ webpackJsonp([10,8],{
 	  /* cssModules */
 	  null
 	)
-	Component.options.__file = "E:\\vue-dyc360\\app\\App.vue"
-	if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-	if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
-
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-b8be9790", Component.options)
-	  } else {
-	    hotAPI.reload("data-v-b8be9790", Component.options)
-	  }
-	})()}
 
 	module.exports = Component.exports
 
@@ -1212,7 +1196,7 @@ webpackJsonp([10,8],{
 /***/ },
 
 /***/ 242:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('transition', {
@@ -1222,13 +1206,6 @@ webpackJsonp([10,8],{
 	    }
 	  }, [_c('router-view')], 1)
 	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-b8be9790", module.exports)
-	  }
-	}
 
 /***/ },
 
