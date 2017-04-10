@@ -40,7 +40,9 @@ import '../../../../style/custom.css'
 export default {
   data() {
     return {
-      cardNo: null,
+      oldPassword: null,
+      newPassword: null,
+      repeatPassword: null,
       showAlert: false, 
       alertText: null, 
     }
@@ -58,6 +60,19 @@ export default {
   },
   methods: {
     async modifyPassword(){
+        if(!this.oldPassword){
+          this.showAlert = true;
+          this.alertText = "请输入当前密码";
+          return;
+        }else if(!this.newPassword){
+          this.showAlert = true;
+          this.alertText = "请输入新密码";
+          return;
+        }else if(this.newPassword != this.repeatPassword){
+          this.showAlert = true;
+          this.alertText = "两次密码不一样";
+          return;
+        }
       modifyLoginPassword(MD5(this.oldPassword), MD5(this.newPassword), MD5(this.repeatPassword)).then(res => {
         if(res.data.retCode == "1"){
           this.showAlert = true;
@@ -71,7 +86,7 @@ export default {
     async reuturnSet(){
       if(this.alertText == "修改密码成功"){
         this.showAlert = false;
-        this.$router.push({path: "/more/usersSet", query:{'reload':true}});
+        this.$router.replace({path: "/more/usersSet", query:{'reload':true}});
       }else{
         this.showAlert = false;
       }

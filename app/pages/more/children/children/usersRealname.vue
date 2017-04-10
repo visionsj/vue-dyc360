@@ -72,7 +72,7 @@ export default {
     async reuturnSet(){
       if(this.alertText == "实名认证成功"){
         this.showAlert = false;
-        this.$router.push({path: "/more/usersSet", query:{'reload':true}});
+        this.$router.replace({path: "/more/usersSet", query:{'reload':true}});
       }else{
         this.showAlert = false;
       }

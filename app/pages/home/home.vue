@@ -37,7 +37,7 @@
                 <div id="jqm-round-circle" class="jqm-round-circle">
                     <div style="margin-top:5px;">
                         <h1>
-                            {{productDetail.yield-productDetail.floatYield}}<font class="ft20">%</font>
+                            {{!(productDetail.yield-productDetail.floatYield) ? 0 : (productDetail.yield-productDetail.floatYield)}}<font class="ft20">%</font>
                             
                             <span class="yield" v-if="productDetail.floatYield > 0"> +{{productDetail.floatYield}}%</span>
                             
