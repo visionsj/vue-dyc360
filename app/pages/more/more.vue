@@ -17,7 +17,7 @@
 
                 </div>
                 <div class="user_set">
-                    <router-link :to="{path: '/more/usersSet'}" tag="div">
+                    <router-link :to="{path: !!userInfo.isLogin ? '/more/usersSet':'login'}" tag="div">
                         <img src="../../images/um1.png?20161116" height="25" />
                     </router-link>
                 </div>
@@ -25,12 +25,12 @@
 
 
             <div class="list_title list_title_clu mg0 bor0" >
-                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appFriends', query: {loginRef: '/appFriends'}}">
+                <a :href=" !userInfo.isLogin ? '/login' : 'https://m.duc360.com/app_friends.html?loginRef=http://rrys365.com/#/more'">
                     <span class="fl users_main_list">
                         <img src="../../images/um8.png?v20161116" height="30" />
                     </span>
                     邀请好友<i></i> <span class="fr ft16 ftog">30<font class="ft13 ftgray9">元红包+提成</font></span>
-                </router-link>
+                </a>
             </div>
 
             <div class="list_title list_title_clu mg0">
@@ -52,7 +52,7 @@
             </div>
 
             <div class="list_title list_title_clu mg0 bor0">
-                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appHelpList'}">
+                <router-link :to="{path: !userInfo.isLogin ? '/login' : '/appNoticeList'}">
                     <span class="fl users_main_list">
                         <img src="../../images/um11.png?v20161116" height="30" />
                     </span>

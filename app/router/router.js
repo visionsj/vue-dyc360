@@ -7,6 +7,11 @@ const register = r => require.ensure([], () => r(require('../pages/member/regist
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
 const more = r => require.ensure([], () => r(require('../pages/more/more')), 'more')
 const usersSet = r => require.ensure([], () => r(require('../pages/more/children/usersSet')), 'usersSet')
+const appHelpContent = r => require.ensure([], () => r(require('../pages/more/children/appHelpContent')), 'appHelpContent')
+const appHelpList = r => require.ensure([], () => r(require('../pages/more/appHelpList')), 'appHelpList')
+const appNewsList = r => require.ensure([], () => r(require('../pages/more/appNewsList')), 'appNewsList')
+const appNoticeList = r => require.ensure([], () => r(require('../pages/more/appNoticeList')), 'appNoticeList')
+const appAbout = r => require.ensure([], () => r(require('../pages/more/appAbout')), 'appAbout')
 
 const usersMain = r => require.ensure([], () => r(require('../pages/users/usersMain')), 'usersMain')
 
@@ -57,6 +62,40 @@ export default [{
                     component: usersSet
                 },
             ]
+        },
+        {
+            path: '/appHelpList',
+            component: appHelpList,
+            children: [
+                {
+                    path: 'appHelpContent',
+                    component: appHelpContent
+                },
+            ]
+        },
+        {
+            path: '/appNewsList',
+            component: appNewsList,
+            children: [
+                {
+                    path: 'appHelpContent',
+                    component: appHelpContent
+                },
+            ]
+        },
+        {
+            path: '/appNoticeList',
+            component: appNoticeList,
+            children: [
+                {
+                    path: 'appHelpContent',
+                    component: appHelpContent
+                },
+            ]
+        },
+        {
+            path: '/appAbout',
+            component: appAbout,
         },
 
         //我的

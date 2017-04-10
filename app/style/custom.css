@@ -6,8 +6,6 @@
 #index .list_title a:active{color:#ff5c5f;}
 #index .list_title i{width:14px;height:14px;margin-top:4px;float:right;background:url("../images/icons-png/carat-r-grey.png")}
 
-#index .dhb_title{ position:absolute; top: 0;left: 0; width: 100%; height: 34px; background:url("../images/dhb/dhb_icon.png") no-repeat  20px  top; background-size:82px 34px;}
-#index .dhb_title a{position: absolute; top: 23px; right: 25px;  display: inline-block; font-weight: normal; text-decoration: none;float:right;color: #7c91c7 !important;width: 90px; font-size: 18px}
 #index .rate{padding-top: 40px;}
 #index .jqm-round-wrap{display:block;position:relative;width:200px;height:200px;margin:0 auto 20px; overflow:hidden;  border-radius:240px;-webkit-border-radius:240px;}
 #index .jqm-round-sector{position:absolute;width:200px;height:200px;}
@@ -36,7 +34,7 @@
 .app_down a{}
 .app_down .app_close{position: absolute; right: 5px; top: 5px;}
 .sum_tender{position:fixed; bottom:0; left:0; width:94%; padding: 10px 3%; height:24px; line-height: 24px; background: #555;filter:Alpha(Opacity=95);opacity:.95; color:#e7e7e7; text-shadow:none; text-align: center; z-index: 99999;}
-
+.bzxx_lei_box img{ max-width: 100%;}
 /*公共样式*/
 body, html{margin: 0; font-size: 14px; color: #666; background: #efeff4}
 input{border:1px solid #b7bbc2; border-radius: 4px;}

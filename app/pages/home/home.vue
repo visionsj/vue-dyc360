@@ -37,7 +37,7 @@
                 <div id="jqm-round-circle" class="jqm-round-circle">
                     <div style="margin-top:5px;">
                         <h1>
-                            {{productDetail.yield | isNAN}}<font class="ft20">%</font>
+                            {{productDetail.yield-productDetail.floatYield}}<font class="ft20">%</font>
                             
                             <span class="yield" v-if="productDetail.floatYield > 0"> +{{productDetail.floatYield}}%</span>
                             
@@ -46,8 +46,8 @@
                         <p class="ft1">
                             <span class="circle_list fl">
                                 <font class="ftred" v-if="productDetail.durationType == 1 || productDetail.durationType == 2">{{productDetail.duration}}</font>
-                                <font class="ftred" v-if="productDetail.durationType == 3 || productDetail.durationType == 2">{{productDetail.duration * 3}}</font>
-                                <font class="ftred" v-if="productDetail.durationType == 4 || productDetail.durationType == 2">{{productDetail.duration * 6}}</font>
+                                <font class="ftred" v-if="productDetail.durationType == 3">{{productDetail.duration * 3}}</font>
+                                <font class="ftred" v-if="productDetail.durationType == 4 ">{{productDetail.duration * 6}}</font>
                                 
                                 <font class="ft14" v-if="productDetail.durationType == 1">天</font>
                                 <font class="ft14" v-else>个月</font>

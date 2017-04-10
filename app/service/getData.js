@@ -379,3 +379,16 @@ export const getPayChannelLimit =  () => Vue.http.post('/common/getPayChannelLim
 //获取我的礼品列表
 export const getUserGiftList =  () => Vue.http.post('/gift/getUserGiftList', {
 })
+
+//获取新闻列表
+export const getArticleWebPage =  (pageNo, siteId, pageSize) => Vue.http.post('/article/getArticleWebPage', {
+	pageNo: pageNo,
+	siteId: siteId,
+	pageSize: pageSize
+})
+
+//获取新闻详细
+export const getArticle =  (id) => Vue.http.post('/article/getArticle', {
+	id: id,
+})
+

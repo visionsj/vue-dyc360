@@ -139,9 +139,6 @@
                 </div>
                
                 </div>
-                <div id="pullUp" class="fl">
-                    <span class="pullUpLabel"></span>
-                </div>
             </div>
         </div>
     </div> 
@@ -186,7 +183,7 @@ export default {
 	},
 	methods: {
                 async initData(){
-                    let res = await getBorrowList(this.pageNo, 10, 3);
+                    let res = await getBorrowList(this.pageNo, 15, 3);
                     let productVote = [], product = [];
                     for(var i=0; i<res.data.data.length; i++){
                         let value = res.data.data[i];
@@ -215,7 +212,7 @@ export default {
                     this.preventRepeat = true;
                     this.showLoading = true;
                     this.pageNo += 1;
-                    let res = await getBorrowList(this.pageNo, 10, 3);  
+                    let res = await getBorrowList(this.pageNo, 15, 3);  
                                     
                     
                     for(var i=0; i<res.data.data.length; i++){
@@ -227,8 +224,8 @@ export default {
                         }
                     };
 
-                    this.productVote = this.productVote.concat(this.productVote, productVoteNew);
-                    this.product = this.product.concat(this.product, productNew);
+                    this.productVote = this.productVote.concat(productVoteNew);
+                    this.product = this.product.concat(productNew);
 
                     this.preventRepeat = false;
                     this.hideLoading();

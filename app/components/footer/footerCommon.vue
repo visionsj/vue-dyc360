@@ -14,7 +14,7 @@
 		</router-link>
 		<router-link 
 		:class="$route.path.indexOf('usersMain') !== -1? 'nav-bar-wrap active':'nav-bar-wrap'"
-		:to="'usersMain'">
+		:to="login == 'true' ? 'usersMain' : 'login'">
 			<p class="nav-bar-content nb2">我的</p>
 		</router-link>
 		<router-link 
@@ -26,27 +26,28 @@
 </footer>
 </template>
 <script>
-    export default {
-    	data(){
+import Vue from 'vue'
+import {getStore, setStore} from '../../config/mUtils'
 
-            return {
-                
-            }
-        },
-        created(){
-           
-        },
-        mounted(){
+export default {
+	data(){
+        return {
+            login: 'true'
+        }
+    },
+    created(){
+       
+    },
+    mounted(){
+    	this.login = getStore('login')
+    },
+    computed: {
+    },
+    methods: {
     
-        },
-        computed: {
-         
-        },
-        methods: {
-        
-        },
+    },
 
-    }
+}
 
 </script>
 <style lang="scss" scoped>
