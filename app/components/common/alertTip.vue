@@ -1,7 +1,7 @@
  <template>
     <div class="alet_container">
 	    <section class="tip_text_container">
-            <div v-if="showAlertIcon"  class="tip_icon">
+            <div v-if="showAlertIcon" class="tip_icon">
                 <span></span>
                 <span></span>
             </div>
@@ -20,7 +20,6 @@
             }
         },
         mounted(){
-            
         },
         props: {
             alertText: {  

@@ -120,15 +120,21 @@ export const checkSignInStatus =  () => Vue.http.post('/user/checkSignInStatus',
 })
 
 //修改登录密码
-export const modifyLoginPassword =  () => Vue.http.post('/user/modifyLoginPassword', {
+export const modifyLoginPassword =  (oldPassword, newPassword, repeatPassword) => Vue.http.post('/user/modifyLoginPassword', {
+	oldPassword: oldPassword,
+	newPassword: newPassword,
+	repeatPassword: repeatPassword
 })
 
 //设置交易密码
-export const setTradePassword =  () => Vue.http.post('/user/setTradePassword', {
+export const setTradePassword =  (tradePassword) => Vue.http.post('/user/setTradePassword', {
+	tradePassword: tradePassword
 })
 
 //修改交易密码
-export const modifyTradePassword =  () => Vue.http.post('/user/modifyTradePassword', {
+export const modifyTradePassword =  (oldTradePassword, newTradePassword) => Vue.http.post('/user/modifyTradePassword', {
+	oldTradePassword: oldTradePassword,
+	newTradePassword: newTradePassword
 })
 
 //找回支付密码
@@ -156,7 +162,9 @@ export const getUserAccountInfo =  () => Vue.http.post('/account/getUserAccountI
 })
 
 //实名认证
-export const checkRealNameAuth =  () => Vue.http.post('/account/checkRealNameAuth', {
+export const checkRealNameAuth =  (personName, personCardNo) => Vue.http.post('/account/checkRealNameAuth', {
+	personName: personName,
+	personCardNo: personCardNo
 })
 
 //验证用户身份
@@ -164,7 +172,8 @@ export const checkUserInfo =  () => Vue.http.post('/account/checkUserInfo', {
 })
 
 //绑定银行卡
-export const bindCardAuth =  () => Vue.http.post('/account/bindCardAuth', {
+export const bindCardAuth =  (cardNo) => Vue.http.post('/account/bindCardAuth', {
+	cardNo: cardNo
 })
 
 //用户金币

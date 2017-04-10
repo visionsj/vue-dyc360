@@ -193,7 +193,6 @@ export default {
 
         },
     },
-    
     props: [
     ],
 

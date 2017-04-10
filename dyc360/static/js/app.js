@@ -1,35 +1,35 @@
-webpackJsonp([10,8],{
+webpackJsonp([15,13],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _vue = __webpack_require__(24);
+	var _vue = __webpack_require__(15);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vueRouter = __webpack_require__(247);
+	var _vueRouter = __webpack_require__(275);
 
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-	var _router = __webpack_require__(130);
+	var _router = __webpack_require__(135);
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(133);
+	var _store = __webpack_require__(138);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _vueResource = __webpack_require__(246);
+	var _vueResource = __webpack_require__(274);
 
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 
-	var _env = __webpack_require__(114);
+	var _env = __webpack_require__(105);
 
-	__webpack_require__(125);
+	__webpack_require__(131);
 
-	var _fastClick = __webpack_require__(126);
+	var _fastClick = __webpack_require__(132);
 
 	var _fastClick2 = _interopRequireDefault(_fastClick);
 
@@ -66,7 +66,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 95:
+/***/ 67:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -76,11 +76,11 @@ webpackJsonp([10,8],{
 	});
 	exports.animate = exports.showBack = exports.loadMore = exports.getStyle = exports.removeStore = exports.getStore = exports.setStore = undefined;
 
-	var _keys = __webpack_require__(151);
+	var _keys = __webpack_require__(160);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _stringify = __webpack_require__(148);
+	var _stringify = __webpack_require__(157);
 
 	var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -335,7 +335,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 114:
+/***/ 105:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -362,7 +362,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 125:
+/***/ 131:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -382,12 +382,12 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 126:
+/***/ 132:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	var _typeof2 = __webpack_require__(98);
+	var _typeof2 = __webpack_require__(110);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -921,7 +921,7 @@ webpackJsonp([10,8],{
 			return new FastClick(layer, options);
 		};
 
-		if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(124)) === 'object' && __webpack_require__(124)) {
+		if ("function" === 'function' && (0, _typeof3.default)(__webpack_require__(130)) === 'object' && __webpack_require__(130)) {
 			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return FastClick;
 			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -935,7 +935,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 130:
+/***/ 135:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -944,7 +944,7 @@ webpackJsonp([10,8],{
 	    value: true
 	});
 
-	var _App = __webpack_require__(224);
+	var _App = __webpack_require__(242);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -952,43 +952,68 @@ webpackJsonp([10,8],{
 
 	var home = function home(r) {
 	    return __webpack_require__.e/* nsure */(0, function () {
-	        return r(__webpack_require__(226));
+	        return r(__webpack_require__(244));
 	    });
 	};
 	var invest = function invest(r) {
-	    return __webpack_require__.e/* nsure */(4, function () {
-	        return r(__webpack_require__(228));
+	    return __webpack_require__.e/* nsure */(7, function () {
+	        return r(__webpack_require__(246));
 	    });
 	};
 	var login = function login(r) {
-	    return __webpack_require__.e/* nsure */(5, function () {
-	        return r(__webpack_require__(230));
+	    return __webpack_require__.e/* nsure */(8, function () {
+	        return r(__webpack_require__(248));
 	    });
 	};
 	var register = function register(r) {
-	    return __webpack_require__.e/* nsure */(6, function () {
-	        return r(__webpack_require__(231));
+	    return __webpack_require__.e/* nsure */(9, function () {
+	        return r(__webpack_require__(249));
 	    });
 	};
 	var forgetPassword = function forgetPassword(r) {
-	    return __webpack_require__.e/* nsure */(7, function () {
-	        return r(__webpack_require__(229));
+	    return __webpack_require__.e/* nsure */(10, function () {
+	        return r(__webpack_require__(247));
 	    });
 	};
 	var more = function more(r) {
 	    return __webpack_require__.e/* nsure */(2, function () {
-	        return r(__webpack_require__(233));
+	        return r(__webpack_require__(256));
 	    });
 	};
 	var usersSet = function usersSet(r) {
 	    return __webpack_require__.e/* nsure */(3, function () {
-	        return r(__webpack_require__(232));
+	        return r(__webpack_require__(255));
+	    });
+	};
+	var appHelpContent = function appHelpContent(r) {
+	    return __webpack_require__.e/* nsure */(11, function () {
+	        return r(__webpack_require__(254));
+	    });
+	};
+	var appHelpList = function appHelpList(r) {
+	    return __webpack_require__.e/* nsure */(6, function () {
+	        return r(__webpack_require__(251));
+	    });
+	};
+	var appNewsList = function appNewsList(r) {
+	    return __webpack_require__.e/* nsure */(5, function () {
+	        return r(__webpack_require__(252));
+	    });
+	};
+	var appNoticeList = function appNoticeList(r) {
+	    return __webpack_require__.e/* nsure */(4, function () {
+	        return r(__webpack_require__(253));
+	    });
+	};
+	var appAbout = function appAbout(r) {
+	    return __webpack_require__.e/* nsure */(12, function () {
+	        return r(__webpack_require__(250));
 	    });
 	};
 
 	var usersMain = function usersMain(r) {
 	    return __webpack_require__.e/* nsure */(1, function () {
-	        return r(__webpack_require__(234));
+	        return r(__webpack_require__(257));
 	    });
 	};
 
@@ -1021,6 +1046,30 @@ webpackJsonp([10,8],{
 	            component: usersSet
 	        }]
 	    }, {
+	        path: '/appHelpList',
+	        component: appHelpList,
+	        children: [{
+	            path: 'appHelpContent',
+	            component: appHelpContent
+	        }]
+	    }, {
+	        path: '/appNewsList',
+	        component: appNewsList,
+	        children: [{
+	            path: 'appHelpContent',
+	            component: appHelpContent
+	        }]
+	    }, {
+	        path: '/appNoticeList',
+	        component: appNoticeList,
+	        children: [{
+	            path: 'appHelpContent',
+	            component: appHelpContent
+	        }]
+	    }, {
+	        path: '/appAbout',
+	        component: appAbout
+	    }, {
 	        path: '/usersMain',
 	        component: usersMain
 	    }]
@@ -1028,14 +1077,14 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 131:
+/***/ 136:
 /***/ function(module, exports) {
 
 	"use strict";
 
 /***/ },
 
-/***/ 132:
+/***/ 137:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1047,7 +1096,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 133:
+/***/ 138:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1056,23 +1105,23 @@ webpackJsonp([10,8],{
 		value: true
 	});
 
-	var _vue = __webpack_require__(24);
+	var _vue = __webpack_require__(15);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(94);
+	var _vuex = __webpack_require__(104);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
-	var _mutations = __webpack_require__(135);
+	var _mutations = __webpack_require__(140);
 
 	var _mutations2 = _interopRequireDefault(_mutations);
 
-	var _action = __webpack_require__(131);
+	var _action = __webpack_require__(136);
 
 	var _action2 = _interopRequireDefault(_action);
 
-	var _getters = __webpack_require__(132);
+	var _getters = __webpack_require__(137);
 
 	var _getters2 = _interopRequireDefault(_getters);
 
@@ -1093,7 +1142,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 134:
+/***/ 139:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1107,7 +1156,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 135:
+/***/ 140:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1116,15 +1165,15 @@ webpackJsonp([10,8],{
 		value: true
 	});
 
-	var _defineProperty2 = __webpack_require__(154);
+	var _defineProperty2 = __webpack_require__(163);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 	var _RECORD_USERINFO$GET_;
 
-	var _mutationTypes = __webpack_require__(134);
+	var _mutationTypes = __webpack_require__(139);
 
-	var _mUtils = __webpack_require__(95);
+	var _mUtils = __webpack_require__(67);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1153,7 +1202,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 136:
+/***/ 141:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1165,25 +1214,25 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 200:
+/***/ 212:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 224:
+/***/ 242:
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(200)
+	__webpack_require__(212)
 
-	var Component = __webpack_require__(11)(
+	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(136),
+	  __webpack_require__(141),
 	  /* template */
-	  __webpack_require__(243),
+	  __webpack_require__(270),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1195,7 +1244,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 243:
+/***/ 270:
 /***/ function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1209,7 +1258,7 @@ webpackJsonp([10,8],{
 
 /***/ },
 
-/***/ 248:
+/***/ 276:
 /***/ function(module, exports) {
 
 	/* (ignored) */

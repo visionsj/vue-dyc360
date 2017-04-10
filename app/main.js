@@ -20,7 +20,8 @@ Vue.use(VueResource);
 Vue.http.interceptors.push((request, next) => {
 　next((response) => {
 	if(response.data.retCode == "-104"){
-		window.location.href = "/#/login"
+		this.$router.push({path: "/login"});
+
 	}else{
 		return response;
 	}

@@ -30,7 +30,7 @@
 /******/ 	// "0" means "already loaded"
 /******/ 	// Array means "loading", array contains callbacks
 /******/ 	var installedChunks = {
-/******/ 		8:0
+/******/ 		13:0
 /******/ 	};
 
 /******/ 	// The require function
@@ -76,7 +76,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"usersMain","2":"more","3":"usersSet","4":"invest","5":"login","6":"register","7":"forgetPassword","9":"vendor","10":"app"}[chunkId]||chunkId) + "." + {"0":"eafe7a289b0ca454f65e","1":"e3136b1f58b0daa3d80f","2":"412c7caac199194073a7","3":"9ab871e961ad6207b70d","4":"ebb5cf201930158bb075","5":"375707038bb71d617179","6":"a3de0383e7d45fd5f507","7":"636a20e9208f33b674a2","9":"ab230ac85a5d3638cdbb","10":"4ebad0a26d6a4efa7d15"}[chunkId] + ".min.js";
+/******/ 			script.src = __webpack_require__.p + "static/js/" + ({"0":"home","1":"usersMain","2":"more","3":"usersSet","4":"appNoticeList","5":"appNewsList","6":"appHelpList","7":"invest","8":"login","9":"register","10":"forgetPassword","11":"appHelpContent","12":"appAbout","14":"vendor","15":"app"}[chunkId]||chunkId) + "." + {"0":"919dcdaacf0ac53a1c8e","1":"a6a5109a58b73ca36055","2":"4a58be032d9046b30835","3":"7f7e1efe0f661ce115e2","4":"77dd0a5bff9fff3317dd","5":"b602d1f5ef08dac4acd5","6":"7b0629cb8dbd887808cd","7":"1f001bd39401527d7025","8":"ea65bd4ac73125aae87c","9":"1bcf22c4ee5016c29ca5","10":"234d0923cbbc67bf5df7","11":"63d54a29ad7ff934817c","12":"8a260641c0138e1e224e","14":"9dd0ed90fe6fd0a09942","15":"45109a86785d9c1e7e93"}[chunkId] + ".min.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};

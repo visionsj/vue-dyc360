@@ -7,6 +7,10 @@ const register = r => require.ensure([], () => r(require('../pages/member/regist
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
 const more = r => require.ensure([], () => r(require('../pages/more/more')), 'more')
 const usersSet = r => require.ensure([], () => r(require('../pages/more/children/usersSet')), 'usersSet')
+const usersRealname = r => require.ensure([], () => r(require('../pages/more/children/children/usersRealname')), 'usersRealname')
+const usersBindBank = r => require.ensure([], () => r(require('../pages/more/children/children/usersBindBank')), 'usersBindBank')
+const usersModifyPassword = r => require.ensure([], () => r(require('../pages/more/children/children/usersModifyPassword')), 'usersModifyPassword')
+const usersModifyPayPassword = r => require.ensure([], () => r(require('../pages/more/children/children/usersModifyPayPassword')), 'usersModifyPayPassword')
 const appHelpContent = r => require.ensure([], () => r(require('../pages/more/children/appHelpContent')), 'appHelpContent')
 const appHelpList = r => require.ensure([], () => r(require('../pages/more/appHelpList')), 'appHelpList')
 const appNewsList = r => require.ensure([], () => r(require('../pages/more/appNewsList')), 'appNewsList')
@@ -59,7 +63,25 @@ export default [{
             children: [
                 {
                     path: 'usersSet',
-                    component: usersSet
+                    component: usersSet,
+                    children: [
+                        {
+                            path: 'usersRealname',
+                            component: usersRealname
+                        },                        
+                        {
+                            path: 'usersBindBank',
+                            component: usersBindBank
+                        },                        
+                        {
+                            path: 'usersModifyPassword',
+                            component: usersModifyPassword
+                        },                        
+                        {
+                            path: 'usersModifyPayPassword',
+                            component: usersModifyPayPassword
+                        },
+                    ]
                 },
             ]
         },

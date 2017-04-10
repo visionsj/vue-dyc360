@@ -402,9 +402,9 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 .invest_list_red li:first-child{margin-right: 20px;}
 .invest_list_red li p{margin:0;}
 .borrow_presentation_list span{width:100%; display: block;}
-.users_realname{display:block;width:94%;margin:20px 0;padding:0 3%;background:#fff;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
-.users_realname ul{margin:10px 0;padding:0}
-.users_realname ul li{margin:0;padding:6px 0;clear:both;line-height:35px;height:35px; position:relative;background:#fff;border-bottom:#e6e6e6 1px solid;box-shadow: none;}
+.users_realname{display:block;margin:20px 0;padding:0 3%;background:#fff;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
+.users_realname ul{margin:0;padding:0}
+.users_realname ul li{margin:0;padding:6px 0;clear:both;line-height:35px; position:relative;background:#fff;border-bottom:#e6e6e6 1px solid;box-shadow: none;}
 .users_realname .reg_text{height:30px;color:#666; border:none; width:70%;line-height:30px;padding-left:60px;padding-right:10px}
 .users_realname .reg_text_2{position: absolute;top:7px;left:10px;}
 .warn_info{font-size: 14px;padding: 15px 20px 0 20px;color: #f00;}

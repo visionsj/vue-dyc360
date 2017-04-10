@@ -131,7 +131,7 @@ export default {
                 this.showAlert = true;
                 this.alertText = registerInfo.data.retMsg;
             }else{
-                window.location.href = "/#/login"
+                this.$router.push({path: "/login"});
             }
         },
         //获取手机验证码
