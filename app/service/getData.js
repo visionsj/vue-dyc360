@@ -194,7 +194,10 @@ export const getRedPacketList =  () => Vue.http.post('/account/getRedPacketList'
 })
 
 //获取我的投资列表
-export const getInvestOrderList =  () => Vue.http.post('/account/getInvestOrderList', {
+export const getInvestOrderList =  (holdingStatus, pageNo, pageSize) => Vue.http.post('/account/getInvestOrderList', {
+	holdingStatus: holdingStatus,
+	pageNo: pageNo,
+	pageSize: pageSize
 })
 
 //获取投资记录详情

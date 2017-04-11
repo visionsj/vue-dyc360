@@ -147,7 +147,7 @@ export default {
                 this.showAlert = true;
                 this.alertText = '您已开通银行存管，不能投资非存管标的'
             }else{
-                this.$router.push({path: url})
+                this.$router.push({path: url, query:{'borrowNo' : this.$route.query.borrowNo}})
             }
         }
                

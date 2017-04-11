@@ -48,7 +48,7 @@
 <script>
 import Vue from 'vue'
 import alertTip from '../../components/common/alertTip'
-import {getUserAssetInfo} from '../../service/getData'
+import {getUserAssetInfo,getBorrowDetail} from '../../service/getData'
 import '../../style/custom.css' 
 
 export default {
@@ -70,8 +70,9 @@ export default {
     },
     methods: {
         async initData(){
+            let resBorrow = await getBorrowDetail(this.$route.query.borrowNo);
             let resAsset = await getUserAssetInfo(this.$route.query.borrowNo);
-            this.assetDetail = {...resAsset.data.data};
+            this.assetDetail = Object.assign({...resBorrow.data.data}, {...resAsset.data.data});
         },
         async tender(url, pass){
            this.showAlert= true;
