@@ -9,7 +9,7 @@
                 <div id="productVote">
                  
                     <router-link class="list_title" style="padding: 5px 10px;" v-for="value in productVote" 
-                    :to="{path:'/borrow_content', query: {borrowNo : value.borrowNo}}">
+                    :to="{path:'/borrowContent', query: {borrowNo : value.borrowNo}}">
                         <div class="mg0 pd0 invest_title_name">
                 	       {{value.name}}
 

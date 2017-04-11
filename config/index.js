@@ -39,7 +39,7 @@ module.exports = {
             '/article',
             '/activity_dync'
         ],
-        proxypath: 'https://api.duc360.com',
+        proxypath: 'http://192.168.7.135:8888/platform/',
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

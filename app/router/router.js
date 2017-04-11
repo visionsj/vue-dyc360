@@ -2,6 +2,11 @@ import App from '../App'
 
 const home = r => require.ensure([], () => r(require('../pages/home/home')), 'home')
 const invest = r => require.ensure([], () => r(require('../pages/invest/invest')), 'invest')
+const borrowContent = r => require.ensure([], () => r(require('../pages/invest/borrowContent')), 'borrowContent')
+const projectBorrowContent = r => require.ensure([], () => r(require('../pages/invest/children/projectBorrowContent')), 'projectBorrowContent')
+const projectDetail = r => require.ensure([], () => r(require('../pages/invest/children/projectDetail')), 'projectDetail')
+const tenderRecord = r => require.ensure([], () => r(require('../pages/invest/children/tenderRecord')), 'tenderRecord')
+const usersTenderInvest = r => require.ensure([], () => r(require('../pages/invest/usersTenderInvest')), 'usersTenderInvest')
 const login = r => require.ensure([], () => r(require('../pages/member/login')), 'login')
 const register = r => require.ensure([], () => r(require('../pages/member/register')), 'register')
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
@@ -16,7 +21,6 @@ const appHelpList = r => require.ensure([], () => r(require('../pages/more/appHe
 const appNewsList = r => require.ensure([], () => r(require('../pages/more/appNewsList')), 'appNewsList')
 const appNoticeList = r => require.ensure([], () => r(require('../pages/more/appNoticeList')), 'appNoticeList')
 const appAbout = r => require.ensure([], () => r(require('../pages/more/appAbout')), 'appAbout')
-
 const usersMain = r => require.ensure([], () => r(require('../pages/users/usersMain')), 'usersMain')
 
 
@@ -39,6 +43,30 @@ export default [{
         {
             path: '/invest',
             component: invest
+        },       
+        //投资详细页
+        {
+            path: '/borrowContent',
+            component: borrowContent,
+            children: [
+                {
+                    path: 'projectBorrowContent',
+                    component: projectBorrowContent
+                },
+                {
+                    path: 'projectDetail',
+                    component: projectDetail
+                },
+                {
+                    path: 'tenderRecord',
+                    component: tenderRecord
+                },
+            ]
+        },
+        //投资确认页
+        {
+            path: '/usersTenderInvest',
+            component: usersTenderInvest
         },
         //会员登录
         {
@@ -125,6 +153,8 @@ export default [{
             path: '/usersMain',
             component: usersMain,
         },
+
+        
 
     ]
 }]

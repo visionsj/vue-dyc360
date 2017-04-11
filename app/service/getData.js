@@ -30,15 +30,20 @@ export const getBorrowList =  (pageNo, pageSize, terminalType) => Vue.http.post(
 
 
 //获取标的详情
-export const getBorrowDetail =  () => Vue.http.post('/product/getBorrowDetail', {
+export const getBorrowDetail =  (borrowNo) => Vue.http.post('/product/getBorrowDetail', {
+	borrowNo: borrowNo
 })
 
 //获取标的购买记录
-export const getInvestRecordList =  () => Vue.http.post('/product/getInvestRecordList', {
+export const getInvestRecordList =  (borrowNo, pageSize) => Vue.http.post('/product/getInvestRecordList', {
+	borrowNo: borrowNo,
+	pageSize: pageSize
 })
 
 //借款人详情
-export const repayUserList =  () => Vue.http.post('/product/repayUserList', {
+export const repayUserList =  (parentId, pageSize) => Vue.http.post('/product/repayUserList', {
+	parentId: parentId,
+	pageSize: pageSize
 })
 
 //获取红包数量
