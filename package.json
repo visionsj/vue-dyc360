@@ -5,7 +5,7 @@
   "author": "heyanhui <985064090@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
+    "dev": "node index.js",
     "build": "node build/build.js "
   },
   "dependencies": {
