@@ -80,10 +80,10 @@ npm run build
 
 # 作者
 
-@author  何艳辉 (985264090)
+@author  何艳辉 (vision_sj@163.com)
 
 
 
-###  热爱技术的小伙伴可以加我【加微信请扫二维码】
+### 加微信请扫二维码
 
 ![](https://github.com/visionsj/vue-dyc360/blob/master/screenGif/weixin.png?raw=true)
