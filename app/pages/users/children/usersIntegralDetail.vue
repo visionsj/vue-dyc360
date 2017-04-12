@@ -110,7 +110,12 @@ export default {
         font-family: Helvetica Neue,Tahoma,Arial;
     }
 }
-
+.noData {
+    text-align: center;
+    margin: 30px 0;
+    display: block;
+    color: #999
+}
 #invest_con .invest_list_title {
     line-height: 30px;
     padding: 0 !important;

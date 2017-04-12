@@ -4,7 +4,7 @@
 <swiper-banner></swiper-banner>
 
 
-<div id="index" style="padding: 0">
+<div id="index" style="padding: 0 0 20px 0">
     <div class="article">
             <div id="slider" v-if="showActicle">
                <div class="close" @click="showActicle=false"></div>

@@ -47,7 +47,7 @@ button{border: none}
 .mian-bg{background: #fff}
 
 a{text-decoration: none; font-weight: normal !important;}
-
+#app{padding-bottom: 50px;}
 #left-panel{padding-top:70px; }
 #left-panel .panel-list{font-weight: normal;padding: .9em 0 .9em 5.5em;min-height: 1em;border-color:#fff;background:#fff;font-size: 15px !important;}
 #left-panel .panel-list:hover{background-color: #ededed;}

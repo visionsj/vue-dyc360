@@ -54,6 +54,6 @@
 .platformInfoText ul li img{max-height: 16px; vertical-align: middle}
 .platformInfoText .investNum {font-size: 14px; color: #fd5e63}
 
-.platformInfoText{margin-bottom: 20px}
+.platformInfoText{}
 .swiper-container-active{width: 300px !important}
 .active-list{padding-top: 50px; padding-left: 50px}
