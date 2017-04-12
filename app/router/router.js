@@ -23,7 +23,8 @@ const appNoticeList = r => require.ensure([], () => r(require('../pages/more/app
 const appAbout = r => require.ensure([], () => r(require('../pages/more/appAbout')), 'appAbout')
 const usersMain = r => require.ensure([], () => r(require('../pages/users/usersMain')), 'usersMain')
 const usersTender = r => require.ensure([], () => r(require('../pages/users/usersTender')), 'usersTender')
-
+const usersRecord = r => require.ensure([], () => r(require('../pages/users/usersRecord')), 'usersRecord')
+const usersRed = r => require.ensure([], () => r(require('../pages/users/usersRed')), 'usersRed')
 
 
 export default [{
@@ -157,6 +158,14 @@ export default [{
         {
             path: '/usersTender',
             component: usersTender,
+        },
+        {
+            path: '/usersRecord',
+            component: usersRecord,
+        },
+        {
+            path: '/usersRed',
+            component: usersRed,
         },
 
 

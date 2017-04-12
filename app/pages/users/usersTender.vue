@@ -3,63 +3,71 @@
     <div id="invest_con" class="pd0">
 
         <div class="ui-navbar">
-            <li :class=" holdingStatus == 1 ? 'active fl' : 'fl'">
-                投标中
-            </li>
-            <li :class=" holdingStatus == 2 ? 'active fl' : 'fl'">
-                还款中
-            </li>
-            <li :class=" holdingStatus == 3 ? 'active fl' : 'fl'">
-                已完成
-            </li>
+            <router-link :to="{path : '/usersTender', query: {'type' : '1'}}" replace>
+                <li :class=" holdingStatus == 1 ? 'active fl' : 'fl'">
+                    投标中
+                </li>
+            </router-link>
+            <router-link :to="{path : '/usersTender', query: {'type' : '2'}}" replace>
+                <li :class=" holdingStatus == 2 ? 'active fl' : 'fl'">
+                    还款中
+                </li>
+            </router-link>
+            <router-link :to="{path : '/usersTender', query: {'type' : '3'}}" replace>
+                <li :class=" holdingStatus == 3 ? 'active fl' : 'fl'">
+                    已完成
+                </li>
+            </router-link>
         </div>
 
 
         <!-- /content -->
-        <div id="wrapper" v-load-more="loaderMore" >
-            <div class="fl list_title user_tender rc_bn" v-for="value in userTenderDetail">
-                <ul>
-                    <li class="fl">
-                        <p class="invest_list_detail_title ft16 ftgray">
-                            {{value.productName}} 
-                            <span class="fr ft14 ftblue2" v-if="value.status != 1">({{value.repayedNum}}/{{value.totalNum}})</span>
-                        </p>
-                    </li>
-                    <li class="fl pd0">
-                        <p class="invest_list_detail_title ft12">
-                            投资金额：<font class="ftgray">{{value.investBalance}}元</font>
-                            <span class="fr" v-if="value.status != 3">
-                                预期总收益：<font class="ftgray">{{value.predictProfitAmount}}元</font>
-                            </span>
-                            <span class="fr" v-else>
-                                总收益：<font class="ftgray">{{value.finishedProfitAmount}}元</font>
-                            </span>
-                        </p>
-                    </li>
+        <div id="wrapper">
+            <div v-load-more="loaderMore" style="display:inline-block">
+                <div class="fl list_title user_tender rc_bn" v-for="value in userTenderDetail">
+                    <ul>
+                        <li class="fl">
+                            <p class="invest_list_detail_title ft16 ftgray">
+                                {{value.productName}} 
+                                <span class="fr ft14 ftblue2" v-if="value.status != 1">({{value.repayedNum}}/{{value.totalNum}})</span>
+                            </p>
+                        </li>
+                        <li class="fl pd0">
+                            <p class="invest_list_detail_title ft12">
+                                投资金额：<font class="ftgray">{{value.investBalance}}元</font>
+                                <span class="fr" v-if="value.status != 3">
+                                    预期总收益：<font class="ftgray">{{value.predictProfitAmount}}元</font>
+                                </span>
+                                <span class="fr" v-else>
+                                    总收益：<font class="ftgray">{{value.finishedProfitAmount}}元</font>
+                                </span>
+                            </p>
+                        </li>
 
-                    <li class="fl pd0">
-                        <p class="invest_list_detail_title ft12">
-                            投资时间：<font class="ftgray">{{value.createdTime}}</font>
+                        <li class="fl pd0">
+                            <p class="invest_list_detail_title ft12">
+                                投资时间：<font class="ftgray">{{value.createdTime | formatTime}}</font>
 
-                            <span class="fr" v-if="value.status == 3">
-                             到期时间：<font class="ftgray">{{value.repayTime}}</font>
-                            </span>
+                                <span class="fr" v-if="value.status == 3">
+                                 到期时间：<font class="ftgray">{{value.repayTime | formatTime}}</font>
+                                </span>
 
-                            <span class="fr" v-if="value.status == 2">
-                                剩余
-                                <font class="ftgray" v-if="parseInt((value.repayTime-it.curDate)/86400000) <= 0">0</font>
-                                <font class="ftgray" v-else>
-                                    {{Math.ceil((value.repayTime-it.curDate)/86400000)}}
-                                </font>
-                            </span>
+                                <span class="fr" v-if="value.status == 2">
+                                    剩余
+                                    <font class="ftgray" v-if="parseInt((value.repayTime-Number(new Date().getTime()))/86400000) <= 0">0天</font>
+                                    <font class="ftgray" v-else>
+                                        {{Math.ceil((value.repayTime-Number(new Date().getTime()))/86400000)}}天
+                                    </font>
+                                </span>
 
-                            <span class="fr" v-if="value.status != 2 && value.status != 3">
-                                <font class="ftgray">{{value.assignTypeText}}</font>
-                            </span>
-                        </p>
-                    </li>
+                                <span class="fr" v-if="value.status != 2 && value.status != 3">
+                                    <font class="ftgray">{{value.assignTypeText}}</font>
+                                </span>
+                            </p>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -88,12 +96,22 @@ import loading from '../../components/common/loading'
 import {loadMore} from '../../plugins/mixin'
 import alertTip from '../../components/common/alertTip'
 import '../../style/custom.css' 
-
+Vue.filter('formatTime', function (value, str) {
+   function add0(m) {
+        return m < 10 ? '0' + m : m
+    }
+    var time = new Date(parseInt(value));
+    var y = time.getFullYear();
+    var m = time.getMonth() + 1;
+    var d = time.getDate();
+    return add0(m) + '月' + add0(d) + '日';
+});
 export default {
     data() {
         return {
             userTenderDetail: [],
             profitStatis: {},
+            pageNo: 1,
             showAlert: false, 
             alertText: null, 
             showLoading: true,
@@ -104,7 +122,7 @@ export default {
 
     },
     mounted() {
-        this.initData();
+        this.initData(this.holdingStatus);
     },
     components: {
         loading,
@@ -114,8 +132,8 @@ export default {
 
     },
     methods: {
-        async initData(){
-            let resInvest = await getInvestOrderList(this.holdingStatus, 1, 10);
+        async initData(type){
+            let resInvest = await getInvestOrderList(type, 1, 10);
             this.userTenderDetail = [...resInvest.data.data];
 
             let resProfit = await getProfitStatis();
@@ -159,7 +177,13 @@ export default {
 
     mixins: [
         loadMore
-    ]
+    ],
+    watch: {
+        $route(){
+            this.holdingStatus = this.$route.query.type || 1
+            this.initData(this.holdingStatus);
+        }
+    }
 }
 </script>
 <style lang="scss" scoped="">
@@ -178,7 +202,7 @@ export default {
     width: 100%;
     height: 42px;
     background: #fff;
-    border-bottom: 1px solid #dcdcde
+    box-shadow: 2px 2px 8px #ddd;
   }
 
   .ui-navbar li {
@@ -209,7 +233,9 @@ export default {
     margin-bottom: 5px;
     border-bottom: 1px solid #c8c8ca
   }
-
+  #invest_con a{
+    color: #666
+  }
   #invest_con .list_title {
     margin: 5px 0;
   }

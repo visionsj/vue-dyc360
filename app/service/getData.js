@@ -190,7 +190,9 @@ export const getGoldCoinList =  () => Vue.http.post('/account/getGoldCoinList', 
 })
 
 //获取红包列表
-export const getRedPacketList =  () => Vue.http.post('/account/getRedPacketList', {
+export const getRedPacketList =  (pageNo, pageSize) => Vue.http.post('/account/getRedPacketList', {
+	pageNo: pageNo, 
+	pageSize: pageSize
 })
 
 //获取我的投资列表
@@ -341,7 +343,10 @@ export const getPromotInviteRecordAppPage =  () => Vue.http.post('/account/getPr
 })
 
 //获取资金记录
-export const fundRecordAppPage =  () => Vue.http.post('/account/fund/FundRecordAppPage', {
+export const fundRecordAppPage =  (type, pageNo, pageSize) => Vue.http.post('/account/fund/FundRecordAppPage', {
+	type: type,
+	pageNo: pageNo,
+	pageSize: pageSize,
 })
 
 //用户活期统计信息
@@ -370,6 +375,12 @@ export const getBranchBankList =  () => Vue.http.post('/common/getBranchBankList
 
 //获取金币可兑换的商品列表
 export const getCouponForExchange =  () => Vue.http.post('/account/getCouponForExchange', {
+
+})
+
+//兑换
+export const activate =  (code) => Vue.http.post('/redeem/activate', {
+	code: code
 })
 
 //获取服务器时间
@@ -394,7 +405,9 @@ export const getPayChannelLimit =  () => Vue.http.post('/common/getPayChannelLim
 })
 
 //获取我的礼品列表
-export const getUserGiftList =  () => Vue.http.post('/gift/getUserGiftList', {
+export const getUserGiftList =  (pageNo, pageSize) => Vue.http.post('/gift/getUserGiftList', {
+	pageNo: pageNo,
+	pageSize: pageSize
 })
 
 //获取新闻列表

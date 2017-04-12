@@ -114,7 +114,7 @@ export default {
 
     #tender_record .list_title .invest_list_title {
         border-bottom: none;
-        padding-bottom: 20px;
+        padding-bottom: .4rem;
     }
 
     #tender_record #wrapper {
