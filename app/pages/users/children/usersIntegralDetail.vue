@@ -66,7 +66,7 @@ export default {
     data() {
         return {
             integralDetail: [],
-            integralDetail: null
+            arrLength: null
         }
     },
     created() {
@@ -83,7 +83,7 @@ export default {
     methods: {
         async initData(){
             let resGold = await getGoldCoinList(100);
-            this.arrLength = resWithdraw.data.data.length;
+            this.arrLength = resGold.data.data.length;
             this.integralDetail = [...resGold.data.data]; 
         },
     },
