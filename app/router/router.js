@@ -25,6 +25,10 @@ const usersMain = r => require.ensure([], () => r(require('../pages/users/usersM
 const usersTender = r => require.ensure([], () => r(require('../pages/users/usersTender')), 'usersTender')
 const usersRecord = r => require.ensure([], () => r(require('../pages/users/usersRecord')), 'usersRecord')
 const usersRed = r => require.ensure([], () => r(require('../pages/users/usersRed')), 'usersRed')
+const usersIntegral = r => require.ensure([], () => r(require('../pages/users/usersIntegral')), 'usersIntegral')
+const usersIntegralDetail = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralDetail')), 'usersIntegralDetail')
+const usersIntegralExchange = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralExchange')), 'usersIntegralExchange')
+const usersIntegralExplain = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralExplain')), 'usersIntegralExplain')
 
 
 export default [{
@@ -160,15 +164,30 @@ export default [{
             component: usersTender,
         },
         {
+            path: '/usersIntegral',
+            component: usersIntegral,
+            children: [
+                {
+                    path: 'usersIntegralDetail',
+                    component: usersIntegralDetail
+                },
+                {
+                    path: 'usersIntegralExchange',
+                    component: usersIntegralExchange
+                },
+                {
+                    path: 'usersIntegralExplain',
+                    component: usersIntegralExplain
+                }
+            ]
+        },
+        {
             path: '/usersRecord',
             component: usersRecord,
         },
         {
             path: '/usersRed',
             component: usersRed,
-        },
-
-
-
+        }
     ]
 }]

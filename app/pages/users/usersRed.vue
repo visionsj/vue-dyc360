@@ -1,14 +1,14 @@
 <template>  
 <div>
     <div class="search red_search_wrap">
-        <div class="right"><button id="btn_red_redeem" @click="redeem">兑 换</button></div>
-        <div class="red_input"><input type="text" v-model="code" class="fl w60" placeholder="请输入兑换码" /></div>
+        <div class="search_right"><button id="btn_red_redeem" @click="redeem">兑 换</button></div>
+        <div class="search_red_input"><input type="text" v-model="code" class="fl w60" placeholder="请输入兑换码" /></div>
     </div>
 
     <div id="invest_con" data-role="content" class="pd0">
-        <div id="wrapper" style="margin-top: 60px;">
+        <div id="wrapper">
             <div id="scroller">
-                <div class="fl list_title mg0 pd0" style="width: 100%;  border:none"  v-load-more="loaderMore">
+                <div class="fl list_title pd0" style="width: 100%; margin-top:60px;  border:none"  v-load-more="loaderMore">
 
                     <div class="fl list_title mg0 bor0" style="width: 100%; padding: 0 3%; border-top:none" 
                         v-if="queryType == 1">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="nex">
                                 <span>{{value.statusText}}</span>
-                                <p>有效期至 {{value.expiredTime}}<br>备注：{{value.remark}}</p>
+                                <p>有效期至 {{value.expiredTime | formatTime}}<br>备注：{{value.remark}}</p>
                             </div>
                         </div>
 
@@ -36,7 +36,7 @@
                                 <img :src="value.imgUrl" />
                             </div>
                             <div class="rnex">
-                                <div class="top">{{value.giftName}}</div>
+                                <div class="top">{{value.giftName | formatTime}}</div>
                                 <p>获得时间：{{value.receiveTime}}<br>备　注：{{value.remark}}</p>
                             </div>
                         </div>
@@ -184,7 +184,7 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped="">
+<style lang="scss" scoped>
 .red_search_wrap{
     position: fixed;
     top:0;
@@ -192,7 +192,7 @@ export default {
     background: #efeff4;
     z-index: 99999;
 }
-.red_input input {
+.search_red_input input {
     padding: 10px;
     line-height: 20px
 }
@@ -203,7 +203,6 @@ export default {
     display: block;
     color: #999
 }
-/*以下为我的搜索区域代码*/
 .search{
     border-bottom: 1px solid #dedede;
     border-top: 1px solid #ccc;
@@ -215,7 +214,7 @@ export default {
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  -ms-box-sizing: border-box;  -o-box-sizing: border-box;  
 
 }
-.search .right button{
+#btn_red_redeem{
     height: 40px;
     width: 106px;
     border-radius: 4px;
@@ -323,7 +322,7 @@ export default {
     vertical-align: middle;
 }
 .few h3 span{
-    font-size: 50px;
+    font-size: 42px;
     line-height: 50px;
     font-weight: normal;
 }
@@ -377,6 +376,7 @@ export default {
 
 .search .red_input input{
     border: none;
+    background: #fff;
 }
 
 </style>

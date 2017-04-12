@@ -186,7 +186,8 @@ export const getGoldCoinInfo =  () => Vue.http.post('/account/getGoldCoinInfo', 
 })
 
 //获取金币收支明细列表
-export const getGoldCoinList =  () => Vue.http.post('/account/getGoldCoinList', {
+export const getGoldCoinList =  (pageSize) => Vue.http.post('/account/getGoldCoinList', {
+	pageSize: pageSize
 })
 
 //获取红包列表
@@ -215,7 +216,9 @@ export const getUserBindBankList =  () => Vue.http.post('/account/getUserBindBan
 })
 
 //获取金币兑换商品记录列表
-export const exchangeGoldCoinWeb =  () => Vue.http.post('/account/exchangeGoldCoinWeb', {
+export const exchangeGoldCoinWeb =  (redPacketIds, exchangeCounts) => Vue.http.post('/account/exchangeGoldCoinWeb', {
+	redPacketIds: redPacketIds,
+	exchangeCounts: exchangeCounts
 })
 
 //浙商强制开户
@@ -374,8 +377,8 @@ export const getBranchBankList =  () => Vue.http.post('/common/getBranchBankList
 })
 
 //获取金币可兑换的商品列表
-export const getCouponForExchange =  () => Vue.http.post('/account/getCouponForExchange', {
-
+export const getCouponForExchange =  (pageSize) => Vue.http.post('/account/getCouponForExchange', {
+	pageSize: pageSize
 })
 
 //兑换

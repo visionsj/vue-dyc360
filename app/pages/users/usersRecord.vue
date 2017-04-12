@@ -1,5 +1,6 @@
 <template>  
 <div class="fl users_tender_list" id="users_tender_list" style="border-top:none">
+    <span class="noData" v-if="!arrLength">暂无数据</span>
     <div class="date_month" v-load-more="loaderMore">
         <div class="datecontent" v-for="value in record">
             <div class="nex"><b>{{value.type}}</b><i class="timenow">{{value.createdTime | formatTime}}</i>
@@ -38,8 +39,6 @@ export default {
         return {
             record: [],
             pageNo: 1,
-            showAlert: false, 
-            alertText: null, 
             showLoading: true,
         }
     },
@@ -59,7 +58,7 @@ export default {
         async initData(type, pageNo, pageSize){
             let resRecord = await fundRecordAppPage(type, pageNo, pageSize);
             this.record = [...resRecord.data.data];
-
+            this.arrLength = !resRecord.data.data ? 0 : resRecord.data.data.length;
             this.showLoading = false;
         },
         async loaderMore(){
@@ -124,6 +123,12 @@ export default {
     -ms-box-sizing: border-box;  
     -o-box-sizing: border-box;  
 
+}
+.noData {
+    text-align: center;
+    margin: 30px 0;
+    display: block;
+    color: #999
 }
 .datecontent .nex{
     float: left;

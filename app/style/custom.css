@@ -286,7 +286,7 @@ footer .nav-bar .nav-bar-wrap.active .nav-bar-content{color: #fff !important; ba
 #invest_con .invest_process .active p.processText{background: #ff5c5f}
 #invest_con .invest_process li.active:after{color: #ff5c5f}
 
-.red_ico{width: 63px; height:33px; margin:3.5px auto !important; line-height: 30px;padding: 5px 0 0 0; text-align: center; color:#ffc400; background: url(../images/hb.png) no-repeat; background-size: 100% auto;}
+.red_ico{width: 63px; margin:3.5px auto !important; line-height: 35px;padding: 5px 0 0 0; text-align: center; color:#ffc400; background: url(../images/hb.png) no-repeat; background-size: 100% auto;}
 .invest_tender{position:fixed; bottom:0; left:0; width: 100%; padding: 8px 3%; font-size: .7rem; line-height: 36px; background: #ff5c5f; color:#fff !important; text-shadow:none; text-align: center; z-index: 99999; text-decoration: none}
 .invest_tender:hover{background: #e92c2f}
 .borrow_invest_detail li p{line-height: 24px;}
