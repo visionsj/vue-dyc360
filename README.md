@@ -41,3 +41,49 @@ vue-dyc360 是一款运行在手机端的金融投资平台,。
 
 
 
+# 项目运行
+
+#### 注意：由于涉及大量的 ES6/7 等新属性，nodejs 必须是 6.0 以上版本 ，node 7 是先行版，有可能会出问题，建议使用 node 6 稳定版
+
+```
+git clone https://github.com/visionsj/vue-dyc360 
+
+cd vue-dyc360
+
+npm install
+
+```
+
+### 编译环境
+```
+npm run dev
+
+访问 http://localhost:8085
+```
+
+
+### 线上版本
+```
+npm run build
+
+生成的dyc360文件夹放在服务器即可正常访问
+```
+
+# 页面结构
+
+待续...
+
+
+# 目标
+
+开发更多更好用的程序，包括pc前台+h5+后台管理系统
+
+# 作者
+
+@author  何艳辉 (985264090)
+
+
+
+###  热爱技术的小伙伴可以加我【加微信请扫二维码】
+
+![](https://github.com/visionsj/vue-dyc360/blob/master/screenGif/weixin.png?raw=true)
