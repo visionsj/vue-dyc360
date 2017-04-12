@@ -4,7 +4,7 @@
 <swiper-banner></swiper-banner>
 
 
-<div id="index" style="padding: 0">
+<div id="index" style="padding: 0 0 20px 0">
     <div class="article">
             <div id="slider" v-if="showActicle">
                <div class="close" @click="showActicle=false"></div>
@@ -68,7 +68,7 @@
 
         <div id="recommend_btn" class="in_invest">
             <router-link 
-            :to="{path: '/borrow_content', query: { borrowNo: productDetail.borrowNo}}"
+            :to="{path: '/borrowContent', query: { borrowNo: productDetail.borrowNo}}"
             :class="productDetail.borrowStatus != 3 ? 'common_btn_og disable_btn' : 'common_btn_og'" >
                 <span v-if="productDetail.borrowStatus == '2'">预告标</span>
                 <span v-if="productDetail.borrowStatus == '3'">立即投资</span>

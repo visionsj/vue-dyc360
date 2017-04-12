@@ -187,8 +187,8 @@ export default {
             if(headPic.data.retCode == "1") {
                 this.userInfo.headPicUrl = headPic.data.data.url
             }else{
-                 this.showAlert= true; //是否显示提示框
-                this.alertText= headPic.data.data.retMsg; //提示框的文字
+                this.showAlert= true; 
+                this.alertText= headPic.data.retMsg; 
             }
 
         },

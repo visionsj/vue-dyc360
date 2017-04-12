@@ -30,15 +30,20 @@ export const getBorrowList =  (pageNo, pageSize, terminalType) => Vue.http.post(
 
 
 //获取标的详情
-export const getBorrowDetail =  () => Vue.http.post('/product/getBorrowDetail', {
+export const getBorrowDetail =  (borrowNo) => Vue.http.post('/product/getBorrowDetail', {
+	borrowNo: borrowNo
 })
 
 //获取标的购买记录
-export const getInvestRecordList =  () => Vue.http.post('/product/getInvestRecordList', {
+export const getInvestRecordList =  (borrowNo, pageSize) => Vue.http.post('/product/getInvestRecordList', {
+	borrowNo: borrowNo,
+	pageSize: pageSize
 })
 
 //借款人详情
-export const repayUserList =  () => Vue.http.post('/product/repayUserList', {
+export const repayUserList =  (parentId, pageSize) => Vue.http.post('/product/repayUserList', {
+	parentId: parentId,
+	pageSize: pageSize
 })
 
 //获取红包数量
@@ -181,15 +186,21 @@ export const getGoldCoinInfo =  () => Vue.http.post('/account/getGoldCoinInfo', 
 })
 
 //获取金币收支明细列表
-export const getGoldCoinList =  () => Vue.http.post('/account/getGoldCoinList', {
+export const getGoldCoinList =  (pageSize) => Vue.http.post('/account/getGoldCoinList', {
+	pageSize: pageSize
 })
 
 //获取红包列表
-export const getRedPacketList =  () => Vue.http.post('/account/getRedPacketList', {
+export const getRedPacketList =  (pageNo, pageSize) => Vue.http.post('/account/getRedPacketList', {
+	pageNo: pageNo, 
+	pageSize: pageSize
 })
 
 //获取我的投资列表
-export const getInvestOrderList =  () => Vue.http.post('/account/getInvestOrderList', {
+export const getInvestOrderList =  (holdingStatus, pageNo, pageSize) => Vue.http.post('/account/getInvestOrderList', {
+	holdingStatus: holdingStatus,
+	pageNo: pageNo,
+	pageSize: pageSize
 })
 
 //获取投资记录详情
@@ -205,7 +216,9 @@ export const getUserBindBankList =  () => Vue.http.post('/account/getUserBindBan
 })
 
 //获取金币兑换商品记录列表
-export const exchangeGoldCoinWeb =  () => Vue.http.post('/account/exchangeGoldCoinWeb', {
+export const exchangeGoldCoinWeb =  (redPacketIds, exchangeCounts) => Vue.http.post('/account/exchangeGoldCoinWeb', {
+	redPacketIds: redPacketIds,
+	exchangeCounts: exchangeCounts
 })
 
 //浙商强制开户
@@ -269,11 +282,13 @@ export const submit =  () => Vue.http.post('/openAccount/submit', {
 })
 
 //获取提现记录列表
-export const getWithdrawCashList =  () => Vue.http.post('/account/getWithdrawCashList', {
+export const getWithdrawCashList =  (pageSize) => Vue.http.post('/account/getWithdrawCashList', {
+	pageSize: pageSize
 })
 
 //获取充值记录列表
-export const getRechargeList =  () => Vue.http.post('/account/getRechargeList', {
+export const getRechargeList =  (pageSize) => Vue.http.post('/account/getRechargeList', {
+	pageSize: pageSize
 })
 
 //提交用户信息
@@ -333,7 +348,10 @@ export const getPromotInviteRecordAppPage =  () => Vue.http.post('/account/getPr
 })
 
 //获取资金记录
-export const fundRecordAppPage =  () => Vue.http.post('/account/fund/FundRecordAppPage', {
+export const fundRecordAppPage =  (type, pageNo, pageSize) => Vue.http.post('/account/fund/FundRecordAppPage', {
+	type: type,
+	pageNo: pageNo,
+	pageSize: pageSize,
 })
 
 //用户活期统计信息
@@ -361,7 +379,13 @@ export const getBranchBankList =  () => Vue.http.post('/common/getBranchBankList
 })
 
 //获取金币可兑换的商品列表
-export const getCouponForExchange =  () => Vue.http.post('/account/getCouponForExchange', {
+export const getCouponForExchange =  (pageSize) => Vue.http.post('/account/getCouponForExchange', {
+	pageSize: pageSize
+})
+
+//兑换
+export const activate =  (code) => Vue.http.post('/redeem/activate', {
+	code: code
 })
 
 //获取服务器时间
@@ -386,7 +410,9 @@ export const getPayChannelLimit =  () => Vue.http.post('/common/getPayChannelLim
 })
 
 //获取我的礼品列表
-export const getUserGiftList =  () => Vue.http.post('/gift/getUserGiftList', {
+export const getUserGiftList =  (pageNo, pageSize) => Vue.http.post('/gift/getUserGiftList', {
+	pageNo: pageNo,
+	pageSize: pageSize
 })
 
 //获取新闻列表

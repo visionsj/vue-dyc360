@@ -7,9 +7,8 @@
                 <div id="users_tender_list" class="ui-body-d ui-content pd0">
                
                 <div id="productVote">
-                 
                     <router-link class="list_title" style="padding: 5px 10px;" v-for="value in productVote" 
-                    :to="{path:'/borrow_content', query: {borrowNo : value.borrowNo}}">
+                    :to="{path: (isLogin == 'true' ? '/borrowContent':'/login'), query: {borrowNo : value.borrowNo}}">
                         <div class="mg0 pd0 invest_title_name">
                 	       {{value.name}}
 
@@ -158,7 +157,9 @@ import Vue from 'vue'
 import {getBorrowList} from '../../service/getData'
 import footerCommon from '../../components/footer/footerCommon'
 import loading from '../../components/common/loading'
+import {getStore, setStore} from '../../config/mUtils'
 import {loadMore} from '../../plugins/mixin'
+
 import '../../style/custom.css' 
 
 export default {
@@ -167,6 +168,7 @@ export default {
 			productVote: [],
 			product: [],
 			pageNo: 1,
+            isLogin: getStore('login'),
 			showLine: false,
 			showLoading: true, //显示加载动画
 		}
