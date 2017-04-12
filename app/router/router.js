@@ -10,6 +10,7 @@ const usersTenderInvest = r => require.ensure([], () => r(require('../pages/inve
 const login = r => require.ensure([], () => r(require('../pages/member/login')), 'login')
 const register = r => require.ensure([], () => r(require('../pages/member/register')), 'register')
 const forgetPassword = r => require.ensure([], () => r(require('../pages/member/forgetPassword')), 'forgetPassword')
+const openAccountGuid = r => require.ensure([], () => r(require('../pages/member/openAccountGuid')), 'openAccountGuid')
 const more = r => require.ensure([], () => r(require('../pages/more/more')), 'more')
 const usersSet = r => require.ensure([], () => r(require('../pages/more/children/usersSet')), 'usersSet')
 const usersRealname = r => require.ensure([], () => r(require('../pages/more/children/children/usersRealname')), 'usersRealname')
@@ -29,6 +30,10 @@ const usersIntegral = r => require.ensure([], () => r(require('../pages/users/us
 const usersIntegralDetail = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralDetail')), 'usersIntegralDetail')
 const usersIntegralExchange = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralExchange')), 'usersIntegralExchange')
 const usersIntegralExplain = r => require.ensure([], () => r(require('../pages/users/children/usersIntegralExplain')), 'usersIntegralExplain')
+const userRechargeDepository = r => require.ensure([], () => r(require('../pages/users/children/userRechargeDepository')), 'userRechargeDepository')
+const userCashDepository = r => require.ensure([], () => r(require('../pages/users/children/userCashDepository')), 'userCashDepository')
+const cashRecord = r => require.ensure([], () => r(require('../pages/users/children/children/cashRecord')), 'cashRecord')
+const rechargeRecord = r => require.ensure([], () => r(require('../pages/users/children/children/rechargeRecord')), 'rechargeRecord')
 
 
 export default [{
@@ -88,6 +93,10 @@ export default [{
         {
             path: '/forgetPassword',
             component: forgetPassword
+        },
+        {
+            path: '/openAccountGuid',
+            component: openAccountGuid,
         },
 
         //更多
@@ -158,6 +167,28 @@ export default [{
         {
             path: '/usersMain',
             component: usersMain,
+            children: [
+                {
+                    path: 'userRechargeDepository',
+                    component: userRechargeDepository,
+                    children: [
+                        {
+                            path: 'rechargeRecord',
+                            component: rechargeRecord
+                        },
+                    ]
+                },
+                {
+                    path: 'userCashDepository',
+                    component: userCashDepository,
+                    children: [
+                        {
+                            path: 'cashRecord',
+                            component: cashRecord
+                        },
+                    ]
+                },
+            ]
         },
         {
             path: '/usersTender',

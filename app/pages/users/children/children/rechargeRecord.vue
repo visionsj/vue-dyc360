@@ -4,15 +4,16 @@
         <div  class="ui-body-d ui-content pd0">
             <div class="list_title mg0 pd0" style="border:none">
                 <div class="fl invest_list_title " style="background: none">
-                    <li class="fl w40">
-                        <p class="invest_list_detail_title ft14 ftbl">说明</p>
+                    <li class="fl w30">
+                        <p class="invest_list_detail_title ft14 ftbl">金额(元)</p>
                     </li>
                     <li class="fl w30">
-                        <p class="invest_list_detail_title ft14 ftbl">金币</p>
+                        <p class="invest_list_detail_title ft14 ftbl">状态</p>
                     </li>
-                    <li class="fl w30" >
+                    <li class="fl w40" >
                         <p class="invest_list_detail_title ft14 ftbl">时间</p>
                     </li>
+
                 </div>
 
                 <!-- /content -->
@@ -20,21 +21,23 @@
                     <div id="scroller">
                         <div class="fl list_title users_tender_list" id="users_tender_list" style="border-top:none;">
                             <span class="noData" v-if="!arrLength">暂无数据</span>
-                            <div class="invest_list_title rc_bn" v-for="value in integralDetail">
-                                <li class="fl w40">
-                                    <p class="invest_list_detail_title ft13 ftgr"> &nbsp;{{value.remark}}</p>
-                                </li>
+ 
+                            <div class="invest_list_title rc_bn" v-for="value in cashDetail">
                                 <li class="fl w30">
-                                    <p class="invest_list_detail_title ft14 ftog" v-if="value.opType==1">
-                                        +{{value.credits}}
-                                    </p>
-                                    <p class="invest_list_detail_title ft14 ftog" v-else>
-                                        -{{value.credits}}
-                                    </p>
+                                    <p class="invest_list_detail_title ft13 ftblue2"> &nbsp;{{value.amount}}</p>
                                 </li>
-                                <li class="fl w30" ><p class="invest_list_detail_title ft14 ftgr">{{value.updateTime | formatTime}}</p>
+                                <li class="fl w30"> 
+                                    <p class="invest_list_detail_title ftgr" v-if="value.rechargeStatus == 1">充值中</p>
+                                    <p class="invest_list_detail_title ftgreen" v-if="value.rechargeStatus == 2">充值成功</p>
+                                    <p class="invest_list_detail_title ftgr" v-if="value.rechargeStatus == 3">取消充值</p>
+                                    <p class="invest_list_detail_title ftgr" v-if="value.rechargeStatus == 4">充值失败</p>
+                                    <p class="invest_list_detail_title ftgr" v-if="value.rechargeStatus == 5">充值过期</p>
+                                </li>
+                                <li class="fl w40" ><p class="invest_list_detail_title ft14 ftgr">{{value.time | formatTime}}</p>
                                 </li>
                             </div>
+         
+                          
                         </div>
 
                     </div>
@@ -50,8 +53,8 @@
 
 <script>
 import Vue from 'vue'
-import {getGoldCoinList} from '../../../service/getData'
-import '../../../style/custom.css' 
+import {getRechargeList} from '../../../../service/getData'
+import '../../../../style/custom.css' 
 Vue.filter('formatTime', function (value, str) {
    function add0(m) {
         return m < 10 ? '0' + m : m
@@ -62,11 +65,12 @@ Vue.filter('formatTime', function (value, str) {
     var d = time.getDate();
     return y + '/' + add0(m) + '/' + add0(d);
 });
+
 export default {
     data() {
         return {
-            integralDetail: [],
-            integralDetail: null
+            cashDetail: [],
+            arrLength: null,
         }
     },
     created() {
@@ -82,9 +86,9 @@ export default {
     },
     methods: {
         async initData(){
-            let resGold = await getGoldCoinList(100);
-            this.arrLength = resWithdraw.data.data.length;
-            this.integralDetail = [...resGold.data.data]; 
+            let resRecharge = await getRechargeList(100);
+            this.arrLength = resRecharge.data.data.length;
+            this.cashDetail = [...resRecharge.data.data]; 
         },
     },
     

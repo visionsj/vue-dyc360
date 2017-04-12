@@ -46,11 +46,11 @@
             </div>
         </div>
         <div class="ui-grid-a" id="btn" style="width: 100%; display: inline-block;">
-            <a class="fl mg0 common_btn_bl w45" 
-            :href="accountDetail.openAccountStatus == 0 ? (!!openAccountDetail.forceOpenAccount ? '/open_account_guid' : 'usersRechargeNew') : 'userRechargeDepository'" >充值</a>
+            <router-link class="fl mg0 common_btn_bl w45" 
+            :to="accountDetail.openAccountStatus == 0 ? (!!openAccountDetail.forceOpenAccount ? '/open_account_guid' : '/usersMain/userRechargeDepository') : '/usersMain/userRechargeDepository'" >充值</router-link>
 
-            <a class="fr common_btn_og w45 br8"
-            :href="accountDetail.openAccountStatus == 0 ? (!!openAccountDetail.forceOpenAccount ? '/open_account_guid' : 'usersCashNew') : 'userCashDepository'">提现</a>
+            <router-link class="fr common_btn_og w45 br8"
+            :to="accountDetail.openAccountStatus == 0 ? (!!openAccountDetail.forceOpenAccount ? '/open_account_guid' : '/usersMain/userRechargeDepository') : '/usersMain/userCashDepository'">提现</router-link>
 
         </div>
 
@@ -106,7 +106,9 @@
     </div>
 
     <footer-common></footer-common>
-
+    <transition name="router-slid">
+         <router-view></router-view>
+     </transition>
     <alert-tip v-if="showAlert" @closeTip="showAlert=false" :alertText="alertText" :showAlertIcon="showAlertIcon"></alert-tip>
 
 </div>
@@ -259,4 +261,11 @@ export default {
     max-height: 16px;
     vertical-align: middle
   }
+  .router-slid-enter-active, .router-slid-leave-active {
+      transition: all .4s;
+  }
+  .router-slid-enter, .router-slid-leave-active {
+      transform: translateX(100%);
+  }
+
 </style>

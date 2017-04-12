@@ -36,8 +36,8 @@
                                 <img :src="value.imgUrl" />
                             </div>
                             <div class="rnex">
-                                <div class="top">{{value.giftName | formatTime}}</div>
-                                <p>获得时间：{{value.receiveTime}}<br>备　注：{{value.remark}}</p>
+                                <div class="top">{{value.giftName }}</div>
+                                <p>获得时间：{{value.receiveTime | formatTime}}<br>备　注：{{value.remark}}</p>
                             </div>
                         </div>
 
@@ -71,7 +71,7 @@ Vue.filter('formatTime', function (value, str) {
     var y = time.getFullYear();
     var m = time.getMonth() + 1;
     var d = time.getDate();
-    return add0(m) + '月' + add0(d) + '日';
+    return y + '/' + add0(m) + '/' + add0(d);
 });
 export default {
     data() {

@@ -282,11 +282,13 @@ export const submit =  () => Vue.http.post('/openAccount/submit', {
 })
 
 //获取提现记录列表
-export const getWithdrawCashList =  () => Vue.http.post('/account/getWithdrawCashList', {
+export const getWithdrawCashList =  (pageSize) => Vue.http.post('/account/getWithdrawCashList', {
+	pageSize: pageSize
 })
 
 //获取充值记录列表
-export const getRechargeList =  () => Vue.http.post('/account/getRechargeList', {
+export const getRechargeList =  (pageSize) => Vue.http.post('/account/getRechargeList', {
+	pageSize: pageSize
 })
 
 //提交用户信息
