@@ -22,6 +22,9 @@ vue-dyc360 是一款运行在手机端的金融投资平台,。
 
 #### 注意：本程序数据连接的是真实环境的数据（[m.duc360.com](https://m.duc360.com/)）, 暂不开放资金操作页面，想投资的建议还是下载官方APP进行投资
 
+## 技术栈
+vue2 + vuex + vue-router + webpack + ES6/7 + fetch + sass + flex 
+
 # 核心功能
 - [x] 首页幻灯片 -- 完成
 - [x] 投资更表 -- 完成
@@ -69,7 +72,17 @@ npm run dev
 npm run build
 
 生成的dyc360文件夹放在服务器即可正常访问
-```
+
+
+# 页面截图
+
+
+### 首页
+
+<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.gif" width="365" height="619"/>
+
+
+
 
 # 页面结构
 
