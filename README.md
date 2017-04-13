@@ -46,6 +46,35 @@ vue2 + vuex + vue-router + webpack + ES6/7 + fetch + sass + flex
 
 
 
+# 页面截图
+
+
+### 首页
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.gif?raw=true" />
+
+### 登录注册
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/login.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/reg.jpg?raw=true" />
+
+
+### 投资列表
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/invest.jpg?raw=true"/>
+
+
+### 我的
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/user.jpg?raw=true"/>
+
+### 更多
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/more.jpg?raw=true"/>
+
+
+
+
+
 # 项目运行
 
 #### 注意：由于涉及大量的 ES6/7 等新属性，nodejs 必须是 6.0 以上版本 ，node 7 是先行版，有可能会出问题，建议使用 node 6 稳定版
@@ -74,30 +103,6 @@ npm run build
 生成的dyc360文件夹放在服务器即可正常访问
 
 
-# 页面截图
-
-
-### 首页
-
-<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.gif?raw=true" />
-
-### 登录注册
-
-<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/login.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/reg.jpg?raw=true" />
-
-
-### 投资列表
-
-<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/invest.jpg?raw=true"/>
-
-
-### 我的
-
-<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/user.jpg?raw=true"/>
-
-### 更多
-
-<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/more.jpg?raw=true"/>
 
 
 # 页面结构
