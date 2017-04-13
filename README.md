@@ -79,9 +79,25 @@ npm run build
 
 ### 首页
 
-<img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.png" width="365" height="619"/> <img src="https://github.com/bailicangdu/vue2-elm/blob/master/screenshots/msite.gif" width="365" height="619"/>
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/index.gif?raw=true" />
+
+### 登录注册
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/login.jpg?raw=true"/> <img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/reg.jpg?raw=true" />
 
 
+### 投资列表
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/invest.jpg?raw=true"/>
+
+
+### 我的
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/user.jpg?raw=true"/>
+
+### 更多
+
+<img src="https://github.com/visionsj/vue-dyc360/blob/master/screenGif/more.jpg?raw=true"/>
 
 
 # 页面结构
